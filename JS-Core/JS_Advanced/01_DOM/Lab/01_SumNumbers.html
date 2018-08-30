@@ -1,0 +1,28 @@
+<!--Problems for in-class lab for the “JavaScript Advanced” course @ SoftUni.
+Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/328/.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum Numbers</title>
+</head>
+<body>
+<form>
+    <label>
+        <input type="text" id="num1"/>
+        <input type="text" id="num2"/>
+        <input type="text" id="sum" readonly="readonly"/>
+        <input type="button" value="Calc" onclick="calc()"/>
+    </label>
+</form>
+
+<script>
+    function calc() {
+        let number1 = Number(document.getElementById('num1').value);
+        let number2 = Number(document.getElementById('num2').value);
+        document.getElementById('sum').value = number1 + number2;
+    }
+</script>
+</body>
+</html>

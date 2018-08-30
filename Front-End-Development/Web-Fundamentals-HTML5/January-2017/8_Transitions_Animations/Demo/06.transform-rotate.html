@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rotate</title>
+    <style>
+        img {
+            margin: 20px auto;
+            display: block;
+            transition: transform 5s;
+        }
+        .cat:hover {
+            transform:rotate(45deg);
+        }
+        .rabbit:hover {
+            /*transform:skewY(-45deg);*/
+            transform:rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+<img src="img/cat.jpg" class="cat" width="200px" height="200px" alt="">
+<img src="img/rabbit.jpg" class="rabbit" width="200px" height="200px" alt="">
+</body>
+</html>

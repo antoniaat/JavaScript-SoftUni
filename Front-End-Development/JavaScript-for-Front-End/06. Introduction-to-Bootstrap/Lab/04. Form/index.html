@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+</head>
+<body class="bg-dark text-light font-weight-bold">
+
+<div class="col-4 m-4 ">
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="exampleSelect1">Age</label>
+            <select class="form-control" id="exampleSelect1">
+                <option>Under 18</option>
+                <option>18-25</option>
+                <option>25-35</option>
+                <option>35-50</option>
+                <option>More than 50</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleSelect2">You heard about us from</label>
+            <select multiple class="form-control" id="exampleSelect2">
+                <option>Facebook</option>
+                <option>Twitter</option>
+                <option>Event</option>
+                <option>Friend</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleTextarea">Message</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputFile">Upload CV</label>
+            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">(It's optional)</small>
+        </div>
+        <fieldset class="form-group">
+            <legend>You are interested in</legend>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    Job Position
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                    Intern
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                    Q&A
+                    <small class="text-muted">(We are not active now)</small>
+                </label>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+</div>
+
+</body>
+</html>

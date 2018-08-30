@@ -1,0 +1,144 @@
+body {
+    font-family: 'Lato', 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 20px;
+}
+
+p {
+    color: #a9a9a9;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .4)), url(images/header.jpg);
+    background-size: cover;
+    padding: 25px;
+}
+
+header nav {
+    width: 60%;
+    margin: 0 auto;
+}
+
+header #logo {
+    float: left;
+}
+
+header ul {
+    margin: 0;
+    text-align: right;
+}
+
+#services article, header ul li {
+    display: inline-block;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 11px;
+}
+
+header article {
+    color: #fff;
+    width: 28%;
+    margin: 120px auto;
+    text-align: center;
+}
+
+header article button {
+    background: #cabc9a;
+    border: 0;
+    padding: 12px 24px;
+    color: #fff;
+    border-radius: 2px;
+    outline: 0;
+    cursor: pointer;
+}
+
+#about-us {
+    text-align: center;
+    padding: 3%;
+}
+
+.italic-heading {
+    font-style: italic;
+    margin-bottom: 45px;
+}
+
+#services {
+    width: 100%;
+    background: #f6f6f6;
+}
+
+#services article {
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+}
+
+#services article img {
+    max-width: 100%;
+    width: 20%;
+}
+
+#blog, #services, #team {
+    text-align: center;
+}
+
+#team {
+    margin: 30px auto;
+    width: 80%;
+}
+
+#team article h3, #team h2, #team h4, header article button {
+    text-transform: uppercase;
+}
+
+#team article {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#blog article h3, #blog article p {
+    padding: 9px;
+    text-align: left;
+}
+
+#blog article h3, #blog h2 {
+    text-transform: uppercase;
+}
+
+#blog h2 {
+    padding-top: 40px;
+}
+
+#blog article, #team article img {
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, .75);
+}
+
+#team article img {
+    max-width: 100%;
+    border-radius: 2px;
+    width: 80%;
+}
+
+#blog {
+    width: 100%;
+    background: #f6f6f6;
+}
+
+#blog article {
+    width: 33%;
+    display: inline-block;
+    margin: 31px;
+    vertical-align: top;
+    background: #fff;
+}
+
+#blog article img {
+    max-width: 100%;
+    width: 40%;
+    float: left;
+    padding-right: 15px;
+}

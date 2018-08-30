@@ -1,0 +1,47 @@
+<!--Problems for in-class lab for the “JavaScript Advanced” course @ SoftUni.
+Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/640/.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add / Delete</title>
+</head>
+<body>
+<h1>List of Items</h1>
+<ul id="items">
+
+</ul>
+<label>
+    <input type="text" id="newText"/>
+    <input type="button" value="Add" onclick="addItem()">
+</label>
+<script>
+    function addItem() {
+        // Add new items to list
+        let newElement = document.getElementById('newText').value;
+        let list = document.getElementById('items');
+
+        // Check if input it's empty
+        if (newElement.length === 0) return;
+
+        let listItem = document.createElement('li');
+        listItem.textContent = newElement;
+
+        // Add remove option for each list item
+        let remove = document.createElement('a');
+        let linkText = document.createTextNode("[Delete]");
+        remove.appendChild(linkText);
+        remove.href = '#';
+        remove.addEventListener('click', deleteItem);
+
+        listItem.appendChild(remove);
+        list.appendChild(listItem);
+
+        function deleteItem() {
+            listItem.remove();
+        }
+    }
+</script>
+</body>
+</html>

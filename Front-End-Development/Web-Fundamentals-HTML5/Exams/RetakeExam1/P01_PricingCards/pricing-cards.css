@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    font: 16px 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #EAF0F1;
+}
+
+li {
+    list-style-type: none;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 140px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    margin-right: 20px;
+    box-shadow: 9px 10px 21px -6px rgba(0,0,0,0.75);
+    color: #333;
+    width: 23%;
+    height: 550px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.card:hover {
+    opacity: 1;
+}
+
+.card-img {
+    width: 100%;
+    max-width: 70px;
+    margin-top: 20px;
+}
+
+.card-description {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 14px;
+}
+
+.card-price {
+    font-weight: 400;
+    color: #FF4D00;
+}
+
+.free-price, .card-price {
+    color: gray;
+    font-weight: 400;
+    margin-bottom: 54%;
+
+}
+
+
+.primary-cta {
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 30px;
+    font-size: 16px;
+    border: none;
+    padding: 10px 30px;
+    background: #93DDE8;
+    color: white;
+}
+
+.primary-cta:hover {
+    box-shadow: 9px 10px 21px -6px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.secondary-btn {
+    background: #FF4D00;
+}
+
+.third-btn {
+    background: #FB7F40;
+}

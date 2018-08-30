@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #234465;
+    min-width: 800px;
+    min-height: 400px
+}
+
+.flat-anim {
+    display: block;
+    width: 264px;
+    height: 265px;
+    background-color: #ecf0f1;
+    border-radius: 42px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -132px 0 0 -132px;
+}
+
+.flat-anim:before {
+    content: "";
+    background-color: #e67e22;
+    width: 26px;
+    height: 26px;
+    border-radius: 26px;
+    position: absolute;
+    top: 19px;
+    left: 19px;
+}
+
+.flat-anim:after {
+    content: "";
+    background-color: #68b5f1;
+    width: 48px;
+    height: 24px;
+    border-radius: 10px;
+    position: absolute;
+    top: 17px;
+    right: 22px;
+}
+
+.bottom {
+    width: 264px;
+    height: 112px;
+    display: block;
+    z-index: 10;
+    background-color: #e67e22;
+    border-radius: 0 0 38px 38px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 15px solid #dd660e;
+    -webkit-box-shadow: inset 0 -20px 0 0 #db640e;
+}
+
+.bottom:before {
+    content: "";
+    background-color: #282e3a;
+    width: 140px;
+    height: 30px;
+    display: block;
+    margin: 14px auto 0 auto;
+}
+
+.bottom:after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 84px;
+    width: 96px;
+    height: 70px;
+    display: block;
+    background-color: #ecf0f1;
+    -webkit-box-shadow: 0 14px 0 0 #db640e,
+    0 -16px 0 0 #c3d1dd;
+    -moz-box-shadow: 0 14px 0 0 #db640e,
+    0 -16px 0 0 #c3d1dd;
+    box-shadow: 0 14px 0 0 #db640e,
+    0 -16px 0 0 #c3d1dd;
+}
+
+.eye {
+    width: 37px;
+    height: 37px;
+    border-radius: 37px;
+    background-color: #243e6e;
+    display: block;
+    margin: 60px auto 0;
+    z-index: 20;
+    position: relative;
+    -webkit-box-shadow: 0 0 0 22px #3e5489,
+    0 0 0 30px #1c3666,
+    0 0 0 45px #ecf0f1,
+    0 10px 0 45px rgba(0, 0, 0, 0.2);
+}
+
+.eye:before {
+    content: "";
+    background-color: #a3bfd5;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    position: absolute;
+    top: -16px;
+    left: -16px;
+}
+
+.eye:after {
+    content: "";
+    background-color: #6078a3;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+
+/* Animation */
+
+/*TODO flatAnimation*/
+
+@-webkit-keyframes flatAnimation {
+    0% {
+        /*TODO rotate and scale*/
+
+    }
+    13% {
+        /*TODO rotate and scale*/
+
+    }
+    20% {
+        /*TODO rotate and scale*/
+
+    }
+    95% {
+        /*TODO rotate and scale*/
+
+    }
+    100% {
+        /*TODO rotate and scale*/
+
+    }
+}
+
+.eye,
+.flat-anim:before,
+.flat-anim:after {
+
+    /*Animation eye properties*/
+}
+
+/*TODO before .flat-anim use delay property*/
+
+/*TODO after .flat-anim use delay property*/
+
+@-webkit-keyframes eyeAnimation {
+    0% {
+        opacity: 0;
+        /*TODO use sc transform*/
+    }
+    12% {
+        opacity: 0;
+        /*TODO*/
+
+    }
+    13% {
+        opacity: 1;
+        /*TODO*/
+
+    }
+    20% {
+        opacity: 1;
+        /*TODO*/
+
+    }
+    25% {
+        /*TODO*/
+    }
+    95% {
+        /*TODO*/
+
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        /*TODO*/
+
+    }
+}
+/*TODO before .bottom*/
+
+@-webkit-keyframes bottomAnimation {
+    0% {
+        opacity: 0;
+        /*TODO change width*/
+    }
+    20% {
+        opacity: 0;
+        /*TODO change width*/
+    }
+    21% {
+        opacity: 0;
+        /*TODO change width*/
+
+    }
+    22% {
+        opacity: 1;
+        /*TODO change width*/
+    }
+    25% {
+        opacity: 1;
+        /*TODO change width*/
+    }
+    26% {
+        opacity: 1;
+        /*TODO change width*/
+    }
+    95% {
+        opacity: 1;
+        /*TODO change width*/
+    }
+    96% {
+        opacity: 0;
+        /*TODO change width*/
+    }
+    100% {
+        opacity: 0;
+        /*TODO change width*/
+    }
+}
+
+/*TODO after .bottom*/
+
+@-webkit-keyframes bottomAfterAnimation {
+    0% {
+        opacity: 0;
+        /*TODO change height and border*/
+    }
+    25% {
+        opacity: 0;
+        /*TODO change height and border*/
+    }
+    26% {
+        opacity: 1;
+        /*TODO change height and border*/
+    }
+    26% {
+        opacity: 1;
+        /*TODO change height and border-top*/
+    }
+    28% {
+        opacity: 1;
+        /*TODO change height and border-top*/
+    }
+    28% {
+        opacity: 1;
+        /*TODO change height and border-top and border-bottom*/
+    }
+    95% {
+        opacity: 1;
+        /*TODO change height and border-top and border-bottom*/
+    }
+    100% {
+        opacity: 0;
+        /*TODO change height and border*/
+    }
+}

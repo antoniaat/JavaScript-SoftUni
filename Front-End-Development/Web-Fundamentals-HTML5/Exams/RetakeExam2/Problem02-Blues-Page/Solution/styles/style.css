@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "Blues";
+    src: url("../../Resources/Fonts/RicksAmericanNF.ttf");
+}
+
+body {
+    font-size: 16px;
+    color: #FFA500;
+    background-color: #000;
+}
+
+#wrapper {
+    background: rgba(200, 200, 200, 0.3);
+    width: 960px;
+    margin: 10px auto;
+}
+
+/***** Header styles *****/
+#wrapper > header {
+    font-family: "Blues", Arial, Helvetica, sans-serif;
+    margin: 10px auto;
+    background-color: #000000;
+}
+
+#wrapper > header > h1 {
+    font-size: 60px;
+    letter-spacing: 20px;
+    text-align: center;
+}
+
+#wrapper > header > nav {
+    text-transform: uppercase;
+    padding: 20px 0 20px 0;
+}
+
+#wrapper > header > nav > ul > li {
+    display: inline-block;
+    width: 230px;
+    height: 50px;
+    border-radius: 80px;
+}
+
+#wrapper > header > nav > ul > li:hover {
+    background-color: #FFA500;
+    color: #000000;
+}
+
+#wrapper > header > nav > ul > li > a {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 5px;
+}
+
+/***** Main styles *****/
+main {
+    display: inline-block;
+    width: 65%;
+}
+
+main > article {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+img {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+
+article > h3 {
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 2px 2px #000;
+}
+
+article > p {
+    display: inline-block;
+    width: 48%;
+    text-indent: 30px;
+    text-align: justify;
+    text-shadow: 2px 2px #000;
+}
+
+#wrapper > main > article > p > a {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/***** Aside styles *****/
+aside {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    padding: 20px;
+}
+
+aside figure {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+figure > a > img {
+    border: 1px solid #ffa500;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+figcaption {
+    position: relative;
+    bottom: 17px;
+    left: 1px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px #000;
+    font-weight: bold;
+    text-align: center;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+figure:hover > figcaption {
+    color: rgba(0, 0, 0, 0.6);
+    background-color: #FFA500;
+    text-shadow: none;
+}
+
+/***** Footer styles *****/
+footer {
+    background-color: #000;
+}
+
+footer > p {
+    text-align: center;
+    padding: 10px;
+}

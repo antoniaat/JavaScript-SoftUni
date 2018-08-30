@@ -1,0 +1,55 @@
+<!--Problems for in-class lab for the “JavaScript Advanced” course @ SoftUni.
+Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/640/.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stopwatch</title>
+</head>
+<body>
+<div id="time" style="border:3px solid blue; text-align:center; font-size:2em; margin-bottom:10px">00:00</div>
+<button id="startBtn">Start</button>
+<button id="stopBtn" disabled="true">Stop</button>
+<script>window.onload = function () {
+    stopwatch();
+}</script>
+
+<script>
+    function stopwatch() {
+        let startBtn = document.getElementById('startBtn');
+        let stopBtn = document.getElementById('stopBtn');
+
+        startBtn.addEventListener("click", startClicked);
+        stopBtn.addEventListener("click", stopClicked);
+
+        let timer = null;
+        let seconds = 0;
+
+        function outputTime(value) {
+            document.getElementById('time').textContent =
+                ('0' + (Math.floor(value / 60))).slice(-2)  + ':' + ('0' + value % 60).slice(-2);
+        }
+
+        function startClicked() {
+            seconds = 0;
+            outputTime(seconds);
+            stopBtn.disabled = false;
+            startBtn.disabled = true;
+            timer = setInterval(tick, 1000);
+        }
+
+        function stopClicked() {
+            stopBtn.disabled = true;
+            startBtn.disabled = false;
+            clearInterval(timer);
+        }
+
+        function tick() {
+            seconds++;
+            outputTime(seconds);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extreme Sports</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <ul>
+                <li><img src="../Resources/Images/paraglider-icon.png" alt="paraglider-icon"><a href="#">Paragliding</a></li>
+                <li><img src="../Resources/Images/sky-diver.png" alt="sky-diver-icon"><a href="#">Skydiving</a></li>
+                <li><img src="../Resources/Images/climbing.png" alt="climber-icon"><a href="#">Climbing</a></li>
+                <li><img src="../Resources/Images/about-us.png" alt="about-us"><a href="#">About Us</a></li>
+            </ul>
+        </header>
+        <main>
+            <form action="#" method="post">
+                <fieldset id="personal-info">
+                    <legend>Personal Info</legend>
+
+                    <span id="name-icon"></span>
+                    <input type="text" id="full-name" placeholder="Enter your full name" required />
+
+                    <span id="email-icon"></span>
+                    <input type="email" id="email" placeholder="Enter a valid e-mail" required />
+
+                    <span id="tel-icon"></span>
+                    <input type="tel" id="tel" placeholder="Enter a phone number" required />
+                </fieldset>
+
+                <fieldset id="flight-info">
+                    <legend>Flight Info</legend>
+
+                    <label for="radio-buttons">Are flying for first time?</label>
+                    <div id="radio-buttons">
+                        <input type="radio" name="first-timer" id="yes" value="Yes" /><label for="yes">Yes</label>
+                        <input type="radio" name="first-timer" id="no" value="No" /><label for="no">No</label>
+                    </div>
+
+                    <label for="destination">Choose Destination</label>
+                    <select name="destination" id="destination">
+                        <optgroup label="Bulgaria" id="Bg">
+                            <option value="Dobrostan">Dobrostan</option>
+                            <option value="Sopot">Sopot</option>
+                            <option value="Sofia">Sofia</option>
+                            <option value="Bourgas">Bourgas</option>
+                        </optgroup>
+                        <optgroup label="Rest of the world" id="rest">
+                            <option value="Nepal">Nepal</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="France">France</option>
+                        </optgroup>
+                    </select>
+                    <label for="date">Choose Date</label>
+                    <input type="date" id="date"/>
+                </fieldset>
+
+                <div id="buttons">
+                    <input type="reset" value="Clear">
+                    <input type="submit" value="Send" >
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

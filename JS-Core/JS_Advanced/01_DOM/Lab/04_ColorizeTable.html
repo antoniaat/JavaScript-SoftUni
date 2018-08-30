@@ -1,0 +1,48 @@
+<!--Problems for in-class lab for the “JavaScript Advanced” course @ SoftUni.
+Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/328/.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Colorize Table</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Town</th>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Sofia</td>
+    </tr>
+    <tr>
+        <td>Nick</td>
+        <td>Varna</td>
+    </tr>
+    <tr>
+        <td>Didi</td>
+        <td>Ruse</td>
+    </tr>
+    <tr>
+        <td>Tedy</td>
+        <td>Varna</td>
+    </tr>
+</table>
+<button onclick="colorize()">Colorize</button>
+
+<script>
+    function colorize() {
+        let rows = document.querySelectorAll('table tr');
+
+        for (let index = 0; index < rows.length; index++) {
+            if (index % 2 === 1) {
+                rows[index].style.backgroundColor = 'teal';
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

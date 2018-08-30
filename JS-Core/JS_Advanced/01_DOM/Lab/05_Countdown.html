@@ -1,0 +1,43 @@
+<!--Problems for in-class lab for the “JavaScript Advanced” course @ SoftUni.
+Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/328/.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Countdown</title>
+    <style>
+        #time {
+            border: 3px solid blue;
+            text-align: center;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+
+<label>
+    <input type="text" id="time"/>
+</label>
+
+<script>
+    window.onload = function () {
+        countdown(600);
+    }
+</script>
+
+<script>
+    function countdown(startTime) {
+        let time = startTime;
+        let box = document.getElementById('time');
+        let intervalID = setInterval(decrement, 1000);
+
+        function decrement() {
+            time--;
+            box.value = Math.trunc(time / 60) +
+                ':' + ("0" + (time % 60)).slice(-2);
+        }
+    }
+</script>
+</body>
+</html>

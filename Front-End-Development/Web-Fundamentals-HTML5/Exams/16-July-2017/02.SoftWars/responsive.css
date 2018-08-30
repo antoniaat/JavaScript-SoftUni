@@ -1,0 +1,40 @@
+@media all and (max-width: 1023px){
+    .container {
+        flex-wrap: wrap;
+    }
+    .info {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 479px){
+    .container {
+        flex-direction: column;
+    }
+
+    .blog article {
+        width: 93%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .blog img {
+        max-width: 329px;
+        max-height: 300px;
+        width: 68%;
+        height: 16%;
+    }
+    header {
+         min-height: 340px;
+     }
+
+    header h1 {
+        font-size: 1.5em;
+        padding: 20px;
+    }
+}

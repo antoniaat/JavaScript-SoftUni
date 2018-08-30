@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Nth Child</title>
+	<style type="text/css">
+		table
+		{
+			border: solid black 1px;
+		}
+		tr {
+			font-size: 30px;
+		}
+
+		/*Even child*/
+
+		/*tr:nth-child(2n){*/
+			/*background-color: #95313b;*/
+			/*color: #fff;*/
+
+		/*}*/
+
+		/*Odd child*/
+
+		/*tr:nth-child(2n+1) {*/
+			/*background-color: #95313b;*/
+			/*color: #fff;*/
+
+		/*}*/
+
+		/*nth-last-child(n)*/
+
+		tr:nth-last-child(3)
+		{
+			color: white;
+			background-color: #95313b;;
+		}
+
+		/*tr:last-child*/
+		/*{*/
+			/*color: white;*/
+			/*background-color: #880000;*/
+		/*}*/
+	</style>
+</head>
+<body>
+<table>
+	<tr><td>This is first row.</td></tr>
+	<tr><td>This is second row.</td></tr>
+	<tr><td>This is third row.</td></tr>
+	<tr><td>This is fourth row.</td></tr>
+</table>
+</body>
+</html>

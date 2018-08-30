@@ -1,0 +1,132 @@
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+body {
+    width: 960px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #fcfcfc;
+    background-color: #355664;
+}
+
+header > h1, h2, h3 {
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+h1 {
+    font-size: 50px;
+    padding: 10px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 40px;
+    letter-spacing: 15px;
+    text-align: center;
+    border-bottom: 3px solid #416371;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+h3 {
+    text-align: right;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+
+p {
+    line-height: 20px;
+    padding-bottom: 5px;
+    color: #ffffff;
+    text-align: left;
+}
+
+img {
+    border: none;
+    width: 500px;
+    height: 300px;
+}
+
+.article-content {
+    margin: 15px 0;
+}
+
+nav {
+    background-color: #355664;
+    padding: 0 5px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+a {
+    color: #ffffff;
+    margin: 5px 2px;
+    padding: 7px 10px 4px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+nav ul li:first-of-type > a {
+    color: #7CB3E9;
+    font-size: 30px;
+    text-transform: lowercase;
+}
+
+nav ul a[title="sweet tabs"] {
+    color: #8EC45B;
+    font-size: 30px;
+    text-transform: none;
+}
+
+article {
+    height: 482px;
+    background-color: #213E4A;
+    padding: 20px;
+    margin: 0 0 10px;
+}
+
+figure {
+    border: 3px solid #142830;
+    float: right;
+    height: 300px;
+    width: 500px;
+    margin-left: 15px;
+}
+
+figure + p {
+    color: #94c258;
+}
+
+footer {
+    border-top: 3px solid #142830;
+    padding-top: 15px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+div.article-content {
+    margin: 15px 0;
+}
+
+nav, article, nav ul li a, figure {
+    border-radius: 10px;
+}
+
+span a {
+    background url("bg2.jpg");
+    color: #ffffff;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+footer {
+    margin: 0;
+    padding: 40px 0 64px 0;
+    text-align: center;
+}

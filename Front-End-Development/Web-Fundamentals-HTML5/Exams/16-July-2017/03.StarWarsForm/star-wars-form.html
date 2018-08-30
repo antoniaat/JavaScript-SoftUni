@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars Form</title>
+    <link rel="stylesheet" href="star-wars-form.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+</head>
+<body>
+<h3>
+    may the force be with <span id="small-letters">yo</span>u
+</h3>
+<h2>
+    Thanks for pre-ordering!
+</h2>
+
+<form>
+    <div class="half-width">
+        <label class="container">
+            <span class="text-area">Pay Pal</span>
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+            <img src="images/PayPal.png" alt="PayPal" class="right-align-img">
+        </label>
+        <label class="container">
+            <span class="text-area">Debit/Credit Card</span>
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+            <img src="images/MasterCard.png" alt="PayPal" class="right-align-img">
+        </label>
+    </div>
+
+    <div id="middle-line">
+        <label id="middle-label">
+            <span>Card Number</span>
+            <input type="text" placeholder="4111 1111 1111">
+        </label>
+    </div>
+
+    <div id="last-line">
+        <label class="expiry">
+            <span class="text-area">Expiry</span>
+            <input type="text" placeholder="MM/YY">
+        </label>
+
+        <label class="csv">
+            <span class="text-area">CSV</span>
+            <input type="text" placeholder="123">
+        </label>
+    </div>
+
+    <div id="finish">
+        <label>
+            <i class="fas fa-lock"></i>
+            <input type="submit" value="Finish And Pay">
+        </label>
+    </div>
+</form>
+
+<p id="price">
+    That's
+    <span>
+        $19.99
+    </span>
+</p>
+
+<img src="images/R2D2.png" alt="R2D2" id="image">
+</body>
+</html>

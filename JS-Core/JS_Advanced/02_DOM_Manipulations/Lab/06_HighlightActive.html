@@ -1,0 +1,56 @@
+<!--Problems for in-class lab for the “JavaScript Advanced” course @ SoftUni.
+Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/640/.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Focus</title>
+    <style>
+        div {
+            width: 470px;
+        }
+
+        div div {
+            text-align: center;
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 15px;
+            border: 1px solid #999;
+        }
+
+        .focused {
+            background: #999999;
+        }
+    </style>
+</head>
+<body onload="focus()">
+<div>
+    <div><h1>Section 1</h1><input type="text"/></div>
+    <div><h1>Section 2</h1><input type="text"/></div>
+    <div><h1>Section 3</h1><input type="text"/></div>
+    <div><h1>Section 4</h1><input type="text"/></div>
+</div>
+<script>
+    function focus() {
+        let inputFields = document.querySelectorAll('div input');
+
+        for (let input of inputFields) {
+
+            input.addEventListener('focus', onfocus);
+
+            function onfocus () {
+                // Clean all previous styles
+                for (let i = 0; i < inputFields.length; i++) {
+                    inputFields[i].parentElement.classList.remove('focused');
+                }
+
+                // Colors only current focus input
+                input.parentElement.classList.add('focused');
+            }
+        }
+    }
+</script>
+</body>
+</html>

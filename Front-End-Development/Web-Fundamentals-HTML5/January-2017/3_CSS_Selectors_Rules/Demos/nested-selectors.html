@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<title>Multiple Selectors</title>-->
+    <title>Nested Selectors</title>
+    <style>
+        /*p.item a { text-decoration: overline }*/
+        body {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        h1 + .span {
+            color: #962103;
+        }
+
+        span {
+            background-color: white;
+        }
+
+        div > span {
+            background-color: DodgerBlue;
+        }
+
+        /*p + p {*/
+        /*color: red;*/
+        /*}*/
+
+        h1#header.intro {
+            text-decoration: underline;
+            color: #C00;
+        }
+
+        h1, h2, p {
+            background-color: yellow;
+        }
+
+        /*<!--Attribute Selectors-->*/
+
+            a[title="menu"] {
+                text-decoration: none;
+                color: #962103;
+                font-size: 22px;
+            }
+
+
+    </style>
+
+
+</head>
+<body>
+<!--Nested Selector-->
+
+<!--<p class="item">-->
+<!--<a href="#">Item1</a>-->
+<!--<a href="#">Item2</a>-->
+<!--<a href="#">Item3</a>-->
+<!--</p>-->
+<!--<ul>-->
+<!--<li><a href="#">Item4</a></li>-->
+<!--<li><a href="#">Item5</a></li>-->
+<!--<li><a href="#">Item6</a></li>-->
+<!--</ul>-->
+
+<!--<h1>Heading</h1>-->
+<!--<span class="span">Some more text</span>-->
+<!--<div>Div</div>-->
+<!--<span>Some other Text</span>-->
+<!--<h1>Head1</h1>-->
+<!--<span class="span">Some other Text</span>-->
+
+<!--Next Child-->
+
+<!--<style>-->
+<!--p,h2 {-->
+<!--line-height: 10px;-->
+<!--}-->
+<!--p + p {-->
+<!--font-style: italic;-->
+<!--/*margin: 0;*/-->
+<!--font-size: 18px;-->
+
+<!--}-->
+<!--</style>-->
+<!--<div>-->
+<!--<p>I'm a paragraph</p>-->
+<!--<p>I get selected!</p>-->
+<!--</div>-->
+<!--<div>-->
+<!--<p>I'm a paragraph</p>-->
+<!--<h2>Monkey hair</h2>-->
+<!--<p>I will NOT get selected</p>-->
+<!--</div>-->
+
+<!--Direct Child-->
+<!--<div>-->
+<!--<span>Span #1, in the div.-->
+<!--<span>Span #2, in the span that's in the div.</span>-->
+<!--</span>-->
+<!--</div>-->
+<!--<span>Span #3, not in the div at all.</span>-->
+
+<!--Double Class Selector-->
+
+<!--<style>-->
+<!--p,h2,h3 {-->
+<!--line-height: 10px;-->
+<!--font-weight: bold;-->
+<!--}-->
+<!--.apple.orange {-->
+<!--color: orange;-->
+
+<!--}-->
+<!--</style>-->
+<!--<p class="apple orange">Apple and Orange Classes</p>-->
+<!--<h2 class="apple">Apple class</h2>-->
+<!--<h3 class="orange">Orange class</h3>-->
+
+<!--Attribute Selectors-->
+
+<!--<ul>-->
+    <!--<li><a href="#">Home</a></li>-->
+    <!--<li><a href="#">Products</a></li>-->
+    <!--<li><a href="#" title="menu">Menu</a></li>-->
+<!--</ul>-->
+
+<!--Combining Multiple Selectors-->
+<!--<h1 id="header" class="intro">HTML and CSS</h1>-->
+
+<!--Multiple Selectors-->
+
+<!--<h1>Welcome to My Homepage</h1>-->
+
+<!--<h2>My name is Donald.</h2>-->
+<!--<p>I live in Duckburg.</p>-->
+
+<!--<p>My best friend is Mickey.</p>-->
+
+</body>
+</html>

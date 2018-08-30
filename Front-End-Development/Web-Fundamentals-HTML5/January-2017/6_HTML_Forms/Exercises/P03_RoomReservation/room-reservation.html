@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room Reservation</title>
+    <link rel="stylesheet" href="room-reservation.css">
+</head>
+<body>
+<header class="site-header">
+<h1>Room Reservation</h1>
+</header>
+
+<main>
+    <section class="info">
+        <article class="information">
+        <h3>Basic Information</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at nibh varius odio sollicitudin
+            blandit nec eu elit. Suspendisse ac risus nunc, quis elementum lorem. Pellentesque vehicula egestas eros
+            nec commodo.
+        </p>
+        </article>
+
+        <article class="search">
+        <label class="search-label">
+        <h3>
+            Search
+        </h3>
+            <input id="search" type="text" name="search" class="input-search"/>
+        </label>
+        </article>
+    </section>
+
+    <section class="reservation">
+        <article class="details">
+            <label>
+                <h3>Personal Details</h3>
+                <input id="name" type="text" name="name" placeholder="First Name"/>
+                <input id="name" type="text" name="name" placeholder="Last Name"/>
+                <input id="name" type="text" name="name" placeholder="Enter email"/>
+            </label>
+        </article>
+
+        <article class="request">
+            <label>
+                <h3>Request a reservation</h3>
+                <span>Select a Room</span>
+
+                    <select name="selection" class="selection">
+                        <option value="Room 3">Room 3</option>
+                    </select>
+            </label>
+
+            <label class="number">
+                <span>Number of Rooms</span>
+                <input id="name" type="text" name="name" placeholder="1"/>
+            </label>
+
+            <label class="check">
+                <span class="check-span">Check-In:</span>
+                <input id="date" type="date" name="date" placeholder="dd/mm/yyyy"/>
+            </label>
+
+            <label class="check">
+            <span>Check-Out:</span>
+                <input id="date" type="date" name="date" placeholder="dd/mm/yyyy"/>
+            </label>
+        </article>
+    </section>
+
+    <button>
+        Book Now
+    </button>
+</main>
+</body>
+</html>

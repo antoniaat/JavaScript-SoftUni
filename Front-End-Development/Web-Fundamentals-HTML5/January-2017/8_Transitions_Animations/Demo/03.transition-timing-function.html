@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timing Functions</title>
+
+</head>
+<style>
+    div {
+        width: 100px;
+        border: 2px solid black;
+    }
+    #div1:hover,#div2:hover,#div3:hover,#div4:hover,#div5:hover {
+        transition-property: width,height;
+        height: 40px;
+        width: 500px;
+        transition-duration: 8s;
+        transition-timing-function: linear;
+        background-color: red;
+        color: #ffffff;
+
+    }
+
+    #div2:hover {
+        transition-timing-function: ease;
+        background-color: blue;
+    }
+
+    #div3:hover {
+        transition-timing-function: ease-in;
+        background-color: #fd9500;
+    }
+
+    #div4:hover {
+        transition-timing-function: ease-out;
+        background-color: #36fd26;
+
+    }
+
+    #div5:hover {
+        transition-timing-function: ease-in-out;
+        background-color: #fdf408;
+    }
+
+
+</style>
+<body>
+<div id="div1">Linear</div>
+<div id="div2">Ease</div>
+<div id="div3">Ease-In</div>
+<div id="div4">Ease-Out</div>
+<div id="div5">Ease-in-out</div>
+
+
+
+
+</body>
+</html>

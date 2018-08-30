@@ -1,0 +1,37 @@
+@media screen and (max-width: 640px) {
+        body {
+            width: 100%;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        .wrap {
+            width: 100%;
+        }
+
+        #header-top-area > h2 {
+            display: none;
+        }
+
+        #header-middle-area {
+            margin-top: 44px;
+            border-top: 1px solid darkgray;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid darkgray;
+        }
+
+    #product-menu .product-type a {
+        display: block;
+    }
+
+    .submenu {
+        display: block;
+
+    }
+
+
+
+    }

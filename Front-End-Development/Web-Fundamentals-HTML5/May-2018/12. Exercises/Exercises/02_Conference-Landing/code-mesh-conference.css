@@ -1,0 +1,348 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    margin: 0;
+    min-width: 700px;
+    font-family: “Roboto“,sans-serif;
+
+}
+
+.site-header {
+    text-align: center;
+
+    background:
+            linear-gradient(rgba(25, 25, 25, 0.8),
+            rgba(20, 20, 20, 0.8)),
+            url(img/header-bg.png) no-repeat center;
+    background-size: cover;
+    padding: 10px 0;
+}
+
+.code-mesh  {
+    font-family: “Roboto“,sans-serif;
+    position: relative;
+    left: 30px;
+    text-transform: uppercase;
+    color: white;
+    float: left;
+    font-weight: bold;
+    text-shadow: 0px 0px 4px black;
+}
+
+.nav-menu {
+    float: right;
+    position: relative;
+    right: 30px;
+}
+
+.nav-menu ul li {
+    display: inline-block;
+}
+
+.nav-menu ul li a {
+    font-family: “Roboto“,sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
+    font-weight: bold;
+    color: white;
+    padding: 15px;
+    text-shadow: 0px 0px 4px black;
+}
+
+.nav-menu ul li a:hover {
+    font-family: “Roboto“,sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
+    font-weight: bold;
+    color: #FF6C14;
+    padding: 15px;
+    text-shadow: 0px 0px 4px black;
+}
+
+.site-header > h1 {
+    font-family: “Roboto“,sans-serif;
+    text-shadow: 0px 0px 4px black;
+    color: white;
+    font-weight: bold;
+    word-break: break-all;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 200px;
+    float: left;
+    padding-left: 226px;
+    width: 605px;
+}
+
+.fa.fa-play-circle.fa-4x {
+    color: white;
+    position: relative;
+    padding-right: 340px;
+    padding-top: 161px;
+}
+
+.fa.fa-play-circle.fa-4x:hover {
+    color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.site-header  > article {
+    display: inline-block;
+}
+
+.site-header  > article > p {
+    color: white;
+}
+
+.site-header article {
+    display: inline-block;
+    width: 250px;
+    vertical-align: top;
+    word-break: break-all;
+    padding-top: 100px;
+    padding-right: 30px;
+    margin-bottom: 69px;
+}
+
+.site-header article > p {
+    text-align: left;
+    word-break: break-all;
+}
+
+.fa.fa-code.fa-2x {
+    color: white;
+    margin-left: -207px;
+    padding-bottom: 15px;
+}
+
+.fa.fa-area-chart.fa-2x {
+    color: white;
+    margin-left: -207px;
+    padding-bottom: 15px;
+}
+
+.fa.fa-diamond.fa-2x {
+    color: white;
+    margin-left: -207px;
+    padding-bottom: 15px;
+}
+
+.fa.fa-cube.fa-2x {
+    color: white;
+    margin-left: -207px;
+    padding-bottom: 15px;
+}
+
+.site-main {
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.first-section {
+margin-left: 245px;
+}
+
+.first-section article {
+    display: inline-block;
+    margin-top: 50px;
+    vertical-align: top;
+    padding-right: 30px;
+}
+
+.first-article {
+    width: 284px;
+}
+
+.first-article > p {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.second-article {
+    width: 307px;
+}
+
+.second-article > hr {
+    margin-bottom: 28px;
+    margin-top: 28px;
+
+}
+
+.second-p {
+    font-weight: bold;
+}
+
+.third-article {
+    width: 500px;
+    z-index: 5;
+}
+
+.third-article > img{
+    width: 350px;
+}
+
+.orange {
+    width: 430px;
+    background-color: #FC681E;
+    opacity: 0.7;
+    height: 487px;
+    z-index: 0;
+    margin-top: -476px;
+    float: right;
+}
+
+.second-section {
+    background-color: #3C3F4A;
+    padding-top: 34px;
+    padding-bottom: 34px;
+}
+
+.special-events {
+    background-color: #3C3F4A;
+    border: 2px solid white;
+    padding: 80px;
+    margin: 50px 229px 137px 200px;
+}
+
+.special-events > h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: “Roboto“,sans-serif;
+    color: white;
+}
+
+.special-events-p {
+    color: white;
+    text-align: center;
+    font-family: “Roboto“,sans-serif;
+    width: 398px;
+    margin-left: 250px;
+}
+
+.email {
+    border-bottom: 4px solid #FC681E;
+    width: 187px;
+    text-align: left;
+    font-family: “Roboto“,sans-serif;
+    color: white;
+    margin-left: 250px;
+    margin-top: 79px;
+    cursor: pointer;
+}
+
+.special-events > button {
+    padding: 10px 25px;
+    color: white;
+    background-color: #FC681E;
+    font-family: “Roboto“,sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 18px;
+    float: right;
+    position: relative;
+    left: -277px;
+    top: -49px;
+    width: 132px;
+    cursor: pointer;
+}
+
+.special-events > button:hover {
+    background-color: #333333;
+    padding: 10px 25px;
+    color: white;
+    font-family: “Roboto“,sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 18px;
+    float: right;
+    position: relative;
+    left: -277px;
+    top: -49px;
+    width: 132px;
+    cursor: pointer;
+}
+
+.second-section-footer {
+    background-color: #282A30;
+    width: 100%;
+    height: 80px;
+    margin-bottom: -34px;
+}
+
+.footer-p1 {
+    color: white;
+    float: left;
+    font-family: “Roboto“,sans-serif;
+    padding: 10px 25px;
+    text-transform: uppercase;
+}
+
+.footer-p2 {
+    color: #ABACAE;
+    float: right;
+    font-family: “Roboto“,sans-serif;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    width: 259px;
+}
+
+.third-section {
+    margin-left: 300px;
+}
+
+.third-section-header {
+    margin-bottom: 50px;
+}
+
+.third-section-header > h3 {
+    font-weight: bold;
+    font-family: “Roboto“,sans-serif;
+    width: 300px;
+}
+
+.third-section-article {
+    display: inline-block;
+    vertical-align: top;
+    width: 262px;
+    box-shadow: 10px 12px 7px -5px rgba(0,0,0,0.43);
+    margin-right: 125px;
+    padding-bottom: 21px;
+    margin-bottom: 30px;
+}
+
+.third-section-header  > p {
+    font-family: “Roboto“,sans-serif;
+    width: 655px;
+    margin-top: -81px;
+    margin-left: 400px;
+    font-weight: bold;
+}
+
+.speakers-img {
+    width: 262px;
+}
+
+.speakers-name {
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.speakers-proffesion {
+    text-transform: uppercase;
+    color: #FC681E;
+    padding-left: 20px;
+}
+
+.fa.fa-github:hover {
+    color: #FC681E;
+    cursor: pointer;
+}

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Lato, sans-serif;
+}
+
+header {
+    background: url(images/star-wars-logo.jpg) no-repeat top center;
+    background-size: cover;
+    width: 100%;
+    min-height: 700px;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 3em;
+    margin: 0;
+    padding: 50px;
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.blog img{
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.blog article {
+    width: 400px;
+    padding: 10px;
+}
+
+section h2 {
+    display: block;
+    text-align: center;
+    font-size: 3em;
+    margin: 40px 0;
+}
+
+.images {
+    margin: 0 auto;
+}
+
+.gallery::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.images img {
+    width: 180px;
+    height: 180px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact {
+    padding: 50px;
+}
+
+.info {
+    width: 50%;
+    float: left;
+    margin-right: 150px;
+    line-height: 25px;
+}
+
+.contact-form input, .contact-form textarea{
+    display: block;
+    width: 35%;
+    padding: 10px;
+    outline: none;
+    margin: 10px 0;
+    background: none;
+    border: 1px solid #000000;
+}
+
+
+.contact-form button {
+    display: block;
+    padding: 10px 25px;
+    text-transform: uppercase;
+}

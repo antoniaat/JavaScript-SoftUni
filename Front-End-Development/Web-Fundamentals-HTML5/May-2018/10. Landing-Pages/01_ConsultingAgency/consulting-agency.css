@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body, ul {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+header {
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0, 0.3)),
+    url('images/Layer-759_02.jpg') no-repeat center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+nav {
+    background: rgba(186, 146, 94, 0.9);
+    width: 60%;
+    margin: 0px auto;
+    position: relative;
+    top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 18px 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 20px 20px;
+    font-size: 20px;
+}
+
+header h1 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 160px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+header p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    width: 27%;
+    margin: 0 auto;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+button {
+    background: #090721;
+    color: white;
+    border: none;
+    outline: none;
+    margin: 28px auto;
+    margin-bottom: 200px;
+    width: 10%;
+    padding: 13px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+button i {
+    color: #BA925E;
+}
+
+#industries {
+    padding: 40px;
+    text-align: center;
+    vertical-align: top;
+}
+
+#industries h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+#first-row article, #second-row article {
+    width: 30%;
+    display: inline-block;
+    text-align: left;
+    margin: 20px;
+}
+
+#industries h3 i {
+    margin-left: -46px;
+    padding: 11px;
+    background: #080820;
+    color: white;
+    border-radius: 50%;
+}
+
+#middle-section {
+    background: url("images/steel-bg.jpg");
+    background-size: cover;
+}
+
+#middle-section p {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding: 30px 0;
+}
+
+#middle-section p:first-line {
+    color: #BA925E;
+}
+
+#choose-us {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0, 0.6)),
+    url('images/background-choose-us.jpg') no-repeat center;
+    background-size: cover;
+    text-align: center;
+}
+
+#choose-us h1 {
+    margin-top: 0;
+    color: white;
+    padding-top: 30px;
+    font-size: 35px;
+}
+
+#choose-us article {
+    display: inline-block;
+    width: 28%;
+    color: white;
+    border: 2px solid #BA925E;
+    padding: 18px;
+    vertical-align: top;
+    box-sizing: border-box;
+    margin: 20px 0 0 5px;
+    height: 200px;
+    margin-bottom: 40px;
+}
+
+#choose-us article p {
+    text-align: left;
+}
+
+#quote {
+    background-image: url(images/consulting-woman.jpg);
+    background-repeat: no-repeat;
+    text-align: right;
+    height: 640px;
+}
+
+#quote > article {
+    width: 40%;
+    background: rgba(237, 236, 233, 0.5);
+    padding: 20px;
+    position: relative;
+    left: 836px;
+    top: 40px;
+    margin-bottom: 40px;
+    padding: 25px;
+
+}
+
+#nested-article {
+    height: 300px;
+    background: #080820;
+    padding: 15px;
+    width: 80%;
+    margin: 43px;
+    color: white;
+}
+
+#nested-article span {
+    text-align: right;
+    font-size: 15px;
+}
+
+#nested-article h2 {
+    text-align: left;
+}
+
+#partners {
+    text-align: center;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+}
+
+#partners img {
+    vertical-align: top;
+    display: inline-block;
+    width: 180px;
+    height: 96px;
+
+}
+
+footer {
+    padding: 50px;
+    background: #080820;
+    color: white;
+}
+
+footer article {
+    width: 30%;
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+}
+
+footer:nth-child(2){
+    width: 15%;
+}
+
+footer div {
+    width: 20%;
+    display: inline-block;
+}
+
+#social {
+    margin-left: 25px;
+}
+
+#social i {
+    background: #83838F;
+    color: #080820;
+    border-radius: 50%;
+    margin: 8px;
+    padding: 12px;
+}
+
+footer div {
+    vertical-align: top;
+}
+
+footer div a {
+    color: orange;
+    text-decoration: none;
+}
+
+footer article img {
+    width: 120px;
+    height: 120px;
+}
+
+header button:hover, header button:hover i{
+    cursor:pointer;
+    color: #080820;
+    background: #BA925E;
+}
+

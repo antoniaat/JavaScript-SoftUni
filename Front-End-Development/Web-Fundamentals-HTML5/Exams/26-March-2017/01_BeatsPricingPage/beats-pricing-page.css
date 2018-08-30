@@ -1,0 +1,87 @@
+/* latin-ext */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v13/UyBMtLsHKBKXelqf4x7VRQ.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v13/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v13/R4a6fty3waPci7C44H8AjvY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v13/tI4j516nok_GrVf4dhunkg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: #DDDDDD;
+
+    margin: 100px auto;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+body article {
+    width: 367px;
+    background: white;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.75);
+    border-radius: 12px;
+    text-align: center;
+    margin-right: 34px;
+}
+
+article > img {
+    width: 114px;
+    height: 151px;
+    margin-top: 28px;
+}
+
+article > h3 {
+    text-transform: uppercase;
+}
+
+article > p {
+    width: 92%;
+    margin: 0 auto;
+}
+
+article > button {
+    padding: 11px;
+    text-align: center;
+    border: 3px solid #2C2C2C;
+    width: 42%;
+    border-radius: 25px;
+    background: white;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+.price {
+    font-weight: 900;
+}

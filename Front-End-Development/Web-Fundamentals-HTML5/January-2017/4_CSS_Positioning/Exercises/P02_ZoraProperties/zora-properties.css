@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:700|Open+Sans:400,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+aside {
+    float: left;
+    height: 1100px;
+    width: 315px;
+    background-color: #FFFFFF;
+}
+
+aside h2 {
+    font-family:  "Comfortaa", sans-serif;
+    text-align: center;
+    font-size: 40px;
+}
+
+aside img {
+    margin-left: 73px;
+    width: 177px;
+    border-radius: 50%;
+    font-size: 20%;
+}
+
+aside p {
+    font-family:  "Comfortaa", sans-serif;
+    text-transform: uppercase;
+    color: #B9C2C9;
+    font-size: 20px;
+    text-align: center;
+}
+
+aside nav ul li {
+    overflow: hidden;
+    padding: 10px;
+}
+
+aside nav ul li a {
+    font-family:  "Comfortaa", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #B9C2C9;
+    text-decoration: none;
+}
+
+aside nav ul li a:hover {
+    font-family:  "Comfortaa", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+}
+
+.fa.fa-cogs {
+    color: #B9C2C9;
+    position: relative;
+    bottom: -28px;
+    left: -12px;
+}
+
+.fa.fa-cogs:hover {
+    color: black;
+    position: relative;
+    bottom: -28px;
+    left: -12px;
+}
+
+.fa.fa-user-circle-o {
+    color: #B9C2C9;
+    position: relative;
+    bottom: -27px;
+    left: -12px;
+}
+
+.fa.fa-user-circle-o:hover {
+    color: black;
+    position: relative;
+    bottom: -27px;
+    left: -12px;
+}
+
+.fa.fa-users {
+    color: #B9C2C9;
+    position: relative;
+    bottom: -27px;
+    left: -12px;
+}
+
+.fa.fa-users:hover {
+    color: black;
+    position: relative;
+    bottom: -27px;
+    left: -12px;
+}
+
+.fa.fa-comments-o {
+    color: #B9C2C9;
+    position: relative;
+    bottom: -27px;
+    left: -12px;
+}
+
+
+.fa.fa-comments-o:hover {
+    color: black;
+    position: relative;
+    bottom: -27px;
+    left: -12px;
+}
+
+main {
+    background-color: #F4F5F7;
+    margin-top: -21px;
+    margin-bottom: 69px;
+    padding-bottom: 66px;
+}
+
+main h1 {
+    position: relative;
+    padding-top: 40px;
+    left: 70px;
+    font-family:  "Comfortaa", sans-serif;
+
+}
+
+main h1 span {
+    font-family:  "Open Sans", Arial, sans-serif;  "Comfortaa", sans-serif;
+    color: #92A4AD;
+}
+
+.button {
+    float: right;
+    background-color: #FF773A;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    border-radius: 17px;
+    position: relative;
+    top: -58px;
+    right: 58px;
+    border: none;
+}
+
+.button:hover {
+    float: right;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: #F37B46;
+    text-align: center;
+    padding: 10px;
+    border-radius: 17px;
+    position: relative;
+    top: -58px;
+    right: 58px;
+    cursor: pointer;
+    border: 2px solid #FF773A;
+}
+
+.border {
+    font-family:  "Open Sans", Arial, sans-serif;  "Comfortaa", sans-serif;
+    position: relative;
+    left: 69px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.sse {
+      font-family:  "Open Sans", Arial, sans-serif;  "Comfortaa", sans-serif;
+      position: relative;
+      left: 69px;
+      text-transform: uppercase;
+  }
+
+.offers {
+    margin-left: 50px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #FFFFFF;
+    width: 340px;
+    height: 405px;
+    box-shadow: 8px 6px 17px -1px rgba(0,0,0,0.26);
+    position: relative;
+    top: 20px;
+}
+
+.photos {
+    position: relative;
+    top: -58px;
+    width: 340px;
+    height: 261px;
+    margin-top: 60px;
+    z-index: 0;
+}
+
+.appartmentButtons {
+    z-index: 5;
+    text-align: center;
+    position: relative;
+    top: 77px;
+    left: -37px;
+    border-radius: 16px;
+    border: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+#buttonone {
+    background-color: #B8C5CD;
+}
+
+#buttontwo {
+    background-color: #64B365;
+}
+
+#buttonthree {
+    background-color: #91A5AE;
+}
+
+.pheading {
+    font-family:  "Open Sans", Arial, sans-serif;  "Comfortaa", sans-serif;
+    text-transform: capitalize;
+    position: relative;
+    top: -49px;
+    left: 18px;
+    color: black;
+}
+
+.pheading:first-of-type {
+    color: #969799;
+}
+
+.unit {
+    color: #969799;
+    font-family:  "Open Sans", Arial, sans-serif;  "Comfortaa", sans-serif;
+    text-transform: capitalize;
+    position: relative;
+    top: -49px;
+    left: 18px;
+}

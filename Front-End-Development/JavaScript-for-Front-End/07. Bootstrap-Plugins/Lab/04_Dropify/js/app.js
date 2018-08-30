@@ -1,0 +1,1 @@
+$('.dropify').dropify();

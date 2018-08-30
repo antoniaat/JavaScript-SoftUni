@@ -1,0 +1,191 @@
+body {
+    background: url('../../Resources/Images/background.jpg');
+    background-size: cover;
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-size: 20px;
+}
+
+#wrapper {
+    width: 800px;
+    height: 500px;
+    margin: 10px auto;
+    padding-top: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+}
+
+/************* Header style *************/
+header {
+    width: 700px;
+    margin: 0 auto;
+}
+
+header > ul {
+    padding: 5px;
+}
+
+header > ul > li {
+    display: inline-block;
+    padding: 2px;
+    width: 23%;
+    height: 50px;
+    text-align: center;
+    color: #1a6dae;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+header > ul > li:first-child,
+header > ul > li:hover {
+    background-color: rgba(26, 109, 174, 0.5);
+}
+
+header > ul > li > img {
+    vertical-align: middle;
+}
+
+/************* Main style *************/
+main {
+    width: 700px;
+    margin: 10px auto;
+}
+
+/************* Form style *************/
+form {
+    margin-left: 2px;
+}
+
+fieldset {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    height: 250px;
+    border: 2px solid rgba(26, 109, 174, 1);
+    border-radius: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+legend {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+input, select, label, legend {
+    outline: none;
+    color: #1a6dae;
+}
+
+#personal-info > input {
+    width: 90%;
+    height: 40px;
+    box-sizing: border-box;
+    margin: 10px 0 10px 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1em;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #1a6dae;
+}
+
+input::-webkit-input-placeholder {
+    color: rgba(26, 109, 174, 0.5);
+}
+
+span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 3px;
+    left: 35px;
+}
+
+#name-icon {
+    background: url('../../Resources/Images/user1.png');
+}
+
+#tel-icon {
+    background: url('../../Resources/Images/phone.png');
+}
+
+#email-icon {
+    background: url('../../Resources/Images/email.png');
+}
+
+#radio-buttons {
+    text-align: center;
+    margin: 10px auto;
+}
+
+#flight-info > label {
+    display: block;
+    text-align: center;
+}
+
+#flight-info > input[type=date] {
+    display: block;
+    width: 90%;
+    height: 40px;
+    box-sizing: border-box;
+    margin: 10px auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1em;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #1a6dae;
+}
+
+select {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    height: 50px;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid #1a6dae;
+    border-radius: 20px;
+}
+
+#Bg, #rest {
+    color: #1a6dae;
+    background-color: #BEE1E9;
+    font-size: 0.7em;
+}
+
+#buttons {
+    margin: 10px auto;
+    text-align: right;
+}
+
+input[type=submit],
+input[type=reset] {
+    width: 100px;
+    height: 50px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+input[type=submit] {
+    border: 1px solid #00ff00;
+    background-color: transparent;
+    color: #00FF00;
+}
+
+input[type=reset] {
+    border: 1px solid #ff0000;
+    background-color: transparent;
+    color: #FF0000;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(0, 178, 0);
+    color: #FFFFFF;
+}
+
+input[type=reset]:hover {
+    background-color: rgb(180, 0, 0);
+    color: #FFFFFF;
+}

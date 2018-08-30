@@ -1,0 +1,56 @@
+Zora Properties
+
+zora
+
+john doe
+
+properties
+
+applicants
+
+tennants
+
+messages
+
+Properties 3
+
+add property
+
+spring garden road complex
+
+1158 spring garden road, los angeles us
+
+rented
+
+super sweet apartment
+unit 305
+
+listed
+
+super sweet apartment
+
+unit 302
+
+draft
+
+super sweet apartment
+
+unit 303
+
+spring garden road complex
+
+1158 spring garden road, los angeles us
+
+listed
+
+super sweet apartment
+
+unit 305
+
+listed
+super sweet apartment
+unit 302
+
+draft
+super sweet apartment
+unit 303

@@ -1,0 +1,36 @@
+<!--Problems for in-class lab for the “JavaScript Advanced” course @ SoftUni.
+Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/640/.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>List Of Items</title>
+</head>
+<body>
+<h1>List of Items</h1>
+<ul id="items">
+    <li>First</li>
+    <li>Second</li>
+</ul>
+<label>
+    <input type="text" id="newItemText"/>
+    <input type="button" value="Add" onclick="addItem()">
+</label>
+
+<script>
+    function addItem() {
+        let newElement = document.getElementById('newItemText').value;
+        let list = document.getElementById('items');
+
+        if (newElement.length === 0)
+            return;
+
+        let listItem = document.createElement('li');
+        listItem.textContent = newElement;
+        list.appendChild(listItem);
+    }
+</script>
+
+</body>
+</html>

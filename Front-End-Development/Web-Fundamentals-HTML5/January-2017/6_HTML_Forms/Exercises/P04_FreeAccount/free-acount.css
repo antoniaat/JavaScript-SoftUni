@@ -1,0 +1,129 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+
+
+html {
+    background-color: #EEEEEE;
+}
+
+body {
+    background-color: white;
+    width: 800px;
+    margin: 0 auto;
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+.site-header {
+    padding: 24px 37px;
+    text-align: center;
+}
+
+.site-header h1 {
+    font-size: 24px;
+}
+
+.site-header p {
+    padding-bottom: 15px;
+}
+
+
+.account h2 {
+    margin-left: 70px;
+
+}
+
+.account input {
+    width: 250px;
+    padding: 14px;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #CFCFCF;
+    margin-left: 70px;
+}
+
+.yes::before {
+    background-color: #05FC02;
+    left: 307px;
+    font-family: FontAwesome, serif;
+    content: '\f00c';
+    font-size: 21px;
+    position: relative;
+    top: 33px;
+    padding: 7px;
+    color: white;
+}
+
+.no::before {
+    background-color: #D81511;
+    left: 312px;
+    font-family: FontAwesome, serif;
+    content: '\f00d';
+    font-size: 21px;
+    position: relative;
+    top: 33px;
+    padding: 7px;
+    color: white;
+}
+
+.check-box{
+    margin-left: 70px;
+    color: darkgray;
+}
+
+.first-button {
+    border: 1px solid #D0D0D0;
+    margin: 30px 67px;
+    background-color: #F0F0F0;
+    padding: 9px 20px;
+    width: 183px;
+    border-radius: 9px;
+    font-weight: bold;
+    box-shadow: 3px 3px 7px #888888;
+}
+
+.first-button:hover {
+    cursor: pointer;
+    background-color: #AFDF67;
+}
+
+form {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.login input {
+    width: 250px;
+    padding: 14px;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #CFCFCF;
+    margin-left: 70px;
+}
+
+.login h2 {
+    margin-left: 70px;
+}
+
+a {
+    text-transform: none;
+    color: #B48389;
+    text-decoration: none;
+    margin-left: 70px;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.second-button {
+    border: 1px solid #D0D0D0;
+    margin: 30px 67px;
+    background-color: #F0F0F0;
+    padding: 9px 20px;
+    width: 100px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 3px 3px 7px #888888;
+}

@@ -1,0 +1,31 @@
+* {
+    font-family: sans-serif;
+}
+
+main {
+    margin: 50px auto;
+    max-width: 1060px;
+    padding: 0 10px;
+}
+
+h2 {
+    color: #234465;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 5px;
+    letter-spacing: 0;
+    width: 800px;
+}
+
+img {
+    float: left;
+    width: 180px;
+    height: 100px;
+    margin: 10px 50px 0 0;
+    padding-bottom: 5px;
+}

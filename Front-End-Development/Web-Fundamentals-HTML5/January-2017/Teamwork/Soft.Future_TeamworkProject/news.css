@@ -1,0 +1,352 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+body {
+    width: 100%;
+    min-height: 500px;
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container section {
+    width: 80%;
+}
+
+.container aside {
+    width: 20%;
+    color: #fcff9d;
+}
+
+header {
+    margin-top: 0;
+    background: url("img/aurullia-2-1440.jpg") no-repeat;
+    background-size: cover;
+    height: 662px;
+    box-sizing: border-box;
+    border: 3px solid #000;
+}
+
+nav {
+    position: absolute;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    overflow: hidden;
+    padding: 0px 10px;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 5px;
+}
+
+nav ul li:hover {
+    display: inline-block;
+    overflow: hidden;
+    padding: 0px 10px;
+    border-bottom: 3px solid #FFA000;
+    padding-bottom: 5px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+nav ul li a:hover {
+    color: #647C93;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+.container {
+    background: linear-gradient(to bottom, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.8) 15%, rgba(30, 87, 153, 1) 19%, rgba(30, 87, 153, 1) 20%, rgba(41, 137, 216, 1) 50%, rgba(30, 87, 153, 1) 80%, rgba(30, 87, 153, 1) 81%, rgba(30, 87, 153, 0.8) 85%, rgba(30, 87, 153, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1);
+    background-size: contain;
+    background-position: center;
+}
+
+.title h1 {
+    opacity: 1;
+}
+
+#primaryheading {
+    margin: 0 auto;
+    color: #000000;
+    width: 70%;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 3px 2px #8e8e8e;
+    align-self: center;
+    padding: 10px;
+    transition: 0.3s all;
+}
+
+#primaryheading span {
+    transition: 0.3s all;
+}
+
+#primaryheading:hover {
+    font-size: 34px;
+    border: 1px solid #8e8e8e;
+}
+
+#primaryheading:hover span {
+    font-size: 54px;
+}
+
+header {
+    display: flex;
+}
+
+.newsarticle {
+    padding: 0 10px;
+    width: 20%;
+    height: 300px;
+    overflow: hidden;
+    margin: 10px;
+    border: 1px solid #787878;
+    display: inline-block;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+#hidden-element {
+    width: 1%;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.newsarticle:hover {
+rgba(209, 197, 209, 1);
+    box-shadow: 5px 5px 14px -6px rgba(209, 197, 209, 1);
+    content: none;
+    border-radius: 20px;
+}
+
+.newscontent a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+}
+
+.head {
+    color: #FFA000;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+footer {
+    font-size: 1.6rem;
+    padding: 13px;
+    background-color: #414577;
+    text-align: center;
+    color: white;
+    height: 20%;
+}
+
+.site-footer {
+    background: #424577;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.site-footer section {
+    vertical-align: top;
+    color: white;
+    width: 230px;
+    margin: 5px;
+    display: inline-block;
+    text-align: left;
+}
+
+.site-footer .consulting p {
+    margin-left: 30px;
+}
+
+.site-footer p.social-links {
+    margin: 30px 0px 0px 50px;
+}
+
+.site-footer .social-links a {
+    text-decoration: none;
+    color: #424577;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 1.5em;
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.site-footer .social-links a:hover {
+    background: #aaa;
+    box-shadow: 0px 0px 4px white;
+}
+
+.site-footer .extra-links .first-column {
+    margin-left: 30px;
+}
+
+.site-footer .extra-links div {
+    display: inline-block;
+    width: calc(50% - 25px);
+    vertical-align: top;
+}
+
+.site-footer .extra-links a {
+    text-decoration: none;
+    display: block;
+    margin: 5px;
+    color: #b6aa9d;
+}
+
+.site-footer .extra-links a:hover {
+    color: #f1e3d2;
+}
+
+.site-footer .instagram-widget li {
+    display: inline-block;
+}
+
+.site-footer .instagram-widget img {
+    width: 58px;
+    height: 58px;
+}
+
+.site-footer .instagram-widget img:hover {
+    opacity: 0.8;
+}
+
+body {
+    background: #ffffff;
+    font-family: Avenir, Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #000
+}
+
+#news-container {
+    background: #c6c6c6;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+    border-radius: 20px;
+}
+
+#news-container input[type="radio"] {
+    display: none;
+}
+
+#news-container label img {
+    width: 20%;
+    float: left;
+    clear: left;
+    border: 10px solid #111;
+}
+
+#news-container label h1 {
+    background: #787878;
+    margin-left: 5px;
+    width: 20%;
+    float: left;
+    clear: left;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    transition: margin-left 0.2s;
+    padding: 0 5px;
+    font-family: "Simonetta", "Trebuchet MS", Arial, sans-serif;
+    font-size: 1.2em;
+    text-wrap: normal;
+}
+
+#news-container label h1:hover {
+    margin-left: 13px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.82);
+}
+
+#news-container label:hover {
+    cursor: pointer;
+}
+
+#news-block {
+    width: 90%;
+    position: relative;
+    margin-left: calc(25%);
+}
+
+#news-block div figcaption {
+    width: calc(50% - 5px);
+    float: right;
+}
+
+#news-block div img {
+    width: 50%;
+    height: auto;
+    float: right;
+    padding: 20px;
+    padding-top: 0;
+}
+
+#news-block div {
+    margin: 0;
+    width: 82%;
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.5s all linear;
+}
+
+#news-block div figcaption {
+    position: relative;
+    color: #263b41;
+    font-size: 0.8rem;
+    padding-left: 3rem;
+    line-height: 1.4;
+    text-align: left;
+    font-style: italic;
+}
+
+#Presidenta:checked ~ #news-block #president,
+#Protest:checked ~ #news-block #protesting,
+#Religia:checked ~ #news-block #religion,
+#Svetlin:checked ~ #news-block #redjep {
+    opacity: 1;
+    transform: scale(1);
+
+}
+
+#news-block div h1 {
+    margin: 40px;
+    font-family: 'Oxygen', sans-serif;
+
+}
+
+#news-block div p {
+    text-align: justify;
+}

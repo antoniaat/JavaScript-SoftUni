@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
+
+body {
+    font-family: 'Vollkorn', serif;
+    margin: 0 auto;
+    width: 1000px;
+    font-size: 16px;
+}
+
+header h1 {
+    font-family: 'Vollkorn', serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    color: #778495;
+    font-size: 40px;
+}
+
+main article {
+    vertical-align: top;
+    display: inline-block;
+    border: 2px solid #F8F9FB;
+    width: 278px;
+    height: 425px;
+    margin-left: 38px;
+}
+
+.business {
+    font-size: 30px;
+    font-family: 'Vollkorn', serif;
+    margin-top: 0px;
+    text-transform: capitalize;
+    background-color: #EBEFF2;
+    color: #808E99;
+    padding: 18px;
+    text-align: center;
+}
+
+.price {
+    font-size: 60px;
+    font-family: 'Vollkorn', serif;
+    color: #808E99;
+    text-align: center;
+    margin-top: -13px;
+    margin-bottom: 0px;
+}
+
+.offers {
+    padding-left: 8px;
+    font-size: 16px;
+    font-family: Tahoma, sans-serif;
+    color: #808E99;
+    border-bottom: 1px solid #F1F3F2;
+}
+
+.purchase {
+    border: none;
+    text-align: center;
+    background-color: #DDDDDD;
+    color: #ffffff;
+    text-transform: capitalize;
+    border-radius: 8px;
+    padding: 10px 25px;
+    position: relative;
+    left: 69px;
+}
+
+article:first-child .purchase {
+    text-align: center;
+    background-color: #DDDDDD;
+    color: #ffffff;
+    text-transform: capitalize;
+    border-radius: 8px;
+    padding: 10px 25px;
+    position: relative;
+    left: 69px;
+    bottom: -103px;
+}
+
+article:nth-child(2) .purchase {
+    text-align: center;
+    background-color: #DDDDDD;
+    color: #ffffff;
+    text-transform: capitalize;
+    border-radius: 8px;
+    padding: 10px 25px;
+    position: relative;
+    left: 69px;
+    bottom: -70px;
+}

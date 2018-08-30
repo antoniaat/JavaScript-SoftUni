@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Social Buttons</title>
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="jumbotron col-5 m-4">
+            <h1>
+                Sign up
+            </h1>
+            <form>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                           placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.
+                    </small>
+                </div>
+                <button type="submit" id="submitBtn" class="btn btn-primary btn-dark mt-3">Submit</button>
+            </form>
+
+            <div class="row mt-4">
+                <button class="btn btn-warning mr-2 ml-3">
+                    <a href="http://ludu.co" class="text-white">Sign up with Ludu!</a>
+                </button>
+                <button class="btn btn-danger">
+                    <a href="http://google.com" class="text-white">Sign up with Google!</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="jumbotron col-5 m-4">
+            <h1 class="h1 mb-5">
+                Registered users
+            </h1>
+            <ul class="list-group">
+                <li class="list-group-item">Pesho Petrov - pesho@gmail.com
+                    <span class="btn badge badge-danger badge-pill float-right">x</span>
+                </li>
+                <!--<li class="list-group-item">Gosho Petrov - gosho@gmail.com-->
+                <!--<span class="btn badge badge-danger badge-pill float-right">x</span>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/bootstrap.min.js"></script>
+
+<!--Bootstrap Plugins-->
+<script src="js/sweetalert.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

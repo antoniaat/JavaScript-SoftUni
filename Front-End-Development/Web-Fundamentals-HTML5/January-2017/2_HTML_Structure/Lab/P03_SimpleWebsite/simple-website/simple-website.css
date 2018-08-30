@@ -1,0 +1,51 @@
+body {
+    background: #CCCCCC;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    background: rgb(68, 68, 68);
+    margin: 0;
+    list-style: none;
+}
+
+nav {
+    text-align: center;
+}
+
+ul li {
+    font-size: 24px;
+    line-height: 40px;
+    height: 40px;
+    padding: 20px;
+    display: inline-block;
+}
+
+section {
+    margin: 20px;
+}
+
+header p {
+    font-style: italic;
+}
+
+article p {
+    font-size: 24px;
+}
+
+footer {
+    background: rgb(68, 68, 68);
+    text-align: center;
+    color: white;
+    padding: 8px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+

@@ -1,0 +1,136 @@
+/* latin-ext */
+@font-face {
+    font-family: 'Sansita';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Sansita Regular'), local('Sansita-Regular'), url(https://fonts.gstatic.com/s/sansita/v1/OIg80uztPzTvmaigz6QbovY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Sansita';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Sansita Regular'), local('Sansita-Regular'), url(https://fonts.gstatic.com/s/sansita/v1/hJSyxUQeTBqx_NJRx-g3LA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+body {
+    background: url("bg.jpg");
+    background: cover;
+}
+
+body, header {
+    margin: 0;
+    padding: 0;
+}
+
+body > header {
+    font-family: 'Sansita';
+    width: 100%;
+    height: 46px;
+    background-color:#FF0000;
+    color: #FFFF00;
+    font-size: 30px;
+    text-align: center;
+    filter:progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#FF0000, endColorstr=#008000);
+    background-image:-webkit-gradient(linear, left bottom, right bottom, color-stop(13%,#FF0000), color-stop(45%,#008000),color-stop(94%,#0000FF));
+}
+
+nav {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 160px;
+    background-color: rgba(245, 230, 254, 0.9);
+    font-family: 'Sansita';
+    height: 180px;
+    border-radius: 12px;
+}
+
+nav > header {
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul li > a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    list-style-image: url("a.png");
+
+}
+
+nav ul li {
+    list-style-image: url("a.png");
+}
+
+main section > article {
+    margin-top: -158px;
+    margin-bottom: 192px;
+    border-radius: 8px;
+    margin-left: 200px;
+    width: 800px;
+    background-color: rgba(245, 230, 254, 0.9);
+    font-family: 'Sansita';
+}
+
+main section article #webColors {
+    margin-left: 9px;
+    margin-top: -171px;
+    font-family: 'Sansita';
+    font-size: 20px;
+    color: white;
+    background-color: #FF0000;
+    border-radius: 8px;
+    width: 772px;
+    height: 20px;
+    text-align: left;
+    padding: 8px;
+}
+
+main section article #webColors p {
+    margin-left: 215px;
+    margin-top: -171px;
+    font-family: 'Sansita';
+    font-size: 20px;
+    color: black;
+}
+
+main section article p:first-letter {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+main section article footer > a {
+    color: black;
+}
+
+main section article #RGBA {
+    margin-left: 9px;
+    margin-top: -171px;
+    font-family: 'Sansita';
+    font-size: 20px;
+    color: white;
+    background-color: #008000;
+    border-radius: 8px;
+    width: 772px;
+    height: 20px;
+    text-align: left;
+    padding: 8px;
+}
+
+main section article #HSLHSV {
+    margin-left: 9px;
+    margin-top: -171px;
+    font-family: 'Sansita';
+    font-size: 20px;
+    color: white;
+    background-color: #800080;
+    border-radius: 8px;
+    width: 772px;
+    height: 20px;
+    text-align: left;
+    padding: 8px;
+}

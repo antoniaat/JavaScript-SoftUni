@@ -1,0 +1,110 @@
+body {
+    width: 800px;
+    background-color: #EEEEEE;
+    font-size: 16px;
+    font-family: "Roboto", Helvetica, sans-serif;
+    color: #1E1917;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.site-header {
+    color: #334E5A;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    background-color: white;
+    border-top: 10px solid #334E5A;
+    border-right: 10px solid #334E5A;
+    margin-bottom: 40px;
+}
+
+span {
+    margin-left: 40px;
+}
+
+.input-label > input {
+    margin-left: 40px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    display: block;
+    width: 500px;
+    border-top: 4px solid #334E5A;
+    border-left: 4px solid #334E5A;
+    height: 30px;
+}
+
+.radio-label input {
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.radio-input {
+    position: relative;
+    right: -34px;
+}
+
+.input-checkbox {
+    padding: 15px;
+    background-color: white;
+    border-top: 4px solid #334E5A;
+    border-left: 4px solid #334E5A;
+    width: 500px;
+    height: 150px;
+    display: block;
+    margin-left: 40px;
+    margin-top: 9px;
+}
+
+.input-checkbox > input {
+    margin-bottom: 15px;
+}
+
+a {
+    color: #226860;
+}
+
+button {
+    display: inline-block;
+}
+
+.cancel {
+    text-transform: uppercase;
+    color: #E05F3F;
+    border: none;
+    border-bottom: 3px solid #E05F3F;
+    border-right: 3px solid #E05F3F;
+    background-color: transparent;
+    padding: 10px 25px;
+    width: 200px;
+    height: 35px;
+    outline: none;
+    margin-left: 40px;
+}
+
+.save {
+    text-transform: uppercase;
+    color: #226860;
+    border: none;
+    border-bottom: 3px solid #226860;
+    border-right: 3px solid #226860;
+    background-color: transparent;
+    padding: 10px 25px;
+    width: 200px;
+    height: 35px;
+    outline: none;
+    margin-left: 40px;
+}
+
+.cancel:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #E05F3F;
+}
+
+.save:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #226860;
+}

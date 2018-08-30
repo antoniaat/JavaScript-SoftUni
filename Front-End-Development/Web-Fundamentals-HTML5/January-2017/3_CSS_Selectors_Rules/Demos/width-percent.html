@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Width in Percent</title>
+    <style>
+        #outer-div {
+            width: 300px;
+            height: 100px;
+            border: 3px dashed #89b3a5;
+            text-align: center;
+        }
+        #inner-div {
+            width: 50%;
+            height: 50px;
+            border: 3px solid #1b6d85;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer-div">
+        I am outer-div with 600px
+        <div id="inner-div">
+            I am div with 50% from #outer-div
+        </div>
+    </div>
+</body>
+</html>

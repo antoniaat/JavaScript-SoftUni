@@ -1,0 +1,45 @@
+<!--Problems for in-class lab for the “JavaScript Advanced” course @ SoftUni.
+Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/328/.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Extract Parenthesis</title>
+</head>
+<body>
+<p id="content">
+    Lorem ipsum dolor sit amet, (consectetur) adipisicing elit. Assumenda blanditiis earum magnam maxime mollitia nemo,
+    non quod ratione voluptates! Cum eaque eos (fugiat), minus nam necessitatibus quas rem soluta? A ab accusamus ad
+    amet aperiam architecto aspernatur commodi deserunt distinctio doloremque eaque expedita fugit illo illum impedit
+    inventore laboriosam molestiae molestias mollitia, nesciunt nulla officiis placeat possimus provident quia quo quos
+    reprehenderit sed totam unde veniam voluptas voluptate voluptatibus. Aspernatur at atque aut debitis dolore dolorem
+    eaque enim, eveniet ex facere fugit hic ipsa iste itaque laboriosam magnam nam necessitatibus non officia omnis
+    porro quae quibusdam saepe vitae voluptatem (voluptatum)?
+</p>
+
+<button onclick="extract()" id="btn">
+    Print result
+    <br>
+</button>
+
+<script>
+    function extract() {
+        let parag = document.getElementById('content');
+        let content = parag.textContent;
+        let result = [];
+
+        content.match(/(\([^\(\)]+\))/gm).forEach((elem) => {
+            result.push(elem)
+        });
+
+        return result;
+
+        // let paragraph = document.createElement('p');
+        // paragraph.textContent = result.join('; ');
+        //
+        // console.dir(paragraph.textContent);
+    }
+</script>
+</body>
+</html>

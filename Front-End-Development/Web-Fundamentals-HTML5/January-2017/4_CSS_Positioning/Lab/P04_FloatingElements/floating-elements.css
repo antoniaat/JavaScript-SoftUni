@@ -1,0 +1,30 @@
+body {
+    font-size: 18px;
+    width: 400px;
+
+}
+
+.left {
+    float: left;
+    background-color: #6395EC;
+    padding: 15px 40px;
+    margin-right: 8px;
+    border-radius: 6px;
+}
+
+.right {
+    float: right;
+    background-color: #6395EC;
+    padding: 15px 40px;
+    margin-left: 8px;
+    border-radius: 6px;
+}
+
+.center {
+    width: 125px;
+    float: none;
+    background-color: #6395EC;
+    padding: 15px;
+    border-radius: 6px;
+    margin-left: 102px;
+}

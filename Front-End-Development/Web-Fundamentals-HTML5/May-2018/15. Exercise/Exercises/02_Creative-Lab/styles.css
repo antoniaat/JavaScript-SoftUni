@@ -1,0 +1,217 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body, ul, header, footer, section, article, ul, li, a, span, nav, h1, h2, aside, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: url('img/site-background.jpg') fixed;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+body #wrapper {
+    font-size: 16px;
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+    /*FlexBox*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+body #wrapper > header {
+    order: 1;
+    flex-grow: 4;
+    vertical-align: bottom;
+    margin-bottom: 17px;
+    padding: 15px 15px 25px;
+    width: 100%;
+    background: rgba(59, 0, 25, 0.8);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 46px;
+}
+
+body #wrapper > header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: left;
+    vertical-align: bottom;
+    width: 100%;
+}
+
+body #wrapper > header h1 a {
+    color: #000000;
+    text-decoration: none;
+    vertical-align: text-bottom;
+    /*FlexBox*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+body #wrapper > header h1 a span {
+    margin-left: 30px;
+    color: white;
+    padding-top: 32px;
+    padding-right: 424px;
+}
+
+body #wrapper > header h1 a img {
+    width: 22%;
+    height: 20%;
+    padding-left: 25px;
+}
+
+body #wrapper > header nav {
+    margin-top: 20px;
+    width: 100%;
+}
+
+body #wrapper > header nav ul {
+    list-style-type: none;
+    width: 98%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    margin-top: -37px;
+}
+
+body #wrapper > header nav ul li {
+    width: 150px;
+    text-align: center;
+    background: #3B0019;
+    display: inline-block;
+    font-size: 1.1em;
+    margin-left: 10px;
+    position: relative;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+
+body #wrapper > header nav ul li:hover {
+    background: white;
+    color: rgba(59, 0, 25, 1);
+    border: 1px solid rgb(59, 0, 25);
+
+}
+
+body #wrapper > header nav ul li:hover > a {
+    color: rgb(59, 0, 25);
+}
+
+body #wrapper > header nav ul li a {
+    color: rgb(255, 251, 251);
+    display: inline-block;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+body #wrapper > aside {
+    width: 29%;
+    order: 5;
+    /*FlexBox*/
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+body #wrapper > aside div {
+    background: rgba(59, 0, 25, 0.8);
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 100%;
+}
+
+body #wrapper > aside div.news ul li {
+    border-bottom: 1px solid white;
+    margin: 5px 0;
+}
+
+body #wrapper > aside div.news ul li a {
+    color: white;
+    padding: 5px 0 5px 0;
+    text-decoration: none;
+}
+
+body #wrapper > aside div.news ul li:last-of-type {
+    border: none;
+}
+
+body #wrapper > aside div ul {
+    list-style-type: none;
+}
+
+body #wrapper > aside div ul li a {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+}
+
+body #wrapper > aside div ul li a img {
+    vertical-align: middle;
+    width: 32px;
+    padding: 5px;
+}
+
+body #wrapper > aside div ul li a span {
+    vertical-align: middle;
+}
+
+body #wrapper > section {
+    width: 70%;
+    order: 2;
+}
+
+body #wrapper > section article {
+    background: rgba(59, 0, 25, 0.8);
+    margin-bottom: 13px;
+    padding: 25px;
+}
+
+body #wrapper > section article header {
+    margin: 0 auto;
+    width: 100%;
+}
+
+body #wrapper > section article header h1 {
+    font-size: 1.7em;
+}
+
+body #wrapper > section article > div p {
+    text-align: justify;
+}
+
+body #wrapper > footer {
+    background: rgba(59, 0, 25, 0.8);
+    float: left;
+    height: 70px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    order: 10;
+}
+
+body #wrapper > footer h2 {
+    font-size: 1.3em;
+    height: 100%;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+body #wrapper > footer h2 a {
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 300;
+}
+

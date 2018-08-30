@@ -1,0 +1,44 @@
+@media screen and (max-width: 740px) {
+
+    #info {
+        text-align: center;
+        float: none;
+    }
+
+    #photo {
+        text-align: center;
+        float: none;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        padding: 0;
+        font-size: 1.5em;
+    }
+}
+
+
+
+@media screen and (max-width: 570px) {
+
+}
+   section#skills.clearfix ul li {
+       display: inline-block;
+       width: 100px;
+   }
+
+    section#skills-right ul li:nth-last-child(2) {
+        width: 120px;
+    }
+
+@media screen and (max-width: 480px) {
+
+    ul li {
+        padding-left: 16px;
+        background: url(img/bullet.png) -3px 5px no-repeat;
+    }
+
+}

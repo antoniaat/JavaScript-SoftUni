@@ -1,0 +1,103 @@
+@media screen and (max-width:640px) {
+
+    .nav-primary {
+        display: inline-flex;
+        width: 100%;
+        padding: 0;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-item {
+        text-align: center;
+        padding: 4%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .solo {
+        padding: 0;
+        display: inline-flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .solo-cta {
+        padding: 0.4rem 3rem;
+        margin: 3rem auto;
+        width: auto;
+        text-align: center;
+    }
+
+    .solo-title {
+        text-align: center;
+    }
+
+    .solo-description {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .second-row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mixr-left {
+        padding: 0;
+        width: auto;
+    }
+
+    .urbeats-right {
+        padding: 0;
+        width: auto;
+    }
+
+    .studio {
+        padding: 2rem;
+        height: auto;
+        width: auto;
+        text-align: center;
+    }
+
+    .product-img {
+        width: 49%;
+        max-width: 100%;
+    }
+
+    .mixr-left, .urbeats-right {
+        padding: 2rem;
+    }
+
+    .nav-item > a {
+        margin: 0;
+    }
+
+    .sr-title {
+        margin: 10px auto 25px auto;
+    }
+
+    .sr-cta {
+        margin: 2rem auto;
+    }
+
+    .sr-description {
+        margin: 0 auto;
+
+    }
+
+    .studio-title {
+        text-align: center;
+    }
+
+    .studio-description {
+        width: 86%;
+        margin: 2rem auto;
+    }
+
+    .studio-cta {
+        margin: 2rem auto;
+    }
+}

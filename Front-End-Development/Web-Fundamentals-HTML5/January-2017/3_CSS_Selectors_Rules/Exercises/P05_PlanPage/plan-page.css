@@ -1,0 +1,178 @@
+body {
+    background: linear-gradient(45deg,
+    rgba(253, 149, 192, 1) 0%,
+    rgba(195, 95, 204, 1) 38%,
+    rgba(175, 104, 241, 1) 66%,
+    rgba(175, 104, 241, 1) 84%,
+    rgba(168, 125, 255, 1) 100%);
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    height: 770px;
+}
+
+main {
+    margin-left: 328px;
+    text-align: center;
+    background-color: #2D3154;
+    border-radius: 8px;
+    width: 800px;
+    height: 530px;
+}
+
+.plan-types {
+    margin: 20px 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+main div ul li {
+    background-color: #ffffff;
+}
+
+.card-type {
+    background-color: rgb(255, 255, 255);
+}
+
+main .plan-types .cards .card-type {
+    display: inline-block;
+}
+
+#basic-plan {
+    font-family: 'Lato', sans-serif;
+    background: url("plan-background-basic.png") #ffffff no-repeat;
+    margin-right: 25px;
+    width: 200px;
+    height: 235px;
+    border-radius: 8px;
+}
+
+#basic-plan h1 {
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    color: #ffffff;
+    font-size: 35px;
+}
+
+#basic-plan h2 {
+    font-family: 'Lato', sans-serif;
+    color: black;
+    font-size: 40px;
+    text-align: center;
+}
+
+.select-plan {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(45deg,
+    rgba(253, 149, 192, 1) 0%,
+    rgba(195, 95, 204, 1) 38%,
+    rgba(175, 104, 241, 1) 66%,
+    rgba(175, 104, 241, 1) 84%,
+    rgba(168, 125, 255, 1) 100%);
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#pro-plan {
+    font-family: 'Lato', sans-serif;
+    margin-right: 25px;
+    background: url("plan-background-pro.png") #ffffff no-repeat;
+    height: 235px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+#pro-plan h1 {
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    color: #ffffff;
+    font-size: 35px;
+}
+
+#pro-plan h2 {
+    font-family: 'Lato', sans-serif;
+    color: black;
+    font-size: 40px;
+    text-align: center;
+}
+
+.chosen-plan {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(45deg,
+    rgba(253, 149, 192, 1) 0%,
+    rgba(195, 95, 204, 1) 38%,
+    rgba(175, 104, 241, 1) 66%,
+    rgba(175, 104, 241, 1) 84%,
+    rgba(168, 125, 255, 1) 100%);
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#med-plan {
+    font-family: 'Lato', sans-serif;
+    background: url("plan-background-med.png") #ffffff no-repeat;
+    height: 235px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+#med-plan h1 {
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    color: #ffffff;
+    font-size: 35px;
+}
+
+#med-plan h2 {
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+}
+
+.information {
+    text-align: left;
+    margin-left: 90px;
+    margin-right: 210px;
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.plan-title {
+    text-transform: capitalize;
+}
+
+.next-step {
+    margin-right: 250px;
+    margin-left: 250px;
+}
+
+.next-step .continue {
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(45deg,
+    rgba(253, 149, 192, 1) 0%,
+    rgba(195, 95, 204, 1) 38%,
+    rgba(175, 104, 241, 1) 66%,
+    rgba(175, 104, 241, 1) 84%,
+    rgba(168, 125, 255, 1) 100%);
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px;
+    width: 113px;
+}

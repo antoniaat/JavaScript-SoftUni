@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+body{
+    font-family: 'Nunito', sans-serif;
+    margin:0 auto ;
+    width: 30%;
+}
+#text{
+    color: darkslateblue;
+}
+
+button{
+    background: lightblue;
+    margin-left:8px;
+    padding: 8px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    color: darkslateblue;
+    text-transform: uppercase;
+    border: 2px solid white;
+}

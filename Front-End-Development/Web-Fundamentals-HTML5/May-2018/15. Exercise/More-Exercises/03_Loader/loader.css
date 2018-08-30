@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #0E1013;
+}
+
+.container {
+    width: 200px;
+    height: 100px;
+    padding-top: 200px;
+    margin: 0 auto;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    margin: 20px auto;
+    border-radius: 50px;
+}
+
+/*TODO Animations*/
+
+/*background: #ff005d;*/
+
+/*background: #35ff99;*/
+
+/*background: #008597;*/
+
+/*background: #ffcc00;*/
+
+/*background: #2d3443;*/
+
+/*background: #ff7c35;*/
+
+/*background: #4d407c;*/
+
+
+/*TODO @keyframes*/

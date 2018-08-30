@@ -1,0 +1,62 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 800 !important;
+}
+
+.navbar-custom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.navbar-custom .navbar-brand, .navbar-custom .navbar-nav .nav-item .nav-link {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    font-weight: 700;
+}
+
+.navbar-custom .navbar-nav .nav-item .nav-link {
+    font-size: .8rem;
+}
+
+header.masthead {
+    background-image: url("../img/bg-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 500px;
+}
+
+@media (min-width: 992px) {
+    header.masthead {
+        padding-top: calc(10rem + 55px);
+        padding-bottom: 10rem;
+    }
+
+    header.masthead .masthead-content .masthead-heading {
+        font-size: 6rem;
+    }
+
+    header.masthead .masthead-content .masthead-subheading {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    header.masthead {
+        display: none;
+    }
+
+    #main-content {
+        padding-top: 5rem;
+    }
+}
+
+.custom-gray {
+    background: #343A40;
+}

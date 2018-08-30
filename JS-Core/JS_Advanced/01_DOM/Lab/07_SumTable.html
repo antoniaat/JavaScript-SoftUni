@@ -1,0 +1,54 @@
+<!--Problems for in-class lab for the “JavaScript Advanced” course @ SoftUni.
+Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/328/.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sum Table</title>
+    <style>
+        table, tr, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tbody>
+    <tr>
+        <th>Product</th>
+        <th>Cost</th>
+    </tr>
+    <tr>
+        <td>Beer</td>
+        <td>2.88</td>
+    </tr>
+    <tr>
+        <td>Fries</td>
+        <td>2.15</td>
+    </tr>
+    <tr>
+        <td>Burger</td>
+        <td>4.59</td>
+    </tr>
+    <tr>
+        <td>Total:</td>
+        <td id="sum"></td>
+    </tr>
+    </tbody>
+</table>
+<button onclick="sum()">Sum</button>
+<script>
+    function sum() {
+        let rows = document.querySelectorAll('table tr td');
+        let sum = 0;
+
+        for (let i = 1; i < rows.length; i += 2) {
+            sum += Number(rows[i].textContent);
+        }
+
+        document.getElementById('sum').textContent = sum.toString();
+    }
+</script>
+</body>
+</html>

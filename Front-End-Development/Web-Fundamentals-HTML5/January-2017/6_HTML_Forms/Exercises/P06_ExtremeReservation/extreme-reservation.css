@@ -1,0 +1,190 @@
+body {
+    background: url("images/background.jpg") no-repeat;
+    font-family: "Arial", "Helvetica", sans-serif;
+    width: 800px;
+    margin: 50px auto;
+
+}
+
+.site-header nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.site-header li:first-child {
+    background-color: #6FA7CC;
+    border-radius: 10px;
+    width: 174px;
+    height: 50px;
+}
+
+.site-header a {
+    text-decoration: none;
+    color: #206CA6;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: -15px;
+    padding: 6px;
+}
+
+.site-header a:first-child {
+    background-color: #6FA7CC;
+}
+
+.site-header li:hover {
+    cursor: pointer;
+    background-color: #6FA7CC;
+    border-radius: 10px;
+}
+
+fieldset {
+    color: #256B9E;
+    width: 360px;
+    height: 372px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid #256B9E;
+    font-size: 20px;
+
+}
+
+.personal-info img, input {
+    display: block;
+
+}
+
+input {
+    width: 333px;
+    border-radius: 18px;
+    border: 1px solid #256B9E;
+    padding: 7px;
+    text-align: center;
+    opacity: 0,5;
+    background: rgba(236, 239, 243, 0.5);
+    font-size: 22px;
+}
+
+input[placeholder], [placeholder], *[placeholder] {
+    color: #87A9C5 !important;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #87A9C5;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #87A9C5;
+    opacity:  1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #87A9C5;
+    opacity:  1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #87A9C5;
+}
+
+fieldset > img {
+    position: relative;
+    left: -155px;
+    top: 35px;
+}
+
+legend {
+    margin-bottom: 35px;
+
+}
+
+.radio-field input {
+    width: auto;
+    position: relative;
+    display: inline-block
+}
+
+.selection {
+    width: 333px;
+    border-radius: 18px;
+    border: 1px solid #256B9E;
+    padding: 7px;
+    text-align: center;
+    opacity: 0,5;
+    background: rgba(236, 239, 243, 0.5);
+    font-size: 20px;
+    color: #386592;
+}
+
+.selection optgroup {
+    font-size: 15px;
+    color: #386592;
+    background-color: #BEE0E9;
+    border: none;
+}
+
+.destination {
+    position: relative;
+    top: 21px;
+}
+
+.date {
+    position: relative;
+    top: 38px;
+}
+
+.date > input {
+    width: 338px;
+    height: 24px;
+    position: relative;
+    top: 12px;
+}
+
+.yes-or-no > span {
+    position: relative;
+    top: -5px;
+}
+
+.buttons {
+    float: right;
+    margin-top: 15px;
+
+}
+
+.clear {
+    background-color: transparent;
+    border: 2px solid #E02A3A;
+    border-radius: 21px;
+    width: 91px;
+    font-size: 24px;
+    height: 46px;
+    color: #E02A3A;
+    font-weight: bold;
+    outline: none;
+}
+
+.clear:hover {
+    color: white;
+    background-color: #E02A3A;
+    cursor: pointer;
+}
+
+.send {
+    background-color: transparent;
+    border: 2px solid #13F40E;
+    border-radius: 21px;
+    width: 91px;
+    font-size: 24px;
+    height: 46px;
+    color: #13F40E;
+    font-weight: bold;
+    outline: none;
+}
+
+.send:hover {
+    color: white;
+    background-color: #13F40E;
+    cursor: pointer;
+}

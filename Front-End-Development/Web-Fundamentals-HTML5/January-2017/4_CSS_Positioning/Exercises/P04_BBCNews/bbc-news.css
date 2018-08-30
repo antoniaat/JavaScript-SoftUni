@@ -1,0 +1,33 @@
+body {
+    font-family: Calibri Light, Verdana, sans-serif;
+    width: 890px;
+    border: 2px solid #a5b2b3;
+    margin: 30px auto;
+    height: 488px;
+}
+
+main article {
+    font-family: Calibri Light, Verdana, sans-serif;
+    display: inline-block;
+    width: 200px;
+    height: 400px;
+    vertical-align: top;
+    padding: 9px;
+}
+
+.images {
+    width: 200px;
+    height: 120px;
+}
+
+.images:hover {
+    cursor: pointer;
+    width: 200px;
+    height: 120px;
+    opacity: 0.4;
+}
+
+article h2 {
+    text-align: center;
+    text-transform: capitalize;
+}

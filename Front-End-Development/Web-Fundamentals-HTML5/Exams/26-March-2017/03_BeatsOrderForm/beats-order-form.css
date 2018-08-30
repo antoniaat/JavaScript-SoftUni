@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,900");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: rgb(22,54,64); /* Old browsers */
+    background: -moz-linear-gradient(left, rgb(22,54,64) 0%, rgb(35,63,72) 24%, rgb(80,93,101) 77%, rgb(94,102,109) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgb(22,54,64) 0%,rgb(35,63,72) 24%,rgb(80,93,101) 77%,rgb(94,102,109) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgb(22,54,64) 0%,rgb(35,63,72) 24%,rgb(80,93,101) 77%,rgb(94,102,109) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#163640', endColorstr='#5e666d',GradientType=1 ); /* IE6-9 */
+}
+
+form {
+    background: white;
+    width: 69%;
+    margin: 5rem auto;
+    height: 620px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px -3px rgba(0,0,0,0.75);
+}
+
+.left {
+    width: 35%;
+    float: left;
+    text-align: center;
+}
+
+.left  > img {
+    text-align: center;
+    margin: -4px auto;
+    max-width: 100%;
+}
+
+.form-header {
+    text-align: right;
+    padding: 3rem;
+    font-weight: 900;
+    color: #9B9B9B;
+    text-transform: uppercase;
+    padding-bottom: 0;
+    margin-bottom: -32px;
+    font-size: 35px;
+}
+
+.header-price {
+    color: #7D7D7D;
+    text-align: right;
+    font-weight: 900;
+    padding: 3rem;
+    padding-top: 0;
+    font-size: 35px;
+    margin-top: -33px;
+}
+
+.new-line-header {
+    text-align: right;
+    padding-right: 3rem;
+    font-weight: 900;
+    color: #9B9B9B;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+.fa {
+    position: absolute;
+    color: #545454;
+}
+
+.right-column > label, .left-column > label {
+    width: 14%;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 6rem;
+    border-bottom: 2px solid #545454;
+    padding-top: 19px;
+}
+
+.right-column > label > input, .left-column > label > input {
+    outline: none;
+    border: none;
+    padding-left: 32px;
+    padding-bottom: 8px;
+}
+
+form button {
+    background: #535E66;
+    color: white;
+    cursor: pointer;
+    padding: 9px 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 23px;
+    border: none;
+    width: 12%;
+    margin-left: 42%;
+    font-size: 17px;
+    margin-top: 10%;
+}
+
+.right > div {
+    display: inline-block;
+    width: 30%;
+}
+
+.right > div > label {
+    display: inline-block;
+    width: 47%;
+
+}

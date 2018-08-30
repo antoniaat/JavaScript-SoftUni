@@ -1,0 +1,366 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+    word-wrap: break-word;
+}
+
+body, section, header, footer {
+    margin: 0;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    background: black;
+}
+
+.site-header {
+    background: url('05. Creating-Landing-Pages-Lab-Resources/Layer-759_02.jpg');
+    background-size: cover;
+    min-height: 420px;
+}
+
+nav.top-navigation {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+nav.top-navigation ul {
+    background: rgba(187, 148, 93, 0.9);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 2px;
+}
+
+nav.top-navigation ul li {
+    display: inline-block;
+    padding: 10px;
+}
+
+nav.top-navigation ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav.top-navigation ul li a:hover {
+    color: #f5c686;
+}
+
+nav.top-navigation ul li a.selected {
+    color: #f5e3c9;
+    background: rgb(162, 119, 52);
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+
+main {
+    background: white;
+}
+
+section.slider {
+    text-align: center;
+}
+
+section.slider h1 {
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px black;
+    font-size: 3em;
+    margin-top: 70px;
+    font-weight: bold;
+}
+
+section.slider p {
+    color: white;
+    width: 350px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 1.3em;
+    background: rgba(150, 150, 150, 0.4);
+    box-shadow: 0px 0px 15px 15px rgba(150, 150, 150, 0.4);
+    text-shadow: 0px 0px 10px black;
+}
+
+section.slider .slider-button {
+    margin-top: 30px;
+    display: inline-block;
+    color: white;
+    background: #161616;
+    padding: 14px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px white;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+section.slider .slider-button .fa-chevron-right {
+    color: #c79d63;
+}
+
+section.slider .slider-button:hover,
+section.slider .slider-button:hover .fa-chevron-right {
+    background: #c79d63;
+    color: black;
+}
+
+section.industries {
+    text-align: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+section.industries h1 {
+    font-size: 2.6em;
+    margin: 0;
+    padding: 30px;
+}
+
+section.industries article {
+    width: 350px;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+section.industries .icon {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 2em;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    float: left;
+}
+
+section.industries article h2,
+section.industries article p {
+    text-align: left;
+    margin-left: 64px;
+}
+
+section.industries article h2 {
+    font-size: 1.1em;
+}
+
+section.mission {
+    text-align: center;
+    text-shadow: 0px 0px 4px white;
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7)),
+    url(05. Creating-Landing-Pages-Lab-Resources/steel-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 10px 0px;
+}
+
+section.mission h1 {
+    color: #BF9D70;
+    margin: 25px 0px 3px 0px;
+}
+
+section.mission h2 {
+    margin: 3px 0px 25px 0px;
+}
+
+section.benefits {
+    padding: 10px 0px;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+    url(05. Creating-Landing-Pages-Lab-Resources/background-choose-us.jpg)
+    no-repeat center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+section.benefits > h1 {
+    margin: 30px 0px 15px 0px;
+    font-size: 2.4em;
+    text-transform: capitalize;
+}
+
+section.benefits article {
+    width: 300px;
+    border: 2px solid #c79d63;
+    margin: 10px 10px 30px 10px;
+    display: inline-block;
+}
+
+section.benefits article:hover {
+    border: 2px solid #eca;
+}
+
+section.benefits article p {
+    font-size: 0.9em;
+}
+
+section.benefits article a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+section.benefits article a:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+section.testimonials {
+    background: url(05. Creating-Landing-Pages-Lab-Resources/consulting-woman.jpg);
+    background-size: cover;
+    text-align: right;
+}
+
+article.testimonial {
+    background: rgba(255, 255, 255, 0.6);
+    width: 400px;
+    display: inline-block;
+    padding: 60px;
+    margin: 60px 30px 5px 30px;
+}
+
+article.testimonial .text {
+    text-align: justify;
+    font-size: 0.9em;
+}
+
+article.testimonial .text::before,
+article.testimonial .text::after {
+    content: open-quote;
+    color: #c79d63;
+    font-size: 28px;
+    text-shadow: 0px 0px 3px #eee2ca;
+    position: relative;
+    top: 5px;
+}
+
+article.testimonial .text::after {
+    content: close-quote;
+    line-height: 0.5em;
+}
+
+article.testimonial .author {
+    background: black;
+    color: white;
+    min-height: 150px;
+    padding: 15px;
+}
+
+article.testimonial .position {
+    color: gray;
+}
+
+article.testimonial .author-name {
+    margin-top: 10px;
+    font-size: 1.3em;
+    text-align: left;
+}
+
+section.partners {
+    text-align: center;
+}
+
+section.partners ul {
+    margin: 0;
+    padding: 15px 0;
+}
+
+section.partners li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+section.partners img:hover {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+
+section.partners li a:hover {
+    background: white;
+}
+
+.site-footer {
+    background: black;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.site-footer section {
+    vertical-align: top;
+    color: white;
+    width: 230px;
+    margin: 5px;
+    display: inline-block;
+    text-align: left;
+}
+
+.site-footer .consulting p {
+    margin-left: 30px;
+}
+
+.site-footer p.social-links {
+    margin: 30px 0px 0px 50px;
+}
+
+.site-footer .social-links a {
+    text-decoration: none;
+    color: black;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 1.5em;
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.site-footer .social-links a:hover {
+    background: #aaa;
+    box-shadow: 0px 0px 4px white;
+}
+
+.site-footer .extra-links .first-column {
+    margin-left: 30px;
+}
+
+.site-footer .extra-links div {
+    display: inline-block;
+    width: calc(50% - 25px);
+    vertical-align: top;
+}
+
+.site-footer .extra-links a {
+    text-decoration: none;
+    display: block;
+    margin: 5px;
+    color: #b6aa9d;
+}
+
+.site-footer .extra-links a:hover {
+    color: #f1e3d2;
+}
+
+.site-footer .instagram-widget li {
+    display: inline-block;
+}
+
+.site-footer .instagram-widget img {
+    width: 58px;
+    height: 58px;
+}
+
+.site-footer .instagram-widget img:hover {
+    opacity: 0.8;
+}

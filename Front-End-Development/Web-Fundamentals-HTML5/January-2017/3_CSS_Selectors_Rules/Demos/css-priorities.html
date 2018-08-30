@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Priorities</title>
+    <style>
+        html { background: blue }
+        #main { background: yellow }
+        div { background:red }
+        div > span { background: green }
+    </style>
+</head>
+<body>
+I am HTML <div>I am DIV</div>
+<div id="main">
+    I am also DIV <span>with SPAN</span>
+</div>
+
+</body>
+</html>

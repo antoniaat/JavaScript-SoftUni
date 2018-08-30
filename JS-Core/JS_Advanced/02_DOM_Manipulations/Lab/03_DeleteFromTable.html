@@ -1,0 +1,64 @@
+<!--Problems for in-class lab for the “JavaScript Advanced” course @ SoftUni.
+Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/640/.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Delete From Table</title>
+</head>
+<body>
+<table border="1" id="customers">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>eve@gmail.com</td>
+    </tr>
+    <tr>
+        <td>Nick</td>
+        <td>nick@yahooo.com</td>
+    </tr>
+    <tr>
+        <td>Didi</td>
+        <td>didi@didi.net</td>
+    </tr>
+    <tr>
+        <td>Tedy</td>
+        <td>tedy@tedy.com</td>
+    </tr>
+</table>
+Email:
+<label>
+    <input type="text" name="email"/>
+</label>
+<button onclick="deleteByEmail()">Delete</button>
+<div id="result"></div>
+
+<script>
+    function deleteByEmail() {
+        let targetEmail = document.getElementsByName('email')[0].value;
+        let columns = document.querySelectorAll('table tr');
+        let successfullyRemoved = false;
+
+        for (let i = 1; i < columns.length; i++) {
+            let currentEmail = columns[i].children[1].textContent;
+
+            if (currentEmail === targetEmail) {
+                let row = columns[i];
+                row.parentNode.removeChild(row);
+                successfullyRemoved = true;
+            }
+        }
+
+        if (successfullyRemoved) {
+            document.getElementById('result').textContent = 'Deleted.';
+        } else {
+            document.getElementById('result').textContent = 'Not found.';
+        }
+    }
+</script>
+</body>
+</html>
