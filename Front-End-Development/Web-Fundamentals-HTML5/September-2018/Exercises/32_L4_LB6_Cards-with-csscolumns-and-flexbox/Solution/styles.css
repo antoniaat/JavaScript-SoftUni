@@ -1,0 +1,104 @@
+body {
+	background: #EEE;
+	padding: 3rem;
+}
+
+.container {
+	max-width: 60em;
+	margin: 0 auto;
+}
+
+.cards-layout.masonry {
+	padding: 1em 0 0 0;
+	column-count: 3;
+	column-gap: 1em;
+}  
+
+
+.cards-layout.masonry .card {
+	display: inline-block;
+	break-inside: avoid;
+	margin-bottom: 1em;
+}
+
+.cards-layout.flex {
+	display: flex;
+	flex-wrap: wrap;
+}  
+
+.cards-layout.flex .card {
+	width: 29%;
+	display: flex;
+	align-items: stretch;
+}
+
+.card {
+	padding: 0.4em;
+	text-decoration: none;  
+	color: #333;
+}
+
+.card-inner {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	border: 0.1em solid #CCC;
+	background: #FFF;
+	box-shadow: 0 0 4px 1px rgba(0,0,0,0.1);
+}
+
+.card-inner, .card-inner:after {
+	border-radius: 0.5em;
+}
+
+.card-inner:after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.card-inner:hover:after {
+	opacity: 1;
+}
+
+.card-inner span { 
+	display: block; 
+}
+
+.card-inner > span {
+	flex: 0 0 auto;
+}
+
+.card-media {
+	min-height: 5em;
+	background: #FEF;
+}
+
+.card-media, .card-media * {
+	border-top-left-radius: 0.5em;        
+	border-top-right-radius: 0.5em;        
+}
+
+.card-media img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.card-footer,
+.card-meta {
+	padding: 1.5em;
+}
+
+.card-meta {
+	.title { font-size: 1.4em; }
+}
+
+.card-footer {
+	border-top: 0.1em solid #CCC;
+	margin-top: auto;
+}

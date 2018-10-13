@@ -1,0 +1,92 @@
+body {
+	background: #EEE;
+	margin: 0;
+}
+
+.card {
+	display: block;
+	min-width: 15rem;
+	max-width: 30rem;
+	width: 30vw;
+	box-shadow: 0 0 2.5rem 0rem rgba(0,0,0,0.2), 0 0 0.5rem 0 rgba(0,0,0,0.1) ;
+	border-radius: 0.3rem;
+	transition: box-shadow 0.3s ease;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+
+.card .media {
+	position: relative;
+	z-index: 5;
+	overflow: hidden;
+}
+
+.card .media:after {
+	display: block;
+	content: '';
+	padding-top: 56.25%;
+}
+
+.card .media.portrait:after {
+	padding-top: 150%;
+}
+
+.card .media:before {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	box-shadow: 0 0 8rem 0.5rem rgba(0,0,0,0.8) inset;
+	transition: box-shadow 0.3s ease;
+	z-index: 20;
+}
+
+.card .media:hover:before {
+	box-shadow: 0 0 2rem 0 rgba(0,0,0,0.1) inset;
+}
+
+.card .media img {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	z-index: 10;
+	height: auto;
+}
+
+.card a {
+	display: block;
+	width: 32px; height: 32px;
+	position: absolute;
+	bottom: 1rem; right: 1rem;
+	z-index: 100;
+	font-size: 2rem;
+}
+
+.viewport {
+	height: 100vh;
+	position: relative;
+}
+
+.viewport:nth-child(1) {
+	background: #43cea2;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.viewport:nth-child(2) {
+	background: #D38312;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #A83279, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fas {
+	text-decoration: none;
+	display: block;
+	color: #FFF;
+}
+
+.fas .text {
+	display: none;
+}

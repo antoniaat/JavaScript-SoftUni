@@ -1,0 +1,24 @@
+body {
+	background: #EEDDCC;
+	color: #333;
+	padding: 20%;
+}
+
+h1 {
+	color: rgb(255, 255, 255);
+	background: rgba(0,0,0,0.5);
+}
+
+a {
+	color: orange;
+}
+
+a:hover {
+	background: red;
+	color: #FFF;
+}
+
+a:active {
+	background: #000;
+	color: #FFF;
+}

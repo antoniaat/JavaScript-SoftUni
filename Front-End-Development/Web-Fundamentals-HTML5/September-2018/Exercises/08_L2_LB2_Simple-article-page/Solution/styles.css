@@ -1,0 +1,14 @@
+html {
+	font: 14px/1.5 Verdana, Helvetica, sans-serif;
+}
+
+body {
+	background: #EEE;
+	color: #333;
+	font: inherit;
+}
+
+article {
+	padding: 0 20vw;
+}
+

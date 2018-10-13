@@ -1,0 +1,40 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{{ site.title }} - {{ site.info }}</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<hgroup>
+			<h1>{{site.title}}</h1>
+			<h2>{{site.info}}</h2>
+		</hgroup>
+	</header>
+	<main>
+
+		<section>
+			<h2>Schedule</h2>
+			<ul class="posts">
+				{% for post in site.posts reversed %}
+				<li>
+					<span>
+						{{ post.date | date_to_string }}
+					</span>
+					&raquo;
+					<a target="_blank" href="{{ post.url | remove_first:'/' }}">
+						{{ post.title }}
+					</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</section>
+		
+	</main>
+</body>
+</html>
+

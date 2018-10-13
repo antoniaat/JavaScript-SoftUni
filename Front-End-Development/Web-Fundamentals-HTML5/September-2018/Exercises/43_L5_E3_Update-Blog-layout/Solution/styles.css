@@ -1,0 +1,33 @@
+@import url('reset.css');
+@import url('typography.css');
+@import url('layout.css');
+@import url('navigation.css');
+
+body {
+	padding: 5em;
+	background: #EEE;
+}
+
+.page {
+	max-width: 75rem;
+	margin: 0 auto;
+}
+
+.page > header:first-of-type {
+	border-bottom: 2px solid #000;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+header .site-title {
+	min-width: 20vw;
+	font-weight: bold;
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+
+aside a {
+	text-decoration: none;
+	color: #090;
+}

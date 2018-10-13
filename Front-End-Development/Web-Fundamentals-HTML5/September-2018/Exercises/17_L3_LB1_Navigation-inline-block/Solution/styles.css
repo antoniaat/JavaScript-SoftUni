@@ -1,0 +1,42 @@
+body {
+	padding: 5em;
+}
+
+body > header:first-of-type {
+	border-bottom: 2px solid #000;
+}
+
+header .site-title {
+	display: inline-block;
+	min-width: 20vw;
+	font-weight: bold;
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+
+header nav {
+	display: inline-block;
+}
+
+header nav ul {
+	text-align: right;
+}
+
+header nav ul li {
+	display: inline-block;
+}
+
+header nav ul li a {
+	display: block;
+	padding: 0.5em 1rem;
+	text-decoration: none;
+	color: #090;
+	border-radius: 0.2rem;
+}
+
+header nav ul li a:focus,
+header nav ul li a:hover {
+	outline: none;
+	background: #090;
+	color: #FFF;
+}

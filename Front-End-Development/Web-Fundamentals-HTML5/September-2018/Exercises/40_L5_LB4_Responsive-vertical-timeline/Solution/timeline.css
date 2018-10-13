@@ -1,0 +1,82 @@
+.timeline {
+	border: 0.3rem solid #999;
+	padding-top: 2rem;
+	border-radius: 0.2rem;
+}
+
+.timeline > p:first-child {
+	padding-bottom: 0;
+	margin-left: 2rem;
+}
+
+.timeline > p:first-child .button {
+	margin-right: 0;
+	border-color: #999;
+}
+
+.timeline .inner {
+	width: 0.5rem;
+	background: #999;
+	padding-top: 2rem;
+	margin-left: 3rem;
+}
+
+.timeline ul li + li {
+	padding-top: 0.5rem;
+}
+
+.timeline article {
+	position: relative;
+	width: 75vw;
+	padding: 0 1rem 1rem 3rem;
+}
+
+.timeline article header h3 {
+	margin-top: 0;
+	font-style: italic;
+}
+
+.timeline article:before {
+	display: block;
+	content: '';
+	border: 0.3rem solid #999;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	position: absolute;
+	top: 0; left: -0.75rem;
+	background: #090;
+}
+
+.timeline article:nth-child(even):before {
+	background: orange;
+}
+
+@media screen and (min-width: 700px) {
+
+	.timeline > p:first-child {
+		text-align: center;
+		margin: 0;
+	}
+
+	.timeline article {
+		width: 40vw;
+	}
+	
+	.timeline .inner {
+		margin: 0 auto;
+	}
+
+	.timeline article:nth-child(even) {
+		right: 40vw;
+		margin-top: -5rem;
+		text-align: right;
+		padding: 0 3rem 1rem 1rem;
+	}
+
+	.timeline article:nth-child(even):before {
+		left: inherit;
+		right: -1.25rem;
+	}
+
+}

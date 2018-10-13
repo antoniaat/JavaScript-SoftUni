@@ -1,0 +1,82 @@
+---
+title: "Flexbox"
+date: 2018-10-04 18:00:00
+permalink: /lecture-04.html
+categories: lecture
+layout: lecture
+---
+
+<section>
+	<p>{{ site.title }}</p>
+	<p><img alt="Site Logo" src="reveal/media/logo.png" width="120"></p>
+	<h1 class="center">{{ page.title }}</h1>
+</section>
+
+<section>
+	<section>
+		<h2>Flexbox</h2>
+		<blockquote>
+			<p>The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities. This article gives an outline of the main features of flexbox, which we will be exploring in more detail in the rest of these guides.</p>
+		</blockquote>
+	</section>
+	<section>
+		<h2>Why Flexbox</h2>
+		<p>For a long time, the only reliable cross browser-compatible tools available for creating CSS layouts were things like floats and positioning. These are fine and they work, but in some ways they are also rather limiting and frustrating.</p>
+	</section>
+	<section>
+		<h2>Why Flexbox</h2>
+		<p>The following simple layout requirements are either difficult or impossible to achieve with such tools, in any kind of convenient, flexible way:</p>
+		<ul>
+			<li class="fragment">Vertically centering a block of content inside its parent.</li>
+			<li class="fragment">Making all the children of a container take up an equal amount of the available width/height, regardless of how much width/height is available.</li>
+			<li class="fragment">Making all columns in a multiple column layout adopt the same height even if they contain a different amount of content.</li>
+		</ul>
+	</section>
+	<section>
+		<h2>Flex Container Properties</h2>
+		<ul>
+			<li class="fragment">display: flex;</li>
+			<li class="fragment">flex-direction: row | row-reverse | column | column-reverse;</li>
+			<li class="fragment">flex-wrap: nowrap | wrap | wrap-reverse;</li>
+			<li class="fragment">flex-flow: flex-direction || flex-wrap;</li>
+			<li class="fragment">justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;</li>
+			<li class="fragment">align-items: flex-start | flex-end | center | baseline | stretch;</li>
+			<li class="fragment">align-content: flex-start | flex-end | center | space-between | space-around | stretch;</li>
+		</ul>
+	</section>
+	<section>
+		<h2>Flex Items Properties</h2>
+		<ul>
+			<li class="fragment">order: &lt;integer&gt;</li>
+			<li class="fragment">flex-grow: &lt;number&gt;</li>
+			<li class="fragment">flex-shrink: &lt;number&gt;</li>
+			<li class="fragment">flex-basis: &lt;number&gt;</li>
+			<li class="fragment">flex: none | [ flex-grow flex-shrink || flex-basis ] </li>
+			<li class="fragment">align-self: auto | flex-start | flex-end | center | baseline | stretch;</li>
+		</ul>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">Labs</h1>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">Resources</h1>
+	</section>
+	<section>
+		<h2>Resources</h2>
+
+		<ul>
+			<li>https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox</li>
+			<li>https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox</li>
+			<li>https://css-tricks.com/snippets/css/a-guide-to-flexbox/</li>
+			<li>https://www.youtube.com/watch?v=hs3piaN4b5I</li>
+			<li>https://www.flexboxgame.com/</li>
+		</ul>
+
+	</section>
+</section>

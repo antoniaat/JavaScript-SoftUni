@@ -1,0 +1,39 @@
+@import url("reset.css");
+@import url("typography.css");
+
+body {
+	background: #FFF;
+	padding: 2rem 2rem;
+}
+
+@media screen and (min-width: 600px) {
+	.mq-width:after {
+		display: inline-block;
+		content: 'Viewport width is larger than 600px';
+		color: #060;
+	}
+}
+
+@media screen and (min-height: 600px) {
+	.mq-height:after {
+		display: inline-block;
+		content: 'Viewport height is larger than 600px';
+		color: #060;
+	}
+}
+
+@media (min-aspect-ratio: 8/5) {
+	.mq-ar:after {
+		display: inline-block;
+		content: 'Aspect Ratio is larger than 8/5';
+		color: #060;
+	}
+}
+
+@media (aspect-ratio: 1/1) {
+	.mq-ar:after {
+		display: inline-block;
+		content: 'Aspect Ratio is 1/1';
+		color: #060;
+	}
+}

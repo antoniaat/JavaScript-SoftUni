@@ -1,0 +1,98 @@
+---
+title: "Media Queries - Part 1"
+date: 2018-10-08 18:00:00
+permalink: /lecture-05.html
+categories: lecture
+layout: lecture
+---
+
+<section>
+	<p>{{ site.title }}</p>
+	<p><img alt="Site Logo" src="reveal/media/logo.png" width="120"></p>
+	<h1 class="center">{{ page.title }}</h1>
+</section>
+
+<section>
+    <section>
+        <h1 class="center">Media queries</h1>
+    </section>
+    <section>
+        <h2>Media queries</h2>
+		<p>Media queries let you adapt your site or app depending on the presence or value of various device characteristics and parameters.</p>
+    </section>
+    <section>
+        <h2>Media queries in HTML</h2>
+		<p>In HTML, media queries can be applied to various elements:</p>
+		<ul>
+			<li>In the <code>link</code> element's media attribute, they define the media to which a linked resource (typically CSS) should be applied.</li>
+			<li>In the <code>source</code> element's media attribute, they define the media to which that source should be applied. (This is only valid inside <code>picture</code> elements.)</li>
+			<li>In the <code>style</code> element's media attribute, they define the media to which the style should be applied.</li>
+		</ul>
+    </section>
+	<section data-markdown>
+		<script type="text/template">
+			## Media types
+
+			Media types describe the general category of a given device. Although websites are commonly designed with screens in mind, you may want to create styles that target special devices such as printers or audio-based screenreaders.
+
+			```css
+			@media print { ... }
+			```
+
+			```css
+			@media screen, print { ... }
+			```
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## @import
+
+			The @import CSS at-rule is used to import style rules from other style sheets. These rules must precede all other types of rules, except @charset rules; as it is not a nested statement, @import cannot be used inside conditional group at-rules.
+
+			```css
+			@import url('styles.css') screen;
+			```
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## @media
+
+			Lets geto to the meat of things
+
+			```css
+			@media screen and (min-width: 600px;) {
+				
+			}
+			```
+		</script>
+	</section>
+</section>
+<section>
+    <section>
+        <h1 class="center">Resources</h1>
+    </section>
+    <section>
+		<ul>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries">https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries</a></li>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import">https://developer.mozilla.org/en-US/docs/Web/CSS/@import</a></li>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries</a></li>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features">https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features</a></li>
+			<li><a href="https://caniuse.com/#feat=css-mediaqueries">https://caniuse.com/#feat=css-mediaqueries</a></li>
+		</ul>
+    </section>
+    <section>
+		<ul>
+			<li><a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/">https://css-tricks.com/snippets/css/media-queries-for-standard-devices/</a></li>
+			<li><a href="https://responsivedesign.is/articles/why-you-dont-need-device-specific-breakpoints/">https://responsivedesign.is/articles/why-you-dont-need-device-specific-breakpoints/</a></li>
+		</ul>
+    </section>
+    <section>
+		<ul>
+			<li><a href="https://mediaqueri.es/">https://mediaqueri.es/</a></li>
+			<li><a href="https://responsivedesign.is/">https://responsivedesign.is/</a></li>
+		</ul>
+    </section>
+</section>
+

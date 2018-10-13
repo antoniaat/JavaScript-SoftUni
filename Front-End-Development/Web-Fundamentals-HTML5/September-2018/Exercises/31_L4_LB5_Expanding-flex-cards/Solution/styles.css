@@ -1,0 +1,71 @@
+body {
+	background: #EEE;
+	margin: 0;
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	max-width: 60rem;
+	display: flex;
+}
+
+.card,
+.card .media,
+.card .media  img {
+	border-radius: 0.5rem;
+}
+
+.card,
+.card .media {
+	height: 40vh;
+}
+
+.card {
+	background: #FFF;
+	box-shadow: 0 0 2rem 0.5rem rgba(0,0,0,0.2);
+	position: relative;
+	min-width: 6rem;
+	flex: 0 0 auto;
+	overflow: hidden;
+	margin: 0 0.5rem;
+}
+
+.card.active {
+	min-width: 30vw;
+}
+
+.card .media {
+	position: relative;
+	background: #000;
+}
+
+.card .media:after {
+	display: block;
+	content: '';
+	padding-top: 62.50%;
+}
+
+.card .media img {
+	display: block;
+	width: auto;
+	height: 100%;
+	position: absolute;
+	top: 0; left: 50%;
+	transform: translateX(-50%);
+}
+
+.card .content {
+	display: none;
+	position: absolute;
+	padding: 1rem;
+}
+
+.card .content h3 {
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin: 0 0 0.5rem 0;
+	padding: 0;
+}

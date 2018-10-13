@@ -1,0 +1,24 @@
+.page {
+	overflow: hidden;
+}
+
+.page main,
+.page aside {
+	float: left;
+}
+
+.page main {
+	width: 70%;
+}
+
+.page aside {
+	width: 30%;
+}
+
+main article {
+	padding-right: 2rem;
+}
+
+aside section {
+	padding-left: 4rem;
+}

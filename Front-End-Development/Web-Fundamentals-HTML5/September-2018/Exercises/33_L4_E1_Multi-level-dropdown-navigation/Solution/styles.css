@@ -1,0 +1,79 @@
+body {
+	background: #EEE;
+	padding: 5rem;
+}
+
+body > header:first-of-type {
+	border-bottom: 2px solid #000;
+	display: flex;
+	justify-content: space-between;
+}
+
+header .site-title {
+	min-width: 20vw;
+	font-weight: bold;
+	font-size: 3rem;
+	text-transform: uppercase;
+	padding: 1rem 2rem;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+}
+
+nav ul {
+	background: #FFF;
+	padding: 0.5rem;
+	border-radius: 0.3rem;
+	margin: 0;
+	display: flex;
+}
+
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: -0.5rem;
+	width: 10rem;
+}
+
+nav ul ul ul {
+	top: -0.5rem; right: 100%;
+	left: inherit;
+}
+
+nav ul li {
+	display: block;
+	list-style: none outside;
+	position: relative;
+}
+
+nav > ul > li > ul li:not(:last-child) {
+	padding-bottom: 0.5rem;
+}
+
+nav > ul > li {
+	padding: 0 0.5rem 0 0;
+}
+
+nav ul li:hover > a {
+}
+
+nav ul li:hover > ul {
+	display: block;
+}
+
+nav ul li a {
+	display: block;
+	padding: 0.5rem 1rem;
+	border-radius: 0.4rem;
+	text-decoration: none;
+	background: #333;
+	color: #FFF;
+}
+
+nav ul li a:hover,
+nav ul li:hover > a {
+	background: #090;
+}

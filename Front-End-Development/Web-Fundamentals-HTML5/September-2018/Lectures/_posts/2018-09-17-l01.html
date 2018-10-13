@@ -1,0 +1,1150 @@
+---
+title: "Introduction to HTML and CSS"
+date: 2018-09-17 18:10:00
+permalink: /lecture-01.html
+categories: lecture
+layout: lecture
+---
+
+<section>
+	<p>{{ site.title }}</p>
+	<p><img alt="Site Logo" src="reveal/media/logo.png" width="120"></p>
+	<h1 class="center">{{ page.title }}</h1>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">What is HTML?</h1>
+	</section>
+	<section>
+		<h2>HTML</h2>
+		<p class="fragment">Language for expressing semantic structure in textual documents</p>
+
+		<p class="fragment">HTML is the main markup language for creating web pages and other information that can be displayed in a web browser.</p>
+
+		<ul>
+			<li class="fragment">HTML is a markup language</li>
+			<li class="fragment">HTML is a language for describing web pages.</li>
+			<li class="fragment">HTML documents contain HTML tags and plain text</li>
+			<li class="fragment">A markup language is a set of markup tags</li>
+			<li class="fragment">The tags describe document content</li>
+		</ul>
+
+		<p class="fragment">http://en.wikipedia.org/wiki/Markup_language</p>
+
+		<p class="fragment">HTML &mdash; HyperText Markup Language</p>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section>
+		<h2>HTML is consumed by Web browsers</h2>
+		<p>The purpose of a web browser is to read HTML documents and compose them into visible or audible web pages.</p>
+		<p>The browser does not display the HTML tags, but uses the tags to interpret the content of the page.</p>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">HTML Tags</h1>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## HTML Tags
+
+			Tags are keywords surrounded by angle brackets
+
+			```html
+			'<' + 'html' + '>' ▸ <html>
+			'<' + 'head' + '>' ▸ <head>
+			'<' + 'body' + '>' ▸ <body>
+			'<' + 'p'    + '>' ▸ <p>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### HTML Tag pairs
+
+			HTML tags normally come in pairs
+			```html
+			'<' + 'p' + '>' and '</' + 'p' + '>'
+			```
+			The first tag in a pair is the start tag, the second tag is the end tag
+
+			The end tag is written like the start tag, with a forward slash before the tag name
+
+			Start and end tags are also called opening tags and closing tags
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### HTML Tag pair examples
+
+			```html	
+			Opening tag          Closing tag
+
+			'<' + 'html' + '>'  '</' + 'html' + '>'
+			'<' + 'head' + '>'  '</' + 'head' + '>'
+			'<' + 'body' + '>'  '</' + 'body' + '>'
+			'<' + 'p'    + '>'  '</' + 'p'    + '>'
+
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Main HTML tags
+
+			```html
+			<html></html>
+			```
+			Describes the start and end of the web page/document  
+
+			```html	
+			<head></head>  
+			```	
+			Describes the start and end of the metadata section of the document  
+
+			```html	
+			<body></body>  
+			```	
+			Describes the start and end of the visible page content  
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			<h2>HTML Page/Document structure</h2>
+
+			```html
+			<html>
+				<head>
+					<title>Simple HTML document example</title>
+				</head>
+				<body>
+					<h1>Simple HTML document example</h1>
+				</body>
+			</html>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>	
+
+	<section>
+		<h2>HTML Versions</h2>
+		<p>Time passes, people think of new ways to entertain themselves. So new versions of HTML have been created.</p>
+		<p>How do we differentiate between the different versions?</p>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	
+	<section data-markdown>
+		<script type="text/template">
+			### The <!DOCTYPE> Declaration
+
+			There are many different documents on the web, and a browser can only display an HTML page 100% correctly if it knows the HTML type and version used.
+		</script>
+		<aside class="notes" data-markdown>
+			DOCTYPE Reference.
+			http://docs.webplatform.org/wiki/html/elements/!DOCTYPE
+		</aside>
+	</section>
+	
+	<section data-markdown>
+		<script type="text/template">
+			### Common Declarations - Page 1
+
+			HTML 4.01 Strict
+			```html
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+			"http://www.w3.org/TR/html4/strict.dtd">
+			```
+
+			HTML 4.01 Transitional
+			```html
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+			"http://www.w3.org/TR/html4/loose.dtd">
+			```
+
+			HTML 4.01 Frameset
+			```html
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+			"http://www.w3.org/TR/html4/frameset.dtd">
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>			
+
+	<section data-markdown>
+		<script type="text/template">
+			### Common Declarations - Page 2
+
+			XHTML 1.0 Strict
+			```html
+			<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+			"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+			```
+
+			XHTML 1.0 Transitional
+			```html
+			<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+			"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+			```
+
+			XHTML 1.1
+			```html
+			<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+			"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>			
+
+	<section data-markdown>
+		<script type="text/template">
+			### Common Declarations - Page 3
+
+			HTML5
+			```html
+			<!DOCTYPE html>
+			```
+			Finally!!!
+
+			Something we can all remember.
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	
+	<section data-markdown>
+		<script type="text/template">
+			### Now, lets update our HTML document
+
+			```html
+			<!DOCTYPE html>
+			<html>
+				<head>
+					<title>Simple HTML document example</title>
+				</head>
+				<body>
+					<h1>Simple HTML document example</h1>
+				</body>
+			</html>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	
+	<section data-markdown>
+		<script type="text/template">
+			## Quick overview of the most used tags
+
+			#### Headings
+			```
+			<h1>This is a heading</h1>
+			<h2>This is a heading</h2>
+			<h3>This is a heading</h3>
+			```
+
+			#### Paragraphs
+			```
+			<p>Something smart</p>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+			Tag reference
+			http://docs.webplatform.org/wiki/html/elements
+
+		</aside>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Quick overview of the most used tags
+
+			#### Text formatting
+			```html
+			<strong></strong>
+			<em></em>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Quick overview of the most used tags
+
+			#### Links
+			```html
+			<a href="http://initlab.org">init Lab</a>
+			```
+
+			#### Images
+			```html
+			<img src="/images/icons/terminal.png">
+			```
+
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Quick overview of the most used tags
+
+			#### Quotes
+			```html
+			<cite></cite>
+			```
+
+			#### Multiple paragraph quotes
+			```html
+			<blockquote>
+				<p>Smart quote</p>
+			</blockquote>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Quick overview of the most used tags
+
+			#### Lists
+
+			Ordered list
+			```html
+			<ol>
+				<li>List item</li>
+				<li>List item</li>
+			</ol>
+			```
+
+			Unordered list
+			```html
+			<ul>
+				<li>List item</li>
+				<li>List item</li>
+			</ul>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Quick overview of the most used tags
+
+			#### Definition list
+			```html
+			<dl>
+				<dt>Definition title</dt>
+				<dd>Definition description</dd>
+				<dt>Definition title</dt>
+				<dd>Definition description</dd>
+			</dl>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Quick overview of the most used tags
+
+			#### Tables
+			```html
+			<table>
+				<thead>
+					<tr>
+						<th>Table header 1</th>
+						<th>Table header 2</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Table cell 1</td>
+						<td>Table cell 1</td>
+					</tr>
+				</tbody>
+			</table>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			### Quick overview of the most used tags
+
+			#### Forms
+			```html
+			<form action="#" method="get">
+				<fieldset>
+					<legend>Login information</legend>
+					<label for="username">Username</label>
+					<p><input type="text" name="username" value="" id="username" /></p>
+					<label for="password">Password</label>
+					<p><input type="text" name="password" value="" id="password" /></p>
+				</fieldset>     
+				<p><input type="submit" value="Continue &rarr;"></p> 
+			</form>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+
+</section>
+
+<section>
+	<section>
+		<h1 class="center">Tag attributes</h1>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Tag attributes
+
+			Attributes provide additional information about HTML elements.
+
+			* Tags elements can have attributes
+			* Attributes provide additional information about an element
+			* Attributes are always specified in the start tag
+			* Attributes come in name/value pairs like: name="value"
+		</script>
+		<aside class="notes" data-markdown>
+
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Some examples of Tag attributes
+
+			#### Links
+			```html
+			<a href="http://initlab.org">init Lab</a>
+			```
+
+			#### Images
+			```html
+			<img src="/images/icons/terminal.png">
+			```
+
+			#### Tables
+			```html
+			<table width="100%" cellspacing="0" cellpadding="0">
+			```
+
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Global Attributes Reference
+			http://docs.webplatform.org/wiki/html/attributes
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Few tips
+
+			- Always Quote Attribute Values. Attribute values should always be enclosed in quotes.
+			- Double style quotes are the most common, but single style quotes are also allowed.
+			- Be careful when combining single and double quotes, make sure you use only one type
+
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+</section>
+
+<section class="codesmaller">
+	<section>
+		<h1 class="center">Metadata section</h1>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Metadata section
+
+			#### `<head>` tag
+			The `<head>` element is a container for all the head elements. Elements inside `<head>` can include scripts, instruct the browser where to find style sheets, provide meta information, and more.
+
+			The following tags can be added to the head section:  
+			`<title>`, `<style>`, `<meta>`, `<link>`, `<script>`, `<noscript>`
+			
+			http://docs.webplatform.org/wiki/html/elements/head
+
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Metadata - inside the `<head>` tag
+
+			#### `<title>`
+			The `<title>` tag defines the title of the document.
+			```html
+			<head>
+				<title>HTML Document title</title>
+			</head>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### `<meta>`
+			The `<meta>` tag provides additional information about the HTML document.
+
+			__Examples__
+			```html
+			<!-- Define keywords for search engines: -->
+			<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+
+			<!--Define a description of your web page:-->
+			<meta name="description" content="Free Web tutorials on HTML and CSS">
+
+			<!--Define the author of a page:-->
+			<meta name="author" content="Hege Refsnes">
+
+			<!--Refresh document every 30 seconds:-->
+			<meta http-equiv="refresh" content="30">
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### `<link>`
+			The `<link>` tag defines the relationship between a document and an external resource.
+
+			```html
+			<head>
+				<link rel="stylesheet" type="text/css" href="mystyle.css">
+			</head>
+			```
+			The `<link>` tag is most used to link to style sheets
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			#### `<style>`
+
+			The `<style>` tag is used to define style information for an HTML document.
+
+			Inside the `<style>` element you specify how HTML elements should render in a browser:
+
+			```html
+			<head>
+				<style type="text/css">
+					p { color: #369; }
+				</style>
+			</head>
+			```
+		</script>
+		<aside class="notes" data-markdown>
+
+		</aside>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">Indentation &amp; Code formatting</h1>
+	</section>
+	<section>
+		<h2>Indentation &amp; Code formatting</h2>
+		<ol>
+			<li class="fragment">We will be using tabs that are 4 spaces long for indentation.</li>
+			<li class="fragment">Indentation is extreemply important!</li>
+			<li class="fragment">Bad indentation is shameful!</li>
+			<li class="fragment">I will KILL YOU for bad indentation!</li>
+			<li class="fragment">Do NOT use word wrap!!!</li>
+			<li class="fragment">Proper Indentation saves lives!</li>
+			<li class="fragment">Do NOT use word wrap!!!</li>
+		</ol>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Indentation &amp; Code formatting 
+
+			```
+			<form action="#" method="get">
+				<fieldset>
+					<legend>Login information</legend>
+					
+					<label for="username">Username</label>
+					<p><input type="text" name="usr" id="usr" /></p>
+					
+					<label for="password">Password</label>
+					<p><input type="text" name="pass" id="pass" /></p>
+				</fieldset>     
+			```
+		</script>
+	</section>
+</section>
+<section>
+	<h1 class="center">CSS Basics</h1>
+</section>
+<section>
+	<section>
+		<h1 class="center">What is CSS?</h1>
+	</section>
+	<section>
+			<h2>What is CSS?</h2>
+			<p>CSS stands for <em>Cascading Style Sheets</em></p>
+			<p>Styles define the visual presentation of HTML elements</p>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### CSS solved a problem
+
+			HTML was never intended to contain tags for formatting a document.
+
+			With CSS the separation between semantic content and visual presentation can be achieved again.
+		</script>
+		<aside class="notes" data-markdown>
+			
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### CSS _can_ save you a Lot of Work!
+			
+			External visual style guide shared across all pages of your site.
+
+			Change the style guide - change all pages visual presentation.
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+</section>
+<section>
+	<section>
+		<h1 class="center">CSS Syntax</h1>
+	</section>
+	<section>
+		<h2>CSS Syntax</h2>
+
+		<ul>
+			<li class="fragment">Every CSS document is a collection of CSS rules.</li>
+			<li class="fragment">CSS rule has two main parts, Select and one or more declarations</li>
+			<li class="fragment">Each declaration consists of a property and a value.</li>
+		</ul>
+
+		<aside class="notes" data-markdown>
+			The selector is normally the HTML element you want to style.
+			The property is the style attribute you want to change. Each property has a value.
+		</aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### CSS Rule
+
+			CSS rule has two main parts:
+			
+			1. Selector
+			1. One or more declarations
+		</script>
+	</section>	
+	<section data-markdown>
+		<script type="text/template">
+			### CSS Rule
+
+			```css
+			[selector] {
+				[declaration]
+				[declaration]
+			}
+			```
+		</script>
+	</section>		
+	<section data-markdown>
+		<script type="text/template">
+			### CSS Selector
+
+			```css
+			body {
+				...
+			}
+			```
+
+			The selector is a identifier of the HTML element or the group of HTML elements you want to style.
+		</script>
+	</section>		
+	<section data-markdown>
+		<script type="text/template">
+			### CSS Declarations
+
+			```css
+			{
+				font: 16px/1.5 Verdana, sans-serif;
+				color: #333;
+			}
+			```
+
+			Declarations end with a semicolon, and declaration groups are surrounded by curly brackets.
+		</script>
+	</section>
+</section>
+<section>
+	<section>
+		<h1 class="center">CSS Selectors</h1>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Element selectors
+			
+			Using the HTML tag names as selectors will apply styles to all tags in the document.
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Element selectors
+
+			Styling all titles of level 1:
+			```css
+			h1 {
+				text-align: center;
+				color: #000;
+			}
+			```
+
+			Adding more white space after each paragraph:
+			```css
+			p {
+				padding-bottom: 15px;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### The `id` selector
+
+			The `id` selector uses the `id` attribute of the HTML element, and is defined<br> with a "#".
+	
+			Using the `id` selector will give you the exact element you are refering to.
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### The `id` selector
+
+			Adding border to the top and bottom of an HTML element with attribute id="header".
+			```css
+			#header {
+				border: 1px solid #CCC;
+				border-width: 1px 0;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### The `class` selector
+
+			The class selector uses the HTML class attribute, and is defined<br> with a "." (dot)
+
+			The class selector allows you to set a particular style for many HTML elements with the same class.
+
+			All HTML elements with class="mod" will have bordet on top:
+			```css
+			.mod {
+				border-top: 1px solid #000;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### The `class` selector
+
+			You can also specify that only one HTML tag should be affected by a class.
+
+			```css
+			p.right {
+				text-align: right;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### CSS Attribute Selectors
+
+			Style HTML Elements With Specific Attributes
+			<br><br>
+
+			#### Syntax
+			
+			```css
+			a[title] {
+				color:blue;
+			} 
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Pseudo-classes
+
+			CSS pseudo-classes are used to add special effects to some selectors.
+			<br> <br>
+
+			#### Syntax
+
+			The syntax of pseudo-classes:
+			
+			```css
+			selector:pseudo-class {property:value;}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Pseudo-classes
+
+			Changing the styles of a link when the user's mouse is over it.
+			```css
+			a:hover {
+				text-decoration: underline:
+				color: #C00;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Combining selectors
+			
+			```html
+			<h1 id="header" class="intro">Front End Fundamentals - Part 1</h1>
+			```
+
+			```css
+			h1#header.intro {
+				color: #F00;
+				border: 2px solid currentColor;
+			}
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+</section>
+<section>
+	<section>
+		<h1 class="center">Adding CSS to our HTML documents</h1>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Three Ways to Insert CSS
+
+			There are three ways of inserting a style sheet:
+
+			* External style sheet
+			* Internal style sheet
+			* Inline style
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## External Style Sheet
+
+			An external style sheet is ideal when the style is applied to many pages. With an external style sheet, you can change the look of an entire Web site by changing one file. Each page must link to the style sheet using the <link> tag. The <link> tag goes inside the head section:
+
+			```
+			<head>
+				<link rel="stylesheet" type="text/css" href="mystyle.css">
+			</head>
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Internal Style Sheet
+
+			An internal style sheet should be used when a single document has a unique style. You define internal styles in the head section of an HTML page, by using the <style> tag, like this:
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Inline Styles
+
+			An inline style loses many of the advantages of style sheets by mixing content with presentation. Use this method sparingly!
+
+			To use inline styles you use the style attribute in the relevant tag. The style attribute can contain any CSS property. The example shows how to change the color and the left margin of a paragraph:
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+</section>
+<section>
+	<section>
+		<h1 class="center">Inheritance &amp; Specificity</h1>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Inheritance & Specificity
+
+			CSS relies heavily on specificity and style overwriting.
+			
+			Its in the name!
+
+			_Cascading_ Style Sheets
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Cascade order
+
+			In increasing order of priority.
+
+			1. External `<link>`
+			2. In the `<head>`
+			3. Inline style attribute
+			4. Using !important
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Selector priority (specificity)
+
+			<table>
+			    <tr>
+			        <td>0</td>
+			        <td>0</td>
+			        <td>0</td>
+			        <td>0</td>
+			    </tr>
+			    <tr>
+			        <td>inline styles</td>
+			        <td># of `id` selectors</td>
+			        <td># of `class` selectors</td>
+			        <td># of element selectors</td>
+			    </tr>
+			</table>
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## Selector priority (specificity)
+			
+			```css
+			p { color: #FFF; }                      0, 0, 0, 1
+			```
+			```css
+			.intro { color: #345678; }              0, 0, 1, 0
+			```
+			```css
+			#header { color: #000; }                0, 1, 0, 0 
+			```
+			```html
+			<p style="color: #000;">Text</p>        1, 0, 0, 0 
+			```
+			```css
+			p { color: #000 !important; }           God-mode
+			```
+		</script>
+	</section>
+</section>
+<section>
+	<section>
+		<h1 class="center">CSS properties</h1>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### CSS properties
+			
+			Lets go through some of the most popular CSS properties.
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Background
+			
+			1. background-color: #fff;
+			1. background-image: url(../image.png);
+			1. background-repeat: repeat | repeat-x | repeat-y | no-repeat;
+			1. background-position: top left;
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Text
+
+			1. color: #000;
+			1. text-align: left | right | center | justify;
+			1. text-decoration: underline | overline | line-through | none;
+			1. text-transform: uppercase | lowercase | capitalize;
+			1. text-indent: 50px;
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Font
+			
+			1. font-family: Verdana, Arial, sans-serif
+			1. font-style: italic | normal;
+			1. font-size: 16px;
+			1. font-weight: bold | normal;
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Border
+
+			1. border-style: solid | dotted | dashed | double;
+			1. border-color: #C00;
+			1. border-width: 2px;
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Margin
+
+			1. margin-top: 10px;
+			1. margin-right: 10px;
+			1. margin-bottom: 10px;
+			1. margin-left: 10px;
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Padding
+
+			1. padding-top: 10px;
+			1. padding-right: 10px;
+			1. padding-bottom: 10px;
+			1. padding-left: 10px;
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section>
+		<h3>Some tag specific style options</h3>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Lists styles
+
+			1. list-style-type: none | circle | disc;
+			1. list-style-position: inside | outside;
+			1. list-style-image: url('../image');
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			### Link styles
+
+			```css
+			a:link     { color: #369; }  /* unvisited link */
+			a:visited  { color: #147; }  /* visited link */
+			a:hover    { color: #58B; }  /* mouse over link */
+			a:active   { color: #C00; }  /* selected link */
+			```
+		</script>
+		<aside class="notes" data-markdown></aside>
+	</section>
+</section>
+<section>
+	<section>
+		<h1 class="center">Demo time!</h1>
+	</section>
+</section>
+<section>
+	<section>
+		<h1 class="center">Next time</h1>
+	</section>
+	<section>
+		<h2>CSS & Typography</h2>
+		<ul>
+			<li>Styling text</li>
+			<li>Typography in web</li>
+		</ul>
+	</section>
+</section>
+<section>
+	<section>
+		<h1 class="center">Homework</h1>
+	</section>
+	<section>
+		<h2>Some reading ...</h2>
+		<ol>
+			<li>Read - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">CSS Reference @ Mozilla Developer Network</a></li>
+			<li>Read the first 10 chapters of <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started?redirectlocale=en-US&redirectslug=CSS%2FGetting_Started" target="_blank">Getting started with CSS @ Mozilla Developer Network</a></li>
+		</ol>
+	</section>
+</section>

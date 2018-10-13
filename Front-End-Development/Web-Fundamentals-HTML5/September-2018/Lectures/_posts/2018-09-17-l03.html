@@ -1,0 +1,196 @@
+---
+title: "CSS&nbsp;Box&nbsp;Model and Float"
+date: 2018-10-01 18:00:00
+permalink: /lecture-03.html
+categories: lecture
+layout: lecture
+---
+
+<section>
+	<p>{{ site.title }}</p>
+	<p><img alt="Site Logo" src="reveal/media/logo.png" width="120"></p>
+	<h1 class="center">{{ page.title }}</h1>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">CSS&nbsp;BOX&nbsp;MODEL</h1>
+	</section>
+
+	<section>
+		<p class="center" style="font-size: 1.5em; line-height: 1.2;">Every element in web design is a rectangular box</p>
+	</section>
+
+	<section>
+		<h2>CSS basic box model</h2>
+		<p>When laying out a document, the browser's rendering engine represents each element as a rectangular box according to the standard CSS basic box model. CSS determines the size, position, and properties (color, background, border size, etc.) of these boxes.</p>
+	</section>
+
+	<section>
+		<h2>Display</h2>
+		<p>The display CSS property defines the display type of an element, which consists of the two basic qualities of how an element generates boxes — the outer display type defining how the box participates in flow layout , and the inner display type defining how the children of the box are laid out.</p>
+	</section>
+
+	<section>
+		<h2>Default Width of Block elements</h2>
+		<p>If you don't declare a width, and the box has static or relative positioning, the width will remain 100% in width and the padding and border will push inwards instead of outward. But if you explicitly set the width of the box to be 100%, the padding will push the box outward as normal.</p>
+	</section>
+
+	<section>
+		<h2 class="center">Demo</h2>
+	</section>
+
+	<section>
+		<h2>Box Sizing</h2>
+		<p>The box-sizing CSS property defines how the user agent should calculate the total width and height of an element.</p>
+		<div class="iframe-wrapper">
+			<iframe src="https://interactive-examples.mdn.mozilla.net/pages/css/box-sizing.html" height="400" class="interactive" frameborder="0" width="100%"></iframe>
+		</div>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Universal Box Sizing with Inheritance
+
+			```css
+			html {
+			  box-sizing: border-box;
+			}
+
+			*, *:before, *:after {
+			  box-sizing: inherit;
+			}
+			```
+		</script>
+	</section>
+
+	<section>
+		<h2 class="center">Demo</h2>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">Float</h1>
+	</section>
+
+	<section>
+		<h2>Float</h2>
+		<p>The float CSS property specifies that an element should be placed along the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the web page, though still remaining a part of the flow (in contrast to absolute positioning).</p>
+		
+		<div class="iframe-wrapper">
+			<iframe src="https://interactive-examples.mdn.mozilla.net/pages/css/float.html" height="350" class="interactive" frameborder="0" width="100%"></iframe>
+		</div>
+	</section>
+
+	<section>
+		<h2>Clear</h2>
+		<p>The clear CSS property specifies whether an element can be next to floating elements that precede it or must be moved down (cleared) below them. The clear property applies to both floating and non-floating elements.</p>
+		
+		<div class="iframe-wrapper">
+			<iframe src="https://interactive-examples.mdn.mozilla.net/pages/css/clear.html" height="350" class="interactive" frameborder="0" width="100%"></iframe>
+		</div>
+	</section>
+
+	<section>
+		<h2 class="center">Demo</h2>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">Position</h1>
+	</section>
+	
+	<section>
+		<h2>Position</h2>
+		<p>The position CSS property specifies how an element is positioned in a document. The top, right, bottom, and left properties determine the final location of positioned elements.</p>
+		<div class="iframe-wrapper">
+			<iframe src="https://interactive-examples.mdn.mozilla.net/pages/css/position.html" height="360" class="interactive" frameborder="0" width="100%"></iframe>
+		</div>
+	</section>
+	
+	<section>
+		<h2>Static positioning</h2>
+		<p>The default state of every element — it just means "put the element into its normal position in the document layout flow — nothing special to see here."</p>
+	</section>
+	
+	<section>
+		<h2>Relative positioning</h2>
+		<p>Very similar to static positioning, except that once the positioned element has taken its place in the normal layout flow, you can then modify its final position, including making it overlap other elements on the page.</p>
+	</section>
+	
+	<section>
+		<h2>top, bottom, left, and right</h2>
+		<p>Used alongside position to specify exactly where to move the positioned element to.</p>
+	</section>
+	
+	<section>
+		<h2>Absolute positioning<span class="fragment"> - Demo</span></h2>
+		<p>This way we have to position the element based on a two dimentional coordinate system. We can use left, top, bottom, right to place the element exactly where we want.</p>
+	</section>
+	
+	<section>
+		<h2>Positioning contexts<span class="fragment"> - Demo</span></h2>
+		<p>Which element is the "containing element" of an absolutely positioned element? This is very much dependent on the position property of the ancestors of the positioned element.</p>
+	</section>
+
+	<section>
+		<h2>z-index<span class="fragment"> - Demo</span></h2>
+		<p>All this absolute positioning is good fun, but there is another thing we haven't considered yet — when elements start to overlap, what determines which elements appear on top of which other elements? In the example we've seen so far, we only have one positioned element in the positioning context, and it appears on the top, since positioned elements win over non-positioned elements. What about when we have more than one?</p>
+	</section>
+
+	<section>
+		<h2>Fixed positioning<span class="fragment"> - Demo</span></h2>
+		<p>This works in exactly the same way as absolute positioning, with one key difference:</p>
+		<p>	whereas absolute positioning fixes an element in place relative to the <code>html</code> element or its nearest positioned ancestor, fixed positioning fixes an element in place relative to the browser viewport itself. This means that you can create useful UI items that are fixed in place, like persisting navigation menus.</p>
+	</section>
+	
+	<section>
+		<h2>position: sticky<span class="fragment"> - Demo</span></h2>
+		<p>An interesting and common use of position: sticky is to create a scrolling index page where different headings stick to the top of the page as they reach it.</p>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">General rules</h1>
+	</section>
+	<section>
+		<blockquote>
+			<p>When you add float, always make sure that it is cleared properly. At the time of adding it!</p>
+		</blockquote>
+	</section>
+	<section>
+		<blockquote>
+			<p>Always set a width on anything floated, absolutely positioned, or fixed positioned</p>
+		</blockquote>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">Labs</h1>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">Resources</h1>
+	</section>
+	<section>
+		https://developer.mozilla.org/en-US/docs/Web/CSS/display
+		https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
+		https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+		https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+		https://developer.mozilla.org/en-US/docs/Web/CSS/position
+		https://developer.mozilla.org/en-US/docs/Web/CSS/position_value
+
+		https://developer.mozilla.org/en-US/docs/Web/CSS/float
+		https://developer.mozilla.org/en-US/docs/Web/CSS/clear
+
+		https://css-tricks.com/the-css-box-model/
+		https://css-tricks.com/box-sizing/
+	</section>
+</section>
+

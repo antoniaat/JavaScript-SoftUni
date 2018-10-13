@@ -1,0 +1,27 @@
+body {
+	padding: 5em;
+}
+
+a.button {
+	display: inline-block;
+	background: green;
+	color: #FFF;
+	text-decoration: none;
+	padding: 0.5rem 0.8rem;
+	border-radius: 0.2rem;
+	transition: background 0.3s ease;
+}
+a.button i {
+	transition: transform 0.9s ease;
+}
+a.button:hover {
+	background: red;
+}
+
+a.button:hover i {
+	color: #000;
+	transform: rotate(360deg);
+}
+
+a.button:active {
+}

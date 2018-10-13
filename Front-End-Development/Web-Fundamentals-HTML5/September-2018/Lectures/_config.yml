@@ -1,0 +1,20 @@
+title: Front End Development Part 1
+info: Courses - SoftUni - September 2018
+future: true
+email: koko@rhyndo.com
+# Build settings
+markdown: kramdown
+highlighter: true
+port: 3500
+# plugins:
+
+#
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

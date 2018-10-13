@@ -1,0 +1,29 @@
+html {
+	font: 16px/1.5 Helvetica, sans-serif;
+}
+
+body {
+	padding: 5em;
+}
+
+ol, ul, dl {
+	margin: 0 0 1.5rem 0;
+}
+
+ul, ol {
+	padding: 0;
+	margin-left: 2.5rem;
+}
+
+ul li, ol li {
+	list-style-position: outside;
+}
+
+ul ul {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+ul li { list-style-type: square; }
+ul ul li { list-style-type: disc; }
+ul ul ul li { list-style-type: circle; }
