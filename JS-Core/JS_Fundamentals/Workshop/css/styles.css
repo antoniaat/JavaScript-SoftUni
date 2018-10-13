@@ -1,0 +1,17 @@
+table {
+    border-collapse: collapse;
+}
+
+td {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(59, 59, 59, .6);
+}
+
+.snake {
+    background: white;
+}
+
+.food {
+    background: red;
+}
