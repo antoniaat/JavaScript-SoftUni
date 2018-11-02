@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #FAEBC8;
+}
+
+section {
+    background: white;
+    width: 70%;
+    margin: 10% auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 29px 8px rgba(191,150,129,1);
+    text-align: center;
+}
+
+section article {
+    display: inline-block;
+    width: 22%;
+    vertical-align: top;
+    margin: 30px;
+}
+
+img {
+    width: 60%;
+}
+
+section article p {
+    text-align: left;
+    height: 211px;
+}
+
+.author {
+    height: auto;
+    color: #A6736A;
+    font-weight: bold;
+    text-shadow: 26px 20px 2px rgba(150, 150, 150, 1);
+}
