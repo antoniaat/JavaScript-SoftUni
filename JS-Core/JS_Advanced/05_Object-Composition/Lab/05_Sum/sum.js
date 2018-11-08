@@ -11,7 +11,7 @@ function getModel() {
         add: () => model.action((a, b) => a + b),
 
         subtract: () => model.action((a, b) => a - b),
-        
+
         action: function (operation) {
             let val1 = Number(model.num1.val());
             let val2 = Number(model.num2.val());
