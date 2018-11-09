@@ -17,4 +17,6 @@ function rgbToHexColor(red, green, blue) {
 
 }
 
+console.log(rgbToHexColor('150', '200', '5'));
+
 module.exports = rgbToHexColor;
