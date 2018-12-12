@@ -1,0 +1,19 @@
+#schedule {
+    text-align: center;
+    width: 400px;
+}
+
+input {
+    width: 120px;
+}
+
+#info {
+    background-color: aquamarine;
+    border: 1px solid black;
+    margin: 0.25em;
+}
+
+.info {
+    font-size: 1.5em;
+    padding: 0.25em;
+}
