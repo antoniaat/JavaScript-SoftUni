@@ -2,6 +2,28 @@ function attachEvents() {
     $('#btnLoad').click(load);
     $('#btnCreate').click(addPerson);
 
+    function load() {
+        $.ajax({
+            type: 'GET',
+            dataType: 'json',
+            url: `https://phonebook-nakov.firebaseio.com/phonebook.json`,
+            success: function (data) {
+                $('#phonebook').empty();
+
+                for (let key in data) {
+                    let person = data[key].person;
+                    let phone = data[key].phone;
+
+                    let listItem = $(`<li>${person}: ${phone} <button class="delete" id='${key}'>[Delete]</button></li>`);
+
+                    $('#phonebook').append(listItem);
+                }
+
+                $('.delete:last-child').click(deletePhone);
+            }
+        });
+    }
+
     function addPerson() {
         let personName = $('#person').val();
         let phone = $('#phone').val();
@@ -15,43 +37,27 @@ function attachEvents() {
                 "phone": phone
             }),
             success: function () {
-                console.log("yey");
+                // Empty input fields
+                $('#person').val('');
+                $('#phone').val('');
             },
         });
+
+        load();
     }
 
-    function load() {
-        $.ajax({
-            type: 'GET',
-            dataType: 'json',
-            url: `https://phonebook-nakov.firebaseio.com/phonebook.json`,
-            success: function (data) {
-                $('#phonebook').empty();
-
-                for (let key in data) {
-                    let person = data[key].person;
-                    let phone = data[key].phone;
-
-                    let listItem = $(`<li>${person}: ${phone} <button class="delete">[Delete]</button></li>`);
-
-                    $('#phonebook').append(listItem);
-                }
-
-                $('.delete:last-child').click(deletePhone);
-            }
-        });
-    }
-
-    function deletePhone(key) {
-        let clickedUser = $(this).parent().text();
+    function deletePhone() {
+        let clickedUserId = $(this).attr('id');
 
         $.ajax({
-            url: `https://phonebook-nakov.firebaseio.com/phonebook/${key}.json`,
+            url: `https://phonebook-nakov.firebaseio.com/phonebook/${clickedUserId}.json`,
             type: 'DELETE',
-            success: function (data) {
+            success: function () {
+                console.log("The user is deleted.");
+                load();
 
             }
         });
-    }
 
+    }
 }
