@@ -1,0 +1,14 @@
+body {
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 2rem;
+}
+
+div {
+	display: block;
+	background: #000;
+	border-radius: 0.2rem;
+	color: #FFF;
+	padding: 2rem;
+}

@@ -1,0 +1,45 @@
+body {
+	padding: 2rem;
+	margin: 0;
+	display: grid;
+	gap: 2rem;
+	grid-template-areas: 
+	"header"
+	"main"
+	"aside"
+	"footer";
+	
+}
+
+@media screen and (min-width: 1024px) {
+	body {
+		grid-template-columns: 7fr 3fr;
+		grid-template-areas: 
+			"header header"
+			"main aside"
+			"footer footer";
+	}
+}
+
+.site-header {
+	grid-area: header;
+}
+
+.site-content {
+	grid-area: main;
+}
+
+.site-sidebar {
+	grid-area: aside;
+}
+
+.site-footer {
+	grid-area: footer;
+}
+
+body > * {
+	background: #000;
+	color: #FFF;
+	border-radius: 0.2rem;
+	padding: 2rem;
+}

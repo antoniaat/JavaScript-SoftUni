@@ -1,0 +1,46 @@
+body, html {
+	height: 100vh;
+	overflow: hidden;
+	font: 16px/1.5 "Verdana", sans-serif;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.box {
+	width: 80vw;
+	height: 80vh;
+	position: relative;
+	background: red;
+}
+
+.box:before,
+.box:after {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.box:before {
+	z-index: 5;
+	background: linear-gradient(to bottom, #d1913c, #ffd194);
+}
+
+.box:after {
+	z-index: 10;
+	background: linear-gradient(to bottom, #8e9eab, #eef2f3);
+	transition: opacity 0.5s ease-in-out;
+}
+
+.box:hover:after {
+	opacity: 0;
+}
+
+
+

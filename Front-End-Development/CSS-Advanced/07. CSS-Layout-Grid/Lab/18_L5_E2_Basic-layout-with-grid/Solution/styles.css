@@ -1,0 +1,19 @@
+body {
+	padding: 2rem;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 7fr 3fr;
+	gap: 2rem;
+}
+
+.site-header,
+.site-footer {
+	grid-column: 1 / span 2;
+}
+
+body > * {
+	background: #000;
+	color: #FFF;
+	border-radius: 0.2rem;
+	padding: 2rem;
+}

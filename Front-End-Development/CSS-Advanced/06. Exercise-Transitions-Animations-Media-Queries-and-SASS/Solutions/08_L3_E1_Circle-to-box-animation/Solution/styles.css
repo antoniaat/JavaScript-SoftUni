@@ -1,0 +1,38 @@
+body, html {
+	height: 100vh;
+	overflow: hidden;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.circle {
+	width: 9rem;
+	height: 9rem;
+	background: red;
+	border-radius: 50%;
+	animation-name: transform;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out; 
+   	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+@keyframes transform {
+	from {
+	}
+
+	to {
+		background: orange;
+		border-radius: 0;
+		width: 15rem;
+		height: 15rem;
+	}
+}
