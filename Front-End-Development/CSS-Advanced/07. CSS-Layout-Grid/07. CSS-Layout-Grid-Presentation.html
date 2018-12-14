@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+
+	<title>CSS Layout - Grid</title>
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="reveal/css/theme/SoftUni.css" id="theme">
+	<link rel="stylesheet" href="css/solarized_light.css"><!-- For syntax highlighting -->
+
+	<script>document.write( '<link rel="stylesheet" href="reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<!--[if lt IE 9]><script src="../reveal/lib/js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides"><!-- Any section element inside of this container is displayed as a slide -->
+			
+			<section>
+	<p>Front End Development Part 2</p>
+	<p><img alt="Site Logo" src="reveal/media/logo.png" width="120"></p>
+	<h1 class="center">CSS Layout - Grid</h1>
+</section>
+
+<section>
+    <section>
+        <h1 class="center">Grid</h1>
+    </section>
+    <section>
+        <h2>CSS Grid Layout</h2>
+		<p>CSS Grid Layout excels at dividing a page into major regions or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives.</p>
+		<p>Like tables, grid layout enables an author to align elements into columns and rows. However, many more layouts are either possible or easier with CSS grid than they were with tables. For example, a grid container's child elements could position themselves so they actually overlap and layer, similar to CSS positioned elements.</p>
+    </section>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">Glossary</h1>
+	</section>
+
+	<section>
+	    <h2>Grid</h2>
+		<p>A <em>CSS grid</em> is defined using the <code>grid</code> value of the <code>display</code> property; you can define columns and rows on your grid using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows" title="The grid-template-rows CSS property defines the line names and track sizing functions of the grid rows."><code>grid-template-rows</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns" title="The grid-template-columns CSS property defines the line names and track sizing functions of the grid columns."><code>grid-template-columns</code></a> properties.</p>
+		<p>The grid that you define using these properties is described as the <em>explicit grid</em>.</p>
+		<p>If you place content outside of this explicit grid, or if you are relying on auto-placement and the grid algorithm needs to create additional row or column <a href="https://developer.mozilla.org/en-US/docs/Glossary/grid_tracks" class="glossaryLink" title="tracks: A grid track is the space between two grid lines. They are defined in the explicit grid by using the grid-template-columns and grid-template-rows properties or the shorthand grid or grid-template properties. Tracks are also created in the implicit grid by positioning a grid Item outside of the tracks created in the explicit grid.">tracks</a> to hold <a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Glossary/grid_item" class="glossaryLink new" title="The definition of that term (grid items) has not been written yet; please consider contributing it!">grid items</a>, then extra tracks will be created in the implicit grid. The <em>implicit grid</em> is the grid created automatically due to content being added outside of the tracks defined.</p>
+	</section>
+
+	<section>
+	    <h2>Grid Areas</h2>
+		<p>A <strong>grid area</strong> is one or more <a href="https://developer.mozilla.org/en-US/docs/Glossary/grid_cell" title="grid cells: In a CSS Grid Layout, a grid cell is the smallest unit you can have on your CSS grid. It is the space between four intersecting grid lines and conceptually much like a table cell." class="glossaryLink">grid cells</a> that make up a rectangular area on the grid. Grid areas are created when you place an item using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">line-based placement</a> or when defining areas using <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">named grid areas</a>.</p>
+		<p><em>Grid areas <strong><u>must</u></strong> be rectangular in nature; it is not possible to create, for example, a T- or L-shaped grid area.</em></p>
+	</section>
+
+	<section>
+		<h2>Grid Column</h2>
+		<p>A <strong>grid column</strong> is a vertical track in a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>, and is the space between two vertical grid lines. It is defined by the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns" title="The grid-template-columns CSS property defines the line names and track sizing functions of the grid columns."><code>grid-template-columns</code></a> property or in the shorthand <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid" title="The grid CSS property is a shorthand property that sets all of the explicit grid properties (grid-template-rows, grid-template-columns, and grid-template-areas), all the implicit grid properties (grid-auto-rows, grid-auto-columns, and grid-auto-flow), and the gutter properties (grid-column-gap and grid-row-gap) in a single declaration."><code>grid</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template" title="The grid-template CSS property is a shorthand property for defining grid columns, rows, and areas."><code>grid-template</code></a> properties.</p>
+		<p>In addition, columns may be created in the <em>implicit grid</em> when items are placed outside of columns created in the <em>explicit grid</em>. These columns will be auto-sized by default, or can have a size specified with the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns" title="The grid-auto-columns CSS property specifies the size of an implicitly-created grid column track."><code>grid-auto-columns</code></a> property.</p>
+		<p>When working with alignment in <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>, the axis down which columns run is known as the <em>block, or column, axis</em>.</p>
+	</section>
+
+	<section>
+		<h2>Grid Row</h2>
+		<p>A <strong>grid row</strong> is a horizontal track in a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>, that is the space between two horizontal grid lines. It is defined by the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows" title="The grid-template-rows CSS property defines the line names and track sizing functions of the grid rows."><code>grid-template-rows</code></a> property or in the shorthand <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid" title="The grid CSS property is a shorthand property that sets all of the explicit grid properties (grid-template-rows, grid-template-columns, and grid-template-areas), all the implicit grid properties (grid-auto-rows, grid-auto-columns, and grid-auto-flow), and the gutter properties (grid-column-gap and grid-row-gap) in a single declaration."><code>grid</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template" title="The grid-template CSS property is a shorthand property for defining grid columns, rows, and areas."><code>grid-template</code></a> properties.</p>
+		<p>In addition, rows may be created in the <em>implicit grid</em> when items are placed outside of rows created in the <em>explicit grid</em>. These rows will be auto sized by default, or can have a size specified with the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows" title="The grid-auto-rows CSS property specifies the size of an implicitly-created grid row track."><code>grid-auto-rows</code></a> property.</p>
+		<p>When working with alignment in <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>, the axis along which rows run is known as the <em>inline, or row, axis</em>.</p>
+	</section>
+
+	<section>
+		<h2>Grid Lines</h2>
+		<p><strong>Grid lines</strong> are created when you define <a href="https://developer.mozilla.org/en-US/docs/Glossary/Grid_tracks" class="glossaryLink">tracks</a> in the explicit grid using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></p>
+	</section>
+
+	<section>
+		<h2>Gutters</h2>
+		<p><strong>Gutters</strong> or <em>alleys</em> are spacing between content tracks. These can be created in <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> using the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap" title="The grid-column-gap CSS property specifies the gutter between grid columns."><code>grid-column-gap</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap" title="The grid-row-gap CSS property specifies the gutter between grid rows."><code>grid-row-gap</code></a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap" title="The grid-gap CSS property is a shorthand property for grid-row-gap and grid-column-gap specifying the gutters between grid rows and columns."><code>grid-gap</code></a> properties.</p>
+	</section>
+
+	<section>
+		<h2>Grid Tracks</h2>
+		<p>A <strong>grid track</strong> is the space between two <a href="/en-US/docs/Glossary/grid_lines" title="grid lines: Grid lines are created when you define tracks in the explicit grid using CSS Grid Layout. In the following example there is a grid with three column tracks and two row tracks. This gives us 4 column lines and 3 row&nbsp;lines." class="glossaryLink">grid lines</a>. They are defined in the <em>explicit grid</em> by using the <a href="/en-US/docs/Web/CSS/grid-template-columns" title="The grid-template-columns CSS property defines the line names and track sizing functions of the grid columns."><code>grid-template-columns</code></a> and <a href="/en-US/docs/Web/CSS/grid-template-rows" title="The grid-template-rows CSS property defines the line names and track sizing functions of the grid rows."><code>grid-template-rows</code></a> properties or the shorthand <a href="/en-US/docs/Web/CSS/grid" title="The grid CSS property is a shorthand property that sets all of the explicit grid properties (grid-template-rows, grid-template-columns, and grid-template-areas), all the implicit grid properties (grid-auto-rows, grid-auto-columns, and grid-auto-flow), and the gutter properties (grid-column-gap and grid-row-gap) in a single declaration."><code>grid</code></a> or <a href="/en-US/docs/Web/CSS/grid-template" title="The grid-template CSS property is a shorthand property for defining grid columns, rows, and areas."><code>grid-template</code></a> properties. Tracks are also created in the <em>implicit grid</em> by positioning a grid Item outside of the tracks created in the explicit grid.</p>
+	</section>
+
+	<section>
+		<h2>Grid Tracks</h2>
+		<h3>Track sizing in the explicit grid</h3>
+		<p>When defining grid tracks using grid-template-columns and grid-template-rows you may use any length unit, and also the flex unit, fr which indicates a portion of the available space in the grid container.</p>
+	</section>
+
+	<section>
+		<h2>Grid Tracks</h2>
+		<h3>Track sizing in the implicit grid</h3>
+		<p>Tracks created in the implicit grid are auto-sized by default, however you can define a size for these tracks using the grid-auto-rows and grid-auto-columns properties.</p>
+	</section>
+
+	<section>
+		<h2>Grid Axis</h2>
+		<p>CSS Grid Layout is a two-dimensional layout method enabling the laying out of content in <em>rows</em> and <em>columns</em>. Therefore in any grid we have two axes. The <em>block or column axis</em>, and the <em>inline or row axis</em>.</p>
+		<p>It is along these axes that items can be aligned and justified using the properties defined in the <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box Alignment specification</a>.</p>
+	</section>
+
+	<section>
+		<h2>Grid Axis</h2>
+		<p>In CSS the <em>block or column axis</em> is the axis used when laying out blocks of text. If you have two paragraphs and are working in a right to left, top to bottom language they lay out one below the other, on the block axis.</p>
+		<p><img src="https://mdn.mozillademos.org/files/14775/7_Block_Axis.png" alt="Diagram showing the block axis in CSS Grid Layout." style="height: 306px; width: 940px;"></p>
+	</section>
+
+	<section>
+		<h2>Grid Axis</h2>
+		<p>The <em>inline or row axis</em> runs across the Block Axis and is the direction along which regular text flows. These are our rows in CSS Grid Layout.</p>
+		<p><img src="https://mdn.mozillademos.org/files/14773/7_Inline_Axis.png" alt="Diagram showing the inline axis in CSS Grid Layout." style="height: 306px; width: 940px;"></p>
+		<p>The physical direction of these axes can change according to the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">writing mode</a> of the document.</p>
+	</section>
+
+	<section>
+		<h2>Grid Cell / Grid Item</h2>
+		<p>In a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>, a <strong>grid cell</strong> is the smallest unit you can have on your CSS grid. It is the space between four intersecting <a href="https://developer.mozilla.org/en-US/docs/Glossary/grid_lines" title="grid lines: Grid lines are created when you define tracks in the explicit grid using CSS Grid Layout. In the following example there is a grid with three column tracks and two row tracks. This gives us 4 column lines and 3 row&nbsp;lines." class="glossaryLink">grid lines</a> and conceptually much like a table cell.</p>
+		<p>If you do not place items using one of the grid placement methods, direct children of the grid container will be placed one into each individual grid cell by the auto-placement algorithm. Additional row or column <a href="https://developer.mozilla.org/en-US/docs/Glossary/grid_tracks" title="tracks: A grid track is the space between two grid lines. They are defined in the explicit grid by using the grid-template-columns and grid-template-rows properties or the shorthand grid or grid-template properties. Tracks are also created in the implicit grid by positioning a grid Item outside of the tracks created in the explicit grid." class="glossaryLink">tracks</a> will be created to create enough cells to hold all items.</p>
+	</section>
+
+	<section>
+		<h2>Grid Container</h2>
+		<p>The element on which display: grid is applied. It's the direct parent of all the grid items. In this example container is the grid container.</p>
+	</section>
+</section>
+
+<section>
+    <section>
+        <h1 class="center">Making a Grid</h1>
+    </section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## display: grid
+
+			```css
+			display: gird;
+			```
+			
+			Defines the element as a grid container and establishes a new grid formatting context for its contents.
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## grid-template-(columns|rows)
+
+			```css
+			grid-template-columns: <track-size>;
+			grid-template-rows: <track-size>;
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## fr - fraction unit
+
+			```css
+			grid-template-columns: 2fr, 1fr, 1fr;
+			```
+		</script>
+	</section>
+	
+	<section data-markdown>
+		<script type="text/template">
+			## repeat()
+
+			```css
+			grid-template-columns: repeat(12, 30px);
+			grid-template-columns: repeat(12, 1fr);
+			```
+		</script>
+	</section>
+
+	
+	<section data-markdown>
+		<script type="text/template">
+			## grid-gap
+
+			```css
+			grid-column-gap: <line-size>;
+			grid-row-gap: <line-size>;
+			grid-gap: <grid-row-gap> <grid-column-gap>;
+			grid-gap: <gap-size>;
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## place-items
+			Sets both the align-items and justify-items properties in a single declaration.
+
+			```css
+			place-items: <align-items> / <justify-items>;
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## justify-content
+
+			Sometimes the total size of your grid might be less than the size of its grid container. This could happen if all of your grid items are sized with non-flexible units like px. In this case you can set the alignment of the grid within the grid container. This property aligns the grid along the inline (row) axis (as opposed to align-content which aligns the grid along the block (column) axis).
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## justify-content
+
+			```css
+			justify-content: start | end | center | stretch | space-around | space-between | space-evenly;	
+			```			
+		</script>
+	</section>	
+
+	<section data-markdown>
+		<script type="text/template">
+			## align-content
+
+			Sometimes the total size of your grid might be less than the size of its grid container. This could happen if all of your grid items are sized with non-flexible units like px. In this case you can set the alignment of the grid within the grid container. This property aligns the grid along the block (column) axis (as opposed to justify-content which aligns the grid along the inline (row) axis).
+		</script>
+	</section>	
+
+	<section data-markdown>
+		<script type="text/template">
+			## align-content
+
+			```css
+			align-content: start | end | center | stretch | space-around | space-between | space-evenly;	
+			```			
+		</script>
+	</section>	
+
+	<section data-markdown>
+		<script type="text/template">
+			## grid-auto-(columns|rows)
+
+			```css
+			grid-template-columns: 60px 60px;
+			grid-template-rows: 90px 90px
+			```			
+		</script>
+	</section>	
+</section>
+
+<section>
+	<section>
+		<h1 class="center">Placing grid items</h1>
+	</section>	
+	
+	<section data-markdown>
+		<script type="text/template">
+			## grid-column-start, grid-column-end, grid-row-start, grid-row-end
+
+			Determines a grid item's location within the grid by referring to specific grid lines. grid-column-start/grid-row-start is the line where the item begins, and grid-column-end/grid-row-end is the line where the item ends.
+		</script>
+	</section>	
+	
+	<section data-markdown>
+		<script type="text/template">
+			## grid-column-start, grid-column-end, grid-row-start, grid-row-end
+
+			```css
+			grid-column-start: <number> | <name> | span <number> | span <name> | auto
+			grid-column-end: <number> | <name> | span <number> | span <name> | auto
+			grid-row-start: <number> | <name> | span <number> | span <name> | auto
+			grid-row-end: <number> | <name> | span <number> | span <name> | auto
+			```
+		</script>
+	</section>	
+	
+	<section data-markdown>
+		<script type="text/template">
+			## grid-column-start, grid-column-end, grid-row-start, grid-row-end
+
+			```css
+			grid-column-start: 2;
+			grid-column-end: five;
+			grid-row-start: row1-start
+			grid-row-end: 3;
+			```
+		</script>
+	</section>	
+	
+	<section data-markdown>
+		<script type="text/template">
+			## grid-column, grid-row
+
+			```css
+			grid-column: <start-line> / <end-line> | <start-line> / span <value>;
+			grid-row: <start-line> / <end-line> | <start-line> / span <value>;
+			```
+		</script>
+	</section>	
+
+	<section data-markdown>
+		<script type="text/template">
+			## grid-column, grid-row
+
+			```css
+			grid-column: 3 / span 2;
+			grid-row: third-line / 4;
+			```
+		</script>
+	</section>	
+
+	<section data-markdown>
+		<script type="text/template">
+			## justify-self
+
+			```css
+			justify-self: start | end | center | stretch;
+			```
+		</script>
+	</section>	
+
+
+	<section data-markdown>
+		<script type="text/template">
+			## align-self
+
+			```css
+			align-self: start | end | center | stretch;
+			```
+		</script>
+	</section>	
+
+</section>
+
+
+<section>
+    <section>
+        <h1 class="center">Resources</h1>
+    </section>
+    <section>
+
+		<ul>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout</a></li>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout</a></li>
+			<li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a></li>
+			<li><a href="https://gridbyexample.com/examples/">https://gridbyexample.com/examples/</a></li>
+		</ul>
+
+    </section>
+</section>
+
+
+
+		</div>
+	</div>
+	<script src="reveal/lib/js/head.min.js"></script>
+	<script src="reveal/js/reveal.min.js"></script>
+	<script>
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+
+		// The "normal" size of the presentation, aspect ratio will be preserved
+		// when the presentation is scaled to fit different resolutions. Can be
+		// specified using percentage units.
+		width: 1600,
+		height: 850,
+
+		// Factor of the display size that should remain empty around the content
+		margin: 0.1,
+
+		// Bounds for smallest/largest possible scale to apply to content
+		minScale: 0.2,
+		maxScale: 1.0,
+		controls: false,
+		progress: false,
+		history: true,
+		keyboard: true,
+		overview: true,
+		center: false,
+		loop: false,
+		autoSlide: 0,
+		mouseWheel: false,
+		rollingLinks: false,
+		transitionSpeed: 'fast', // default/fast/slow
+		transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+		dependencies: [
+			{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+	</script>
+</body>
+</html>
+

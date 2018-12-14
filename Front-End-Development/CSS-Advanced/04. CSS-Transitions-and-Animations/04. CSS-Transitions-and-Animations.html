@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+
+	<title>CSS Transitions and Animations</title>
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="reveal/css/theme/SoftUni.css" id="theme">
+	<link rel="stylesheet" href="css/solarized_light.css"><!-- For syntax highlighting -->
+
+	<script>document.write( '<link rel="stylesheet" href="reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<!--[if lt IE 9]><script src="../reveal/lib/js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides"><!-- Any section element inside of this container is displayed as a slide -->
+			
+			<section>
+	<p>Front End Development Part 2</p>
+	<p><img alt="Site Logo" src="reveal/media/logo.png" width="120"></p>
+	<h1 class="center">CSS Transitions and Animations</h1>
+</section>
+
+<section>
+	<section>
+	    <h1 class="center">Transitions</h1>
+	</section>
+
+	<section>
+	    <h2>Transitions</h2>
+		<p>CSS transitions provide a way to control animation speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time. For example, if you change the color of an element from white to black, usually the change is instantaneous. With CSS transitions enabled, changes occur at time intervals that follow an acceleration curve, all of which can be customized.</p>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Transitions - Properties
+
+			```css
+			transition-property: color;
+			transition-duration: 4s;
+			transition-timing-function: ease-in-out;
+			transition-delay: 1s;
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Transitions - Shorthand
+
+			```css
+			/* property name | duration | timing function | delay */
+			transition: color 4s ease-in-out 1s;
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Transitions - Timing functions
+
+			Mathematical function that describes how fast one-dimensional values change during animations. This lets you vary the animation's speed over the course of its duration.
+
+			"Smooth" timing functions are often called easing functions. They correlate a time ratio to an output ratio, both expressed as <number>s. For these values, 0.0 represents the initial state, and 1.0 represents the final state.
+		</script>
+	</section>
+
+	<section>
+	    <h2>Timing functions - linear</h2>
+		<img src="https://developer.mozilla.org/files/3425/cubic-bezier,linear.png" style="margin: 2rem 4rem 2rem 2rem; float: left">
+		<p>The animation moves from beginning to end at a constant rate. This keyword represents the timing function <pre>cubic-bezier(0.0, 0.0, 1.0, 1.0)</pre></p>
+	</section>
+	
+	<section>
+	    <h2>Timing functions - ease</h2>
+		<img src="https://mdn.mozillademos.org/files/3429/cubic-bezier,ease.png" style="margin: 2rem 4rem 2rem 2rem; float: left">
+		<p>The animation starts slowly, accelerates sharply, and then slows gradually towards the end. This keyword represents the timing function <pre>cubic-bezier(0.25, 0.1, 0.25, 1.0)</pre>. It is similar to ease-in-out, though it accelerates more sharply at the beginning.</p>
+	</section>
+	
+	<section>
+	    <h2>Timing functions - ease-in</h2>
+		<img src="https://mdn.mozillademos.org/files/3426/cubic-bezier,ease-in.png" style="margin: 2rem 4rem 2rem 2rem; float: left">
+		<p>The animation starts slowly, and then progressively speeds up until the end, at which point it stops abruptly. This keyword represents the timing function <pre>cubic-bezier(0.42, 0.0, 1.0, 1.0)</pre></p>
+	</section>
+	
+	<section>
+	    <h2>Timing functions - ease-in-out</h2>
+		<img src="https://mdn.mozillademos.org/files/3428/cubic-bezier,ease-in-out.png" style="margin: 2rem 4rem 2rem 2rem; float: left">
+		<p>The animation starts slowly, speeds up, and then slows down towards the end. This keyword represents the timing function <pre>cubic-bezier(0.42, 0.0, 0.58, 1.0)</pre>. At the beginning, it behaves like the ease-in function; at the end, it is like the ease-out function.</p>
+	</section>
+	
+	<section>
+	    <h2>Timing functions - ease-out</h2>
+		<img src="https://mdn.mozillademos.org/files/3427/cubic-bezer,ease-out.png" style="margin: 2rem 4rem 2rem 2rem; float: left">
+		<p>The animation starts abruptly, and then progressively slows down towards the end. This keyword represents the timing function <pre>cubic-bezier(0.0, 0.0, 0.58, 1.0)</pre>.</p>
+	</section>
+	
+	<section>
+	    <h2>Timing functions - Steps</h2>
+		<p>The steps() functional notation defines a step function dividing the domain of output values in equidistant steps.</p>
+	</section>
+
+	<section>
+	    <h2 class="center">Transitions - Demo</h2>
+	</section>
+</section>
+
+<section>
+	<section>
+	    <h1 class="center">Animations</h1>
+	</section>
+
+	<section>
+	    <h2>Animations</h2>
+		<p>CSS Animations is a module of CSS that lets you animate the values of CSS properties over time, using keyframes. The behavior of these keyframe animations can be controlled by specifying their timing function, duration, their number of repetitions, and other attributes.</p>
+	</section>
+
+	<section>
+		<h2>Transitions - Properties - 1</h2>
+
+		<dl>
+			<dt><a href="/en-US/docs/Web/CSS/animation-delay" title="The animation-delay CSS property specifies when an animation should start. You can begin the animation at a future point in time, immediately and from its beginning, or immediately and partway through the animation cycle."><code>animation-delay</code></a></dt>
+			<dd>Configures the delay between the time the element is loaded and the beginning of the animation sequence.</dd>
+			<dt><a href="/en-US/docs/Web/CSS/animation-direction" title="The animation-direction CSS property specifies whether an animation should play forwards, backwards, or alternating back and forth."><code>animation-direction</code></a></dt>
+			<dd>Configures whether or not the animation should alternate direction on each run through the sequence or reset to the start point and repeat itself.</dd>
+			<dt><a href="/en-US/docs/Web/CSS/animation-duration" title="The animation-duration CSS property specifies the length of time that an animation should take to complete one cycle."><code>animation-duration</code></a></dt>
+			<dd>Configures the length of time that an animation should take to complete one cycle.</dd>
+			<dt><a href="/en-US/docs/Web/CSS/animation-iteration-count" title="The animation-iteration-count CSS property sets the number of times an animation cycle should be played before stopping."><code>animation-iteration-count</code></a></dt>
+			<dd>Configures the number of times the animation should repeat; you can specify <code>infinite</code> to repeat the animation indefinitely.</dd>
+		</dl>
+	</section>
+	
+	<section>
+		<h2>Transitions - Properties - 2</h2>
+
+		<dl>
+			<dt><a href="/en-US/docs/Web/CSS/animation-name" title="The animation-name CSS property specifies one or more animations that should be applied to an element. Each name indicates an @keyframes at-rule that defines the property values for the animation sequence."><code>animation-name</code></a></dt>
+			<dd>Specifies the name of the <a href="/en-US/docs/Web/CSS/@keyframes" title="The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence."><code>@keyframes</code></a> at-rule describing the animation’s keyframes.</dd>
+			<dt><a href="/en-US/docs/Web/CSS/animation-play-state" title="The animation-play-state CSS property sets whether an animation is running or paused."><code>animation-play-state</code></a></dt>
+			<dd>Lets you pause and resume the animation sequence.</dd>
+			<dt><a href="/en-US/docs/Web/CSS/animation-timing-function" title="The animation-timing-function CSS property specifies how a CSS animation should progress over the duration of each cycle."><code>animation-timing-function</code></a></dt>
+			<dd>Configures the timing of the animation; that is, how the animation transitions through keyframes, by establishing acceleration curves.</dd>
+			<dt><a href="/en-US/docs/Web/CSS/animation-fill-mode" title="The animation-fill-mode CSS property specifies how a CSS animation should apply styles to its target before and after its execution."><code>animation-fill-mode</code></a></dt>
+			<dd>Configures what values are applied by the animation before and after it is executing.</dd>
+		</dl>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Using keyframes
+
+			The @keyframes CSS at-rule controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than transitions.
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Using keyframes
+
+			```css
+			@keyframes slidein {
+				from {
+					transform: translateX(-20rem);
+					opacity: 0;
+				}
+
+				to {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## Using keyframes
+
+			```css
+			@keyframes slidein {
+				0% {
+					transform: translateX(-20rem);
+					opacity: 0;
+				}
+
+				50% {
+					transform: translateX(10rem);
+				}
+
+				100% {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+			```
+		</script>
+	</section>
+
+	<section>
+	    <h2 class="center">Animations - Demo</h2>
+	</section>
+</section>
+
+<section>
+	<section>
+	    <h1 class="center">Resources</h1>
+	</section>
+
+	<section>
+	    <h2>Resources</h2>
+		<ul>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties</a></li>
+		</ul>
+	</section>
+
+	<section>
+	    <h2>Resources - Transitions</h2>
+		<ul>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions</a></li>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions</a></li>
+			<li><a href="https://css-tricks.com/almanac/properties/t/transition/">https://css-tricks.com/almanac/properties/t/transition/</a></li>
+			<li><a href="https://easings.net/">https://easings.net/</a></li>
+			<li><a href="https://blog.alexmaccaw.com/css-transitions">https://blog.alexmaccaw.com/css-transitions</a></li>
+			<li><a href="https://www.adobe.com/devnet/archive/html5/articles/using-css3-transitions-a-comprehensive-guide.html">https://www.adobe.com/devnet/archive/html5/articles/using-css3-transitions-a-comprehensive-guide.html</a></li>
+			<li><a href="https://css-tricks.com/different-transitions-for-hover-on-hover-off/">https://css-tricks.com/different-transitions-for-hover-on-hover-off/</a></li>
+			<li><a href="http://joelb.me/blog/2012/maintaining-css-style-states-using-infinite-transition-delays/">http://joelb.me/blog/2012/maintaining-css-style-states-using-infinite-transition-delays/</a></li>
+		</ul>
+	</section>
+
+	<section>
+	    <h2>Resources - Animations</h2>
+		<ul>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations</a></li>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations</a></li>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes</a></li>
+			<li><a href="https://css-tricks.com/almanac/properties/a/animation/">https://css-tricks.com/almanac/properties/a/animation/</a></li>
+			<li><a href="https://daneden.github.io/animate.css/">https://daneden.github.io/animate.css/</a></li>
+		</ul>
+	</section>
+</section>
+
+
+		</div>
+	</div>
+	<script src="reveal/lib/js/head.min.js"></script>
+	<script src="reveal/js/reveal.min.js"></script>
+	<script>
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+
+		// The "normal" size of the presentation, aspect ratio will be preserved
+		// when the presentation is scaled to fit different resolutions. Can be
+		// specified using percentage units.
+		width: 1600,
+		height: 850,
+
+		// Factor of the display size that should remain empty around the content
+		margin: 0.1,
+
+		// Bounds for smallest/largest possible scale to apply to content
+		minScale: 0.2,
+		maxScale: 1.0,
+		controls: false,
+		progress: false,
+		history: true,
+		keyboard: true,
+		overview: true,
+		center: false,
+		loop: false,
+		autoSlide: 0,
+		mouseWheel: false,
+		rollingLinks: false,
+		transitionSpeed: 'fast', // default/fast/slow
+		transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+		dependencies: [
+			{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+	</script>
+</body>
+</html>
+

@@ -1,0 +1,128 @@
+/**
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ *
+ * This theme is created by Konstantin Dankov
+ */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html {
+  font: normal 32px/1.5 "Lato", Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #234465 10%, #012243 90%); 
+  /*background: #234465;*/
+  color: #FFF; 
+  text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.5);
+  font: inherit;
+}
+
+section {
+	height: 100%;
+	padding: 0;
+}
+
+section > p + p {
+	padding-top: 1rem;
+}
+
+::selection {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-shadow: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+h1 { font-size: 2.9rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1.0rem; }
+
+ul, ol {
+	padding: 1rem 0 1rem 1.5rem;
+}
+
+li pre { display: inline-block; }
+
+code {
+	margin: 0.5rem 0;
+}
+
+.schedule { padding: 0; font-size: 0.96rem; line-height: 1.4; }
+.schedule li { list-style: disc inside; }
+.schedule li em { font-family: monospace; font-style: normal; }
+
+/*
+ * LINKS
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+a {
+	color: orange;
+	transition: color .15s ease; 
+	text-decoration: none;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+/*
+ * Corner
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.corner { position: absolute; width: 100%; }
+.corner.topleft { left: 0; top: 0; }
+.corner.topright { right: 0; top: 0; text-align: right; }
+.corner.bottomleft { left: 0; bottom: 0; }
+.corner.bottomright { right: 0; bottom: 0; text-align: right; }
+
+/*
+ * Reveal Specific stuff
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.reveal .slides {
+	text-align: left;
+}
+
+/*
+ * Navigation Control
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled { border-right-color: #336699; }
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled { border-left-color: #336699; }
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled { border-bottom-color: #336699; }
+
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled { border-top-color: #336699; }
+
+.reveal .controls div.navigate-left.enabled:hover	{ border-right-color: #6699cc; }
+.reveal .controls div.navigate-right.enabled:hover	{ border-left-color: #6699cc; }
+.reveal .controls div.navigate-up.enabled:hover		{ border-bottom-color: #6699cc; }
+.reveal .controls div.navigate-down.enabled:hover	{ border-top-color: #6699cc; }
+

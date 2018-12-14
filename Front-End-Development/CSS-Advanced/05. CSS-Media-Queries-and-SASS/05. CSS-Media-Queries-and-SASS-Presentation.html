@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+
+	<title>SASS &amp; Media Queries</title>
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="reveal/css/reveal.min.css">
+	<link rel="stylesheet" href="reveal/css/theme/SoftUni.css" id="theme">
+	<link rel="stylesheet" href="css/solarized_light.css"><!-- For syntax highlighting -->
+
+	<script>document.write( '<link rel="stylesheet" href="reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<!--[if lt IE 9]><script src="../reveal/lib/js/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides"><!-- Any section element inside of this container is displayed as a slide -->
+			
+			<section>
+	<p>Front End Development Part 2</p>
+	<p><img alt="Site Logo" src="reveal/media/logo.png" width="120"></p>
+	<h1 class="center">SASS &amp; Media Queries</h1>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">SASS</h1>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## SASS - Nested Rules
+
+			```scss
+			.hentry {
+				padding-top: 2rem;
+
+				blockquote {
+					padding-left: 2rem
+
+					p:last-child {
+						padding: 0;
+					}
+				}
+			}
+			```
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+			## SASS - Referencing Parent Selectors - '&'
+
+			```scss
+			a {
+				color: orange;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+				&:active {
+					color: red;
+				}
+			}
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## SASS - Interpolation - '#{}'
+
+			```scss
+			.site {
+				max-width: 60rem;
+
+				@at-root {
+					#{&}-header { position: relative; }
+	
+					#{&}-content { position: relative; }
+
+					#{&}-footer { position: relative; }
+				}
+			}
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## SASS - Placeholder Selectors - '%foo'
+
+			```scss
+			%pseudo {
+				display: block;
+				content: '';
+			}
+
+			.media:before {
+				@extend %pseudo;
+			}
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## SASS - Variables - '$'
+
+			Variables are only available within the level of nested selectors where they're defined. If they're defined outside of any nested selectors, they're available everywhere. They can also be defined with the !global flag, in which case they're also available everywhere.
+
+			```scss
+			$colorBodyBackground: #EEE;
+
+			body {
+				background-color: $colorBodyBackground;
+			}
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## SASS - Maps
+
+			```scss
+			$map: (key1: value1, key2: value2, key3: value3);
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## SASS - Comments - '/* */' and '//'
+
+			```scss
+			/* This will be compiled in the CSS file */
+			 
+			// This will not be compiled
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## SASS - For loop
+
+			```scss
+			@for $i from 1 through 3 { 
+				.item-#{$i} { width: 2em * $i; }
+			}
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## SASS - Each loop
+
+			```scss
+			@each $animal in puma, sea-slug, egret, salamander {
+				.#{$animal}-icon {
+					background-image: url('/images/#{$animal}.png');
+				}
+			}
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## SASS - Each loop
+
+			```scss
+			@each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
+				#{$header} {
+					font-size: $size;
+				}
+			}
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## SASS - Mixin directive
+
+			```scss
+			@mixin fa {
+				font-family: 'FontAwesome';
+				disiplay: inline-block;
+			}
+
+			a.button:before {
+				@include fa;
+			}
+			```
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+			## SASS - Content Blocks
+
+			#### Passing Content Blocks to a Mixin
+			It is possible to pass a block of styles to the mixin for placement within the styles included by the mixin. The styles will appear at the location of any @content directives found within the mixin. 
+
+			```scss
+			@mixin mq() {
+			    @media only screen and (min-width: 1044px) {
+					@content;
+			    }
+			}
+
+			.site-header {
+				@include mq {
+					.site-title { paddin-top: 10rem; }
+				}
+			}
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">DON'T PANIC!</h1>
+	</section>
+	<section>
+		<h2>Documentation</h2>
+		<ul>
+			<li class="fragment">Read the Guide</li>
+			<li class="fragment">Read the Documentation</li>
+			<li class="fragment">Move slowly, go through the examples yourself</li>
+			<li class="fragment">Read the Documentation</li>
+			<li class="fragment">Experimentation is a great learning tool</li>
+			<li class="fragment">Documentation is your friend</li>
+		</ul>
+	</section>
+</section>
+
+<section>
+	<section>
+		<h1 class="center">Resources</h1>
+	</section>
+	<section>
+		<h2>Resources - SASS</h2>
+		<ul>
+			<li><a href="http://sass-lang.com/guide">http://sass-lang.com/guide</a></li>
+			<li><a href="https://sass-lang.com/documentation/file.SASS_REFERENCE.html">https://sass-lang.com/documentation/file.SASS_REFERENCE.html</a></li>
+			<li><a href="https://devhints.io/sass">https://devhints.io/sass</a></li>
+		</ul>
+	</section>
+</section>
+
+
+
+		</div>
+	</div>
+	<script src="reveal/lib/js/head.min.js"></script>
+	<script src="reveal/js/reveal.min.js"></script>
+	<script>
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+
+		// The "normal" size of the presentation, aspect ratio will be preserved
+		// when the presentation is scaled to fit different resolutions. Can be
+		// specified using percentage units.
+		width: 1600,
+		height: 850,
+
+		// Factor of the display size that should remain empty around the content
+		margin: 0.1,
+
+		// Bounds for smallest/largest possible scale to apply to content
+		minScale: 0.2,
+		maxScale: 1.0,
+		controls: false,
+		progress: false,
+		history: true,
+		keyboard: true,
+		overview: true,
+		center: false,
+		loop: false,
+		autoSlide: 0,
+		mouseWheel: false,
+		rollingLinks: false,
+		transitionSpeed: 'fast', // default/fast/slow
+		transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+		dependencies: [
+			{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+	</script>
+</body>
+</html>
+
