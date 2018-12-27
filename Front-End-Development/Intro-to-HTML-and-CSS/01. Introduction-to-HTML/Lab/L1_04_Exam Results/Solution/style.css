@@ -1,0 +1,33 @@
+body{
+  font-family: 'Helvetica', sans-serif;
+  margin-top: 30px;
+}
+table{
+  width: 40%;
+  margin: 0 auto; 
+}
+table, td, tr, th {
+  border: 1px solid #000000;
+  border-collapse: collapse;  
+}
+
+td, th {
+  padding: 10px; 
+}
+
+.bold {
+  font-weight: bold;
+  text-align: center;
+}
+
+.result {
+  width: 400px;
+  text-align: right;
+  padding-right: 5px;
+}
+
+
+
+    
+
+
