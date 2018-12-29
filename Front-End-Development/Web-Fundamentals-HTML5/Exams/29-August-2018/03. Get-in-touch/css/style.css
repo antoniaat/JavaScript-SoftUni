@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600,800');
+
+body {
+    background: linear-gradient(rgba(132, 105, 221, 0.8), rgba(132, 105, 221, 0.8)),
+    url("../images/bg-01.jpg") no-repeat center;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+main {
+    background: white;
+    width: 70%;
+    border-radius: 1%;
+    margin: 30px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3% 0 6% 0;
+}
+#image-container {
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+}
+form {
+    display: inline-block;
+    width: 45%;
+}
+h1 {
+    margin-left: 27px;
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+label {
+    width: 95%;
+    display: block;
+}
+input {
+    width: 70%;
+    background-color: #E6E6E6;
+    outline: none;
+    border: none;
+    border-radius: 28px;
+    padding: 12px 10px 12px 32px;
+    margin: 10px 0;
+}
+input::placeholder, textarea::placeholder {
+    color: #AAAAAA;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+form label textarea {
+    margin: 10px 0 0 27px;
+    border-radius: 15px;
+    padding: 17px;
+    width: 72%;
+    background-color: #E6E6E6;
+    outline: none;
+    border: none;
+}
+i {
+    padding: 5px;
+    position: relative;
+    left: 38px;
+    width: 13px;
+    text-align: center;
+    font-size: 11px;
+    color: #AAAAAA;
+}
+
+label:focus-within i {
+    left: 35px;
+    color: #846ADD;
+}
+label:focus-within input::placeholder {
+    opacity: 0;
+}
+.submit-btn {
+    background-color: #846ADD;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    width: 76%;
+    margin-left: 27px;
+    margin-top: 17px;
+}
+.submit-btn:hover {
+    cursor: pointer;
+    background-color: #333333;
+}
