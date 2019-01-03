@@ -1,0 +1,51 @@
+@media screen and (max-width: 1028px){
+    #main {
+        flex-direction: column;
+        width: 90%;
+        margin: 2% auto;
+    }
+    #main aside {
+        width: 96%;
+    }
+    #main > aside > img {
+        float: left;
+        border-radius: 50%;
+        width: 16em;
+        height: 15em;
+        padding: 7%;
+    }
+    #personal-info {
+        padding: 7% 0 0 7%;
+    }
+    .progress-bar {
+        margin: 0 25px;
+    }
+    main {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    #main > aside >img {
+        float: none;
+        border-radius: unset;
+        height: auto;
+        width: 90%;
+        padding-bottom: 2%;
+    }
+    #personal-info {
+        padding: unset;
+        margin: 0 auto;
+        width: 90%;
+        padding-bottom: 2%;
+    }
+    #education > article > div > div {
+        display: block;
+        float: none;
+        width: 12em;
+        margin: 0 auto;
+    }
+    .progress-bar {
+        margin: 0 15px;
+    }
+}

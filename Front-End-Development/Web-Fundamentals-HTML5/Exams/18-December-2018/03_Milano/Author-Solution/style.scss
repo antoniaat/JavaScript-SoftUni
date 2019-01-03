@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+section {
+  width: 60%;
+  margin: 60px auto;
+  border: 1px solid black;
+  color: #4C4C4C;
+
+  article:nth-child(1) {
+    background: #ECECEC;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: normal;
+    padding: 15px 0;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  article:nth-child(2) div {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  article:nth-child(2) div:nth-child(1) {
+    width: 35%;
+    border-right: 1px solid #4C4C4C;
+    text-align: center;
+
+    p {
+      text-align: left;
+      padding: 0px 15px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+  }
+
+  article:nth-child(2) div:nth-child(2) {
+    width: 55%;
+    padding: 16px;
+
+  }
+}
+
+form {
+  font-size: 18px;
+
+  span {
+    font-size: 16px;
+
+  }
+
+  label:nth-child(1) {
+    display: block;
+
+    select {
+      padding: 5px 97%;
+      font-size: 20px;
+      outline: none;
+      border-radius: 12px;
+    }
+  }
+
+  label {
+    width: 45%;
+    display: inline-block;
+    margin: 8px;
+  }
+
+  input {
+    padding: 5px 12px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid rgb(169, 169, 169);
+    border-radius: 12px;
+    width: 64%;
+    margin-left: 19px;
+  }
+
+  label:nth-child(5) input {
+    margin-left: 9px;
+  }
+
+  input[type="submit"] {
+    background: #E34A4A;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 9px;
+    width: 128px;
+    border: none;
+    text-align: center;
+    margin: 22px 44%;
+    color: white;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+      background: #CD2F3D;
+  }
+}

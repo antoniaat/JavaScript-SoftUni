@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+nav {
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5% 10%;
+    color: #777779;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    cursor: pointer;
+}
+nav ul li a {
+    text-decoration: none;
+    color: unset;
+}
+body > nav > ul:nth-child(1) > li:nth-child(1) {
+    color: #FA5B3D;
+}
+.extra-options li {
+    border-right: 1px solid #777779;
+    padding-right: 10px;
+}
+
+header {
+    background-image: url("../img/residential-banner-2.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    height: 20em;
+}
+header h1 {
+    padding: 30px 0 20px 0;
+    width: 23%;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 37px;
+    letter-spacing: 2px;
+}
+.no-break {
+    white-space: nowrap;
+}
+header p {
+    width: 20em;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+body > header > p:nth-child(3) {
+    width: 24em;
+}
+main {
+    text-align: center;
+}
+#how-to {
+    width: 80%;
+    margin: 20px auto;
+}
+h2 {
+    font-family: initial;
+}
+.article-container {
+    display: flex;
+    justify-content: space-around;
+    color: #5A5A5A;
+}
+main section article {
+    width: 17%;
+    margin: 2% 4%;
+}
+body > main > section > div > article:nth-child(2) {
+    width: 19%;
+}
+h3 {
+    width: 54%;
+    text-align: center;
+    border-bottom: 1px solid #5A5A5A;
+    line-height: 0.1em;
+    margin: 10px auto 20px;
+    font-size: 2.6em;
+    font-weight: 300;
+}
+h3 span {
+    background:#fff;
+    padding:0 10px;
+}
+h4 {
+    font-size: 1.8em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-top: 29px;
+}
+.article-container p {
+    margin: 15px 0;
+}
+#views {
+    background-color: #EDEDED;
+    width: 100%;
+}
+#views > div {
+    justify-content: center;
+}
+
+#views > div > article {
+    width: 23%;
+    margin: 3.5% 0.5%;
+}
+#views > div > article> img {
+    width: 100%;
+}
+footer {
+    background-color: #000000;
+    color: #656966;
+    text-align: center;
+}
+footer section {
+    display: flex;
+    width: 74%;
+    margin: 0 auto;
+    padding: 38px 0;
+}
+footer ul {
+    list-style: none;
+}
+footer article {
+    margin: 0 10px;
+}
+#all-the-options {
+    display: flex;
+    width: 28%;
+    border-bottom: 1px solid #656966;
+    padding-bottom: 32px;
+}
+#all-the-options ul {
+    width: 32%;
+}
+#all-the-options ul li {
+    padding: 5px 0;
+    line-height: 15px;
+}
+footer section article img {
+    padding-bottom: 25px;
+}
+footer i {
+    color: white;
+}
+footer i {
+    cursor: pointer;
+}
+#sign-up {
+    width: 35%;
+}
+#sign-up p {
+    width: 80%;
+    margin: 0 auto;
+}
+#sign-up input {
+    display: block;
+    margin: 8px 0;
+    padding: 8px;
+    width: 67%;
+    outline: none;
+}
+#sign-up #subscribe-btn {
+    background-color: #FA5B3C;
+    color: white;
+    border: none;
+    width: 25%;
+    padding: 10px 5px;
+}
+#sign-up #subscribe-btn:hover {
+    cursor: pointer;
+}
+footer > p {
+    padding: 40px 0 20px 0;
+}

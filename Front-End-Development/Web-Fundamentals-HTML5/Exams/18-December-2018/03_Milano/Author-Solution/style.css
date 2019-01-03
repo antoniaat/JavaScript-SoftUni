@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  font-family: 'Roboto', sans-serif; }
+
+section {
+  width: 60%;
+  margin: 60px auto;
+  border: 1px solid black;
+  color: #4C4C4C; }
+  section article:nth-child(1) {
+    background: #ECECEC;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: normal;
+    padding: 15px 0; }
+    section article:nth-child(1) h2 {
+      margin: 0; }
+  section article:nth-child(2) div {
+    display: inline-block;
+    vertical-align: top; }
+  section article:nth-child(2) div:nth-child(1) {
+    width: 35%;
+    border-right: 1px solid #4C4C4C;
+    text-align: center; }
+    section article:nth-child(2) div:nth-child(1) p {
+      text-align: left;
+      padding: 0px 15px; }
+    section article:nth-child(2) div:nth-child(1) img {
+      width: 100%; }
+  section article:nth-child(2) div:nth-child(2) {
+    width: 55%;
+    padding: 16px; }
+
+form {
+  font-size: 18px; }
+  form span {
+    font-size: 16px; }
+  form label:nth-child(1) {
+    display: block; }
+    form label:nth-child(1) select {
+      padding: 5px 97%;
+      font-size: 20px;
+      outline: none;
+      border-radius: 12px; }
+  form label {
+    width: 45%;
+    display: inline-block;
+    margin: 8px; }
+  form input {
+    padding: 5px 12px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid darkgray;
+    border-radius: 12px;
+    width: 64%;
+    margin-left: 19px; }
+  form label:nth-child(5) input {
+    margin-left: 9px; }
+  form input[type="submit"] {
+    background: #E34A4A;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 9px;
+    width: 128px;
+    border: none;
+    text-align: center;
+    margin: 22px 44%;
+    color: white;
+    cursor: pointer; }
+  form input[type="submit"]:hover {
+    background: #CD2F3D; }
+
+/*# sourceMappingURL=style.css.map */
