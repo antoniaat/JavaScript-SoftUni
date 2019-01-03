@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Messages</title>
+    <link rel="stylesheet" type="text/css" href="styles/messages.css"/>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="node_modules/sammy/lib/min/sammy-0.7.6.min.js"></script>
+    <script src="node_modules/sammy/lib/min/plugins/sammy.handlebars-0.7.6.min.js"></script>
+    <script src="js/remote.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/handlers/userSession.js"></script>
+    <script src="js/handlers/home.js"></script>
+    <script src="js/handlers/messages.js"></script>
+</head>
+<body>
+
+<div class="notification">
+    <div id="loadingBox">Loading ...</div>
+    <div id="infoBox">Info</div>
+    <div id="errorBox">Error</div>
+</div>
+
+<div id="app"></div>
+
+</body>
+</html>

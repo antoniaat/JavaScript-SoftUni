@@ -1,0 +1,31 @@
+<section id="viewArchiveSent">
+    <h1>Archive (Sent Messages)</h1>
+    <div class="messages" id="sentMessages">
+        <table>
+            <thead>
+            <tr>
+                <th>To</th>
+                <th>Message</th>
+                <th>Date Sent</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each messages}}
+                <tr>
+                    {{#if sender_name}}
+                        <td>{{sender_name}} ({{sender_username}})</td>
+                    {{else}}
+                        <td>{{sender_username}}</td>
+                    {{/if}}
+                    <td>{{text}}</td>
+                    <td>{{timestamp}}</td>
+                    <td>
+                        <button data-id="{{_id}}">Delete</button>
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
