@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Autumn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <form>
+        <div class="row">
+            <h4>Sign up for AUTUMN Festival</h4>
+            <div class="input-group input-group-icon">
+                <input type="text" placeholder="Full Name"/>
+                <div class="input-icon"><i class="fa fa-user"></i></div>
+            </div>
+            <div class="input-group input-group-icon">
+                <input type="email" placeholder="Email Adress"/>
+                <div class="input-icon"><i class="fa fa-envelope"></i></div>
+            </div>
+            <div class="input-group input-group-icon">
+                <input type="password" placeholder="Password"/>
+                <div class="input-icon"><i class="fa fa-key"></i></div>
+            </div>
+        </div>
+        <div class="row">
+
+            <h4>Payment Details</h4>
+
+            <div class="input-group">
+
+                <input type="radio" name="payment-method" value="card" id="payment-method-card"/>
+
+                <label for="payment-method-card">
+                    <span>
+                        <i class="fab fa-cc-visa"></i>
+                        Credit Card
+                    </span>
+                </label>
+
+                <input type="radio" name="payment-method" value="paypal" id="payment-method-paypal"/>
+
+                <label for="payment-method-paypal">
+                    <span>
+                        <i class="fab fa-cc-paypal"></i>
+                       Paypal
+                    </span>
+                </label>
+
+            </div>
+            <div class="input-group input-group-icon">
+                <input type="text" placeholder="Card Number"/>
+                <div class="input-icon"><i class="fa fa-credit-card"></i></div>
+            </div>
+
+            <input type="submit" value="Send">
+        </div>
+    </form>
+</div>
+</body>
+</html>

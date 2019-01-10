@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  background: url(img/background.png) repeat 0 0;
+}
+
+main {
+  width: 58%;
+  text-align: center;
+  margin: 5% auto;
+
+  section article {
+    display: inline-block;
+    width: 48%;
+
+    h3 {
+      padding-left: 41px;
+      color: #675e54;
+    }
+
+    div {
+      box-shadow: 0 0 10px 1px rgba(0,0,0,0.75);
+      background: white;
+      width: 40%;
+      display: inline-block;
+      margin: 20px;
+
+      img {
+        width: 88%;
+        margin: 5%;
+      }
+
+      p {
+        padding: 5px;
+        color: #675e54;
+      }
+
+      .price {
+        color: #7d02ad;
+        font-weight: bold;
+      }
+    }
+
+    span {
+      color: #ffdd00;
+      cursor: pointer;
+    }
+
+    .lines {
+      color: #bec0c3;
+      font-weight: lighter;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+main > article {
+  img {
+    width: 100%;
+    border-radius: 50px;
+  }
+}

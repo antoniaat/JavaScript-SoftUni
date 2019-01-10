@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,900');
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    background: #fff;
+}
+
+/* Add hover on navbar here */
+
+header {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../images/image-bg.jpg);
+    text-align: center;
+    height: 550px;
+}
+
+nav {
+    padding-top: 20px;
+    font-size: 1.4rem;
+    text-shadow: 0 0 4px #000;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+ul a {
+    text-decoration: none;
+    color: #fff;
+    padding: 30px;
+}
+
+.header-title {
+    padding-top: 2.5em;
+    color: #fff;
+    font-size: 4em;
+}
+
+.header-subtitle {
+    color: #fff;
+    font-size: 2em;
+    font-style: italic;
+    padding-top: 28px;
+}
+
+.scroll-btn {
+    background-color: #5bbad0;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 60px;
+    font-size: 18px;
+}
+
+.scroll-btn:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 50px 3px rgba(0, 0, 0, 1);
+}
+
+#container {
+    background: #efefef;
+}
+
+#container img {
+    width: 50%;
+    height: 20%;
+}
+
+.top-container {
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.bottom-container {
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.hiking-info {
+    background-color: #fff;
+    color: #3a3a3a;
+    padding-top: 3%;
+}
+
+.hiking-text {
+    margin: 0 auto;
+    font-weight: 100;
+    font-size: 32px;
+    width: 40%;
+}
+
+.hiking-subtext {
+    color: #5f5e5e;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 30px;
+    padding-top: 15px;
+    width: 69%;
+}
+
+.hiking-btn {
+    margin-top: 55px;
+    padding: 15px 40px;
+    background: none;
+    border: 2px solid #265363;
+    color: #486e7c;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hiking-btn:hover {
+    cursor: pointer;
+    border: 2px solid #93a6b4;
+    color: #5b5f61;
+    border-radius: 5px;
+}
+
+.feedback {
+    background: #fff;
+    color: #3b3b39;
+    text-align: center;
+    margin: 20px auto;
+    padding-top: 50px;
+    width: 70%;
+}
+
+.feedback p {
+    text-align: left;
+}
+
+.feedback img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: -26px;
+}
+
+.feedback-title {
+    text-transform: capitalize;
+    font-size: 4em;
+    font-weight: 100;
+    padding-bottom: 50px;
+}
+
+.client-pictures {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.clients-text {
+    text-align: left;
+    margin-right: 60px;
+}
+
+.clients-text h2 {
+    font-size: 24px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-weight: 300;
+}
+
+.clients-text span {
+    color: cornflowerblue;
+}
+
+.feedback-container article {
+    display: inline-block;
+    width: 28%;
+    vertical-align: top;
+    text-align: center;
+    margin: 20px;
+}
+
+.feedback-container article p {
+    line-height: 28px;
+}
+
+.feedback-container h2 {
+    padding: 15px;
+    margin-left: -28px;
+}
+
+.contact-us {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/contact-us.jpg');
+    background-size: cover;
+    color: #fff;
+}
+
+.contact-us h2 {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    font-size: 3.5em;
+    font-weight: 300;
+}
+
+.contact-us > p {
+    text-align: center;
+    padding: 5px 50px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.2em;
+}
+
+.contact-container {
+    margin: 0 auto;
+}
+
+input[type=text] {
+    border: none;
+    border-radius: 0;
+    padding: 6rem 10rem;
+}
+
+.contact-btn {
+    margin-top: 30px;
+    padding: 15px 40px;
+    border: none;
+    background: #709faf;
+    color: #fff;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.contact-btn:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    color: #333;
+}
+
+.contact-us {
+    padding: 0 15%;
+}
+
+form h3 {
+    margin: 0 0 17px 0;
+}
+
+.contact-us article {
+    display: inline-block;
+    width: 40%;
+    margin: 20px;
+    vertical-align: top;
+}
+footer {
+    text-align: center;
+    font-size: 1.5em;
+    color: #fff;
+    background: #333;
+    padding: 20px;
+}
+
+.item {
+    justify-content: start;
+}
+
+.container {
+    align-content: center;
+}
+
+.container {
+    grid: auto-flow dense 100px / 1fr 2fr;
+}

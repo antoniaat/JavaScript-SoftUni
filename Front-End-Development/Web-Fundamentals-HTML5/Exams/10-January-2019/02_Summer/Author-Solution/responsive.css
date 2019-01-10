@@ -1,0 +1,87 @@
+@media only screen and (max-width: 600px) {
+  header nav img {
+    float: none;
+    width: 87%;
+    padding: 4%;
+    text-align: center; }
+
+  header nav ul {
+    margin-top: 0;
+    text-align: center;
+    padding-top: 0;
+    position: static; }
+
+  header nav ul li {
+    display: block; }
+
+  header nav p {
+    text-align: center;
+    margin-top: 0;
+    background: #4BBED1;
+    padding: 7px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0; }
+
+  header nav p:hover {
+    cursor: pointer; }
+
+  header section h1, header section h2 {
+    margin: 0; }
+
+  header section {
+    font-size: 3rem;
+    padding: 16%;
+    height: 741px; }
+
+  header section button {
+    font-size: 23px;
+    margin-top: 57px; }
+
+  main section:first-child h1 {
+    width: auto; }
+
+  main section:first-child div article {
+    display: block;
+    width: auto;
+    margin: 44px 0; }
+
+  main section:nth-child(2) article {
+    display: block;
+    width: auto;
+    padding: 6%; }
+
+  main section:nth-child(2) article:nth-child(2) {
+    position: static; }
+
+  main section:nth-child(2) article > h1 {
+    font-size: 4rem;
+    width: 100%; }
+
+  footer {
+    margin-top: 0; }
+
+  footer nav:nth-child(1) ul {
+    margin: 0; }
+    footer nav:nth-child(1) ul li {
+      display: block;
+      margin: 0;
+      text-decoration: none;
+      padding: 10px; }
+
+  footer #social-nav {
+    margin-left: 0; }
+
+  footer nav:nth-child(1) img {
+    width: 88%;
+    margin-left: 0;
+    padding-left: 3%; }
+
+  footer #social-nav div {
+    width: 12%;
+    margin: 25px 27px; }
+
+  footer #social-nav div i {
+    font-size: 25px; } }
+
+/*# sourceMappingURL=responsive.css.map */
