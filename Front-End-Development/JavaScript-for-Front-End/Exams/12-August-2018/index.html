@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <main class="mt-3">
+        <h1 class="text-center text-danger">Modify me</h1>
+        <hr class="w-75 bg-danger" style="height: 2px;">
+        <form class="w-75 mx-auto">
+            <h3 class="text-center text-danger">Personal Info</h3>
+            <div class="first-name-and-last-name-holder row d-flex justify-content-between">
+                <div class="form-group text-danger col-md-5">
+                    <div class="label-holder d-flex justify-content-center">
+                        <label for="firstName" class="font-weight-bold">First Name</label>
+                    </div>
+                    <h5 id="firstName" class="text-gray-dark text-center">Pesho</h5>
+                </div>
+                <div class="form-group text-danger col-md-5">
+                    <div class="label-holder d-flex justify-content-center">
+                        <label for="lastName" class="font-weight-bold">Last Name</label>
+                    </div>
+                    <h5 id="lastName" class="text-gray-dark text-center">Peshov</h5>
+                </div>
+            </div>
+            <div class="first-name-and-last-name-holder row d-flex justify-content-between">
+                <div class="form-group text-danger col-md-5">
+                    <div class="label-holder d-flex justify-content-center">
+                        <label for="phoneNumber" class="font-weight-bold text-center">Phone Number</label>
+                    </div>
+                    <h5 id="phoneNumber" class="text-gray-dark text-center">555-333-4545</h5>
+                </div>
+                <div class="form-group text-danger col-md-5">
+                    <div class="label-holder d-flex justify-content-center">
+                        <label for="ucl" class="font-weight-bold">UCL</label>
+                    </div>
+                    <h5 id="ucl" class="text-gray-dark text-center">9311124003</h5>
+                </div>
+            </div>
+            <hr class="bg-danger" style="height: 2px;">
+            <div class="radio-holders-container">
+                <h3 class="text-center text-danger">Team and Position</h3>
+                <div class="radio-holder d-flex justify-content-around mt-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input mt-2" type="radio" name="team" id="supportRadio" value="support">
+                        <label class="form-check-label mb-1" for="supportRadio">Support</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input mt-2" type="radio" name="team" id="crmRadio" value="crm">
+                        <label class="form-check-label mb-1" for="crmRadio">CRM</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input mt-2" type="radio" name="team" id="marketingRadio"
+                               value="marketing">
+                        <label class="form-check-label mb-1" for="marketingRadio">Marketing</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input mt-2" type="radio" name="team" id="developmentRadio"
+                               value="development">
+                        <label class="form-check-label mb-1" for="developmentRadio">Development</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input mt-2" type="radio" name="team" id="otherRadio" value="other"
+                               checked>
+                        <label class="form-check-label mb-1" for="otherRadio">Other</label>
+                    </div>
+                </div>
+                <hr class="bg-danger w-50" style="height: 2px;">
+                <div id="positionHolder" class="radio-holder d-flex justify-content-around mt-4 mx-auto">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input mt-2" type="radio" name="position" id="teamLeadRadio"
+                               value="teamLead">
+                        <label class="form-check-label mb-1" for="teamLeadRadio">Team Lead</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input mt-2" type="radio" name="position" id="employeeRadio"
+                               value="employee">
+                        <label class="form-check-label mb-1" for="employeeRadio">Employee</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input mt-2" type="radio" name="position" id="internRadio"
+                               value="intern">
+                        <label class="form-check-label mb-1" for="internRadio">Intern</label>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-danger" style="height: 2px;">
+            <div class="button-holder w-50 mt-4 mx-auto d-flex justify-content-around">
+                <button class="btn btn-danger">Submit</button>
+                <button class="btn btn-danger">Reset</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+    </footer>
+    <script src="app.js"></script>
+</div>
+</body>
+</html>

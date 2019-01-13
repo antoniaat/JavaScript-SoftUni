@@ -2,83 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Exam Preparation</title>
-
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log Service</title>
+    <link rel="stylesheet" href="css/reset-css.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
 </head>
 <body>
-
-<header class="container-fluid bg-dark text-center">
-    <h1 class="text-white h1 p-3">
-        Log Horizon
-    </h1>
+<header class="container-fluid bg-dark absolute-top">
+    <div class="text-white p-2 text-center">
+        <h1>Log Horizon</h1>
+    </div>
 </header>
-
-<div class="container-fluid">
-    <div class="row">
-        <form class="form-inline text-center m-auto pt-3">
-            <div class="form-group mx-sm-3 mb-2" id="usernameContainer">
-                <input type="text" class="form-control " id="username" placeholder="Username...">
+<main class="container-fluid mt-3">
+    <div id="user-data-container" class="form-group w-25 row mx-auto">
+        <input type="text" id="username" class="form-control col-md-7" placeholder="Username...">
+        <button id="setUsernameButton" class="btn btn-dark text-white col-md-4 ml-4">Set Username</button>
+    </div>
+    <hr class="bg-dark" style="height: 1px;"/>
+    <div class="log-form-holder w-75 mx-auto">
+        <div class="log-form-caption w-25 mx-auto">
+            <h3 class="text-center">Log a Message</h3>
+        </div>
+        <form class="row mt-4">
+            <div class="form-group my-auto col-md-6">
+                <input type="text" class="form-control" id="logMessage" placeholder="Message...">
             </div>
-            <button type="button" class="btn btn-dark mb-2" id="setUsername">Set Username</button>
+            <div class="form-check form-check-inline col-md-1 border border-success rounded-top rounded-bottom text-success p-2">
+                <input class="form-check-input" type="radio" name="status" id="successRadio" value="success">
+                <label class="form-check-label" for="successRadio">Success</label>
+            </div>
+            <div class="form-check form-check-inline col-md-1 border border-primary rounded-top rounded-bottom text-info p-2">
+                <input class="form-check-input" type="radio" name="status" id="infoRadio" value="info" checked>
+                <label class="form-check-label" for="infoRadio">Info</label>
+            </div>
+            <div class="form-check form-check-inline col-md-1 border border-danger rounded-top rounded-bottom text-danger p-2">
+                <input class="form-check-input" type="radio" name="status" id="errorRadio" value="error">
+                <label class="form-check-label" for="errorRadio">Error</label>
+            </div>
+            <div class="button-holder col-md-2 mx-auto border-left border-dark">
+                <button id="logButton" type="button" class="btn btn-secondary bg-dark w-50 h-100">Log</button>
+            </div>
         </form>
     </div>
-</div>
-
-<hr class="hr bg-dark m-2" style="height: 2px">
-
-<div class="container">
-    <h1 class="text-dark h1 text-center pb-3">
-        Log a Message
-    </h1>
-
-    <div class="row">
-        <form class="form-inline text-center m-auto">
-            <div class="form-group mx-sm-3 mb-2">
-                <input type="text" class="form-control" style="width: 500px" id="logMessage" placeholder="Message...">
-            </div>
-            <button type="button" class="btn btn-outline-success mb-2 mr-2">
-                <input type="radio" name="optradio" checked id="successBtn">
-                Success
-            </button>
-            <button type="button" class="btn btn-outline-info mb-2 mr-2">
-                <input type="radio" name="optradio" id="infoBtn">
-                Info
-            </button>
-            <button type="button" class="btn btn-outline-danger mb-2 mr-2">
-                <input type="radio" name="optradio" id="errorBtn">
-                Error
-            </button>
-
-            <hr class="col-xs-offset-0 col-sm-offset-0 col-md-offset-0"/>
-
-            <button type="button" class="btn btn-dark mb-2" id="loginBtn">Log</button>
-        </form>
+    <hr class="bg-dark mt-4" style="height: 1px;"/>
+    <div class="log-holder mt-2 mb-5">
+        <h2 class="text-center">Logs</h2>
+        <div class="logs">
+            <h2 class="text-center text-muted">There are currently no logs in the database...</h2>
+        </div>
     </div>
-</div>
-
-<hr class="hr bg-dark m-3" style="height: 2px">
-
-<div class="container-fluid text-center">
-    <h1 class="text-dark h1 p-3">
-        Logs
-    </h1>
-
-    <h1 class="text-dark h1 p-3" id="emptyDatabase">
-        They are currently no logs in database...
-    </h1>
-
-    <div id="messages" class="container text-dark">
-    </div>
-</div>
-
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+</main>
 <script src="js/app.js"></script>
-
 </body>
 </html>

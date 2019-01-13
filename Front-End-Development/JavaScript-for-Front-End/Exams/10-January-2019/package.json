@@ -1,0 +1,8 @@
+{
+  "name": "js-exam",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1"
+  }
+}

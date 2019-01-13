@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Job Offers</title>
+    <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">-->
+    <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand font-weight-bold" href="#">Job Offers</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <form class="form-inline my-2 my-lg-0" id="usernameContainer">
+            <input class="form-control mr-sm-2" type="search" placeholder="Username" aria-label="Search" id="username">
+            <button class="btn btn-outline-info my-2 my-sm-0" type="button" id="loginBtn">Login</button>
+        </form>
+    </div>
+</nav>
+
+<div class="container w-50 m-auto pt-3 alert-container" id="lengthValidationNotify">
+    <div class="alert alert-danger" role="alert">
+        The username should have length between 10 and 14 symbols!
+    </div>
+</div>
+
+<div class="container w-50 m-auto pt-3 alert-container" id="spaceValidationNotify">
+    <div class="alert alert-danger" role="alert">
+        The username should not be empty space!
+    </div>
+</div>
+
+<div class="container w-50 m-auto pt-3 alert-container" id="successfulLoginNotify">
+    <div class="alert alert-success" role="alert">
+        Login successful!
+    </div>
+</div>
+
+<div class="container w-50 m-auto pt-3 alert-container" id="successfulLogoutNotify">
+    <div class="alert alert-success" role="alert">
+        Logout successful!
+    </div>
+</div>
+
+<div class="container" id="create-offers">
+    <div class="row m-auto">
+        <h1 class="h1 modal-title text-center font-weight-bold col-12 m-auto pt-3">
+            Create offer:
+        </h1>
+    </div>
+
+    <div class="row m-auto">
+        <div class="col-3"></div>
+
+        <div class="col-6">
+            <form>
+                <div class="form-group">
+                    <label for="positionName">Position name:</label>
+                    <input type="text" class="form-control" id="positionName">
+                    <small class="form-text text-muted">Example: Front-end Developer</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company:</label>
+                    <input type="text" class="form-control" id="company">
+                    <small class="form-text text-muted">Example: Software University</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea class="form-control" rows="5" id="description"></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-6 text-center">
+                        <button type="button" class="btn btn-info btn-lg" id="create-offer-Btn">Create</button>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+
+<div class="container" id="offers">
+
+    <div class="row m-auto">
+        <h1 class="h1 modal-title text-center font-weight-bold col-12 m-auto pt-3">
+            Active job offers:
+        </h1>
+    </div>
+
+    <div class="row mt-5" id="offers-container">
+
+        <div class="col-3">
+            <div class="card text-white bg-info mb-3 pb-3" style="max-width: 18rem;">
+                <div class="card-header">Front-end Developer</div>
+                <div class="card-body">
+                    <h5 class="card-title">Software University</h5>
+                    <p class="card-text">We're seeking a Front-End Developer to join our ongoing quest to create the
+                        most epic, innovative sales management solution around.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card text-white bg-info mb-3 pb-3" style="max-width: 18rem;">
+                <div class="card-header">Java Developer</div>
+                <div class="card-body">
+                    <h5 class="card-title">Codexio</h5>
+                    <p class="card-text">We're seeking a Java Developer to join our ongoing quest to create the
+                        most epic, innovative sales management solution around.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card text-white bg-info mb-3 pb-3" style="max-width: 18rem;">
+                <div class="card-header">PHP Developer</div>
+                <div class="card-body">
+                    <h5 class="card-title">XS Software</h5>
+                    <p class="card-text">We're seeking a PHP Developer to join our ongoing quest to create the
+                        most epic, innovative sales management solution around.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="page-footer font-small mdb-color lighten-3 pt-4 bg-light mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4 mb-4">
+                <div class="view overlay z-depth-1-half">
+                    <img src="images/new-jobs.jpg" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3">© 2018 Copyright: Job Offers</div>
+</footer>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>
