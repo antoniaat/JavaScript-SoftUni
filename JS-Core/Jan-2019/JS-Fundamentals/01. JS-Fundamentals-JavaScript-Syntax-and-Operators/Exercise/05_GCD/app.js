@@ -1,31 +1,26 @@
-// function solve(a, b) {
-//
-//     let gcd;
-//     while (a !== b) {
-//         if (a > b) {
-//             a -= b;
-//         } else {
-//             b -= a;
-//         }
-//     }
-//
-//     gcd = a;
-//     console.log(gcd);
-// }
-
-
 function solve(a, b) {
-    if (a == 0)
-        return b;
+    let biggerNum = Math.max(a, b);
+    let smallerNum = Math.min(a, b);
 
-    while (b != 0) {
-        if (a > b)
-            a = a - b;
-        else
-            b = b - a;
+    let divider = smallerNum;
+    let gcd;
+
+    //Check if the smaller number is the divider
+    if (biggerNum % smallerNum === 0) {
+        gcd = smallerNum;
+    } else {
+        while (divider > 0) {
+            divider--;
+
+            if (biggerNum % divider === 0 && smallerNum % divider === 0) {
+                gcd = divider;
+                break;
+            }
+        }
     }
-    
-    console.log(a);
 
+    console.log(gcd);
 }
+
 solve(15, 5);
+solve(2154, 458);
