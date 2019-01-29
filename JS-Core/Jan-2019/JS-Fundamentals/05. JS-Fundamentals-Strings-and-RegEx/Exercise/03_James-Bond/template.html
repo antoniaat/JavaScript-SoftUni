@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Strings and Regular Expressions - More Exercise</p>
+                <p id="problem-name">3. James Bond</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">Array</label>
+                        <input type="text" id="num1">
+                    </div>
+
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve() {
+            let inputStrings = JSON.parse(document.getElementById("num1").value);
+            let divResult = $('#result');
+
+            function decodeMessages(inputStrings) {
+                let specialKey = inputStrings[0]
+                let pattern = `(\\s|^)(${specialKey}\\s+)([!#$%A-Z]{8,})(\\.|,|\\s|$)`
+                let rgx = new RegExp(pattern, 'gi')
+
+                for (var index = 1; index < inputStrings.length; index++) {
+                    var currentString = inputStrings[index];
+                    let match;
+                    while (match = rgx.exec(currentString)) {
+                        let encodedWord = match[3]
+                        if (encodedWord.toUpperCase() !== encodedWord) {
+                            continue
+                        }
+
+                        let decodedWord = decodeWord(encodedWord)
+                        let decodedMatch = match[1] + match[2] + decodedWord + match[4]
+
+                        currentString = currentString.replace(match[0], decodedMatch)
+                    }
+                    let p = $('<p>');
+                    divResult.append(p.text(currentString));
+                    
+                }
+
+                function decodeWord(encodedWord) {
+                    while (encodedWord.indexOf('!') !== -1) {
+                        encodedWord = encodedWord.replace('!', '1')
+                    }
+
+                    while (encodedWord.indexOf('%') !== -1) {
+                        encodedWord = encodedWord.replace('%', '2')
+                    }
+
+                    while (encodedWord.indexOf('#') !== -1) {
+                        encodedWord = encodedWord.replace('#', '3')
+                    }
+
+                    while (encodedWord.indexOf('$') !== -1) {
+                        encodedWord = encodedWord.replace('$', '4')
+                    }
+
+                    return encodedWord.toLowerCase()
+                }
+            }
+            decodeMessages(inputStrings);
+
+        }
+    </script>
+</body>
+
+</html>

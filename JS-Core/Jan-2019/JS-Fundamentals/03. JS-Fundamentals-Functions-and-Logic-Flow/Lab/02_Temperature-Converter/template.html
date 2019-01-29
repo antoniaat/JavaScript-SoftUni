@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Functions and Logic Flow - Lab</p>
+                <p id="problem-name">2. Temperature Converter</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">Number</label>
+                        <input type="text" id="num1">
+                    </div>
+                    <div>
+                        <label for="type">String</label>
+                    <input type="text" id="type">
+                    </div>
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve(){
+            let degrees = parseInt(document.getElementById("num1").value);
+            let type = document.getElementById("type").value;         
+            let result = '';
+            let convertedTemperature = 0;
+            let correctType = false;
+
+            function convert(degrees, type) {
+                if (type.toLowerCase() === "fahrenheit") {
+                    convertedTemperature = (((degrees - 32) * 5) / 9);
+                    correctType = true;
+
+                } else if (type.toLowerCase() === "celsius") {
+                    convertedTemperature = ((degrees * 9) / 5) + 32;
+                    correctType = true;
+                }
+            }
+
+            function print(degrees, type) {
+                if (correctType) {
+                    result = Math.round(convertedTemperature);
+                } else {
+                    result = "Error!";
+                }
+            }
+
+            convert(degrees, type);
+            print(degrees, type);            
+            document.getElementById("result").innerHTML = result;
+
+        }
+    </script>
+</body>
+
+</html>

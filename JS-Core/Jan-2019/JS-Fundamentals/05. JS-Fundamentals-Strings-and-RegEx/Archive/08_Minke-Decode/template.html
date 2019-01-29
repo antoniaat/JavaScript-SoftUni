@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Strings and Regular Expressions - Exercise</p>
+                <p id="problem-name">8. Minke, Decode</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">Array</label>
+                        <input type="text" id="num1">
+                    </div>
+                    
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve(){
+           let arr = JSON.parse(document.getElementById("num1").value);         
+           let result1 = $('#result'); 
+           function regex(arr) {
+            let startPoint = Number(arr.shift());
+            let endPoint = Number(arr.shift());
+            let rightWord = arr.shift();
+
+            let countryRegex = /\b[A-Z][^\s]+[A-Z]\b/g;
+            let numberRegex = /([0-9]{3}(\.[0-9]+)?)/g;
+
+            for (let obj of arr) {
+                let match = countryRegex.exec(obj);
+
+                let country = match[0];
+                let replace = country.substring(startPoint, endPoint + 1);
+                let newC = country.replace(replace, rightWord);
+
+                let numberMatch;
+                let town = "";
+                while (numberMatch = numberRegex.exec(obj)){
+                    let num = numberMatch[0];
+                    if(num.includes('.')){
+                        num = Number(Math.ceil(numberMatch[0]));
+                    } else {
+                        num = Number(numberMatch[0])
+                    }
+                    town += String.fromCharCode(num);
+                }
+                newC = newC.replace(newC[newC.length - 1], newC[newC.length - 1].toLowerCase());
+                town = town.replace(town[0], town[0].toUpperCase());
+                let output = `${newC} => ${town}`;
+                document.getElementById("result").innerHTML = output;
+            }
+
+        }
+
+            regex(arr);       
+
+        }
+    </script>
+</body>
+
+</html>

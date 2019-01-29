@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Arrays and Matrices - More Exercise</p>
+                <p id="problem-name">5. DNA Helix</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">Number</label>
+                        <input type="text" id="num1">
+                    </div>
+
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve() {
+            let number = document.getElementById("num1").value;
+            let divResult = $('#result')
+            function dna(number) {
+                number = Number(number);
+                let str = 'ATCGTTAGGG';
+                let counter = 0;
+                
+                for (let i = 0; i < number; i++) {
+                    if (i % 4 === 0) {
+                        let p = $('<p>');
+                        divResult.append(p.text(`**${str[counter % 10]}${str[counter % 10 + 1]}**`));
+
+                    } else if (i % 4 === 1) {
+                        let p1 = $('<p>');
+                        divResult.append(p1.text(`*${str[counter % 10]}--${str[counter % 10 + 1]}*`));
+
+                    } else if (i % 4 === 2) {
+                        let p2 = $('<p>');
+                        divResult.append(p2.text(`${str[counter % 10]}----${str[counter % 10 + 1]}`));
+
+                    } else if (i % 4 === 3) {
+                        let p3 = $('<p>');
+                        divResult.append(p3.text(`*${str[counter % 10]}--${str[counter % 10 + 1]}*`));
+
+                    }
+
+                    counter += 2
+                }
+            }
+            dna(number);
+        }
+
+    </script>
+</body>
+
+</html>

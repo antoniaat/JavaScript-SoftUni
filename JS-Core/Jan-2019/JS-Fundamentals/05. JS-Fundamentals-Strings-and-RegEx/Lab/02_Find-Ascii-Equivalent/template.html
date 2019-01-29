@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Strings and Regular Expressions - Lab</p>
+                <p id="problem-name">2.	Find Ascii Equivalent</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">String</label>
+                        <input type="text" id="num1">
+                    </div>
+                   
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve(){
+           let input = document.getElementById("num1").value;
+           let result = $('#result');
+           function findAsciiEquivalent(input) {
+                let split = input.split(' ').filter(a => a !== '');
+                let output = "";
+                for (let element of split) {
+
+                    if(Number(element)){
+                        output += (String.fromCharCode(element));
+                    } else {
+                        let charToNum = "";
+
+                        for (let i = 0; i < element.length; i++) {
+                            charToNum += `${element[i].charCodeAt(0)} `
+                        }
+                        let p = $('<p>');                       
+                        result.append(p.text(charToNum));
+                        console.log(result);
+                        
+                    }
+            }
+            let p = $('<p>');                       
+            result.append(p.text(output));
+           
+        }         
+            
+            findAsciiEquivalent(input);         
+
+        }
+    </script>
+</body>
+
+</html>

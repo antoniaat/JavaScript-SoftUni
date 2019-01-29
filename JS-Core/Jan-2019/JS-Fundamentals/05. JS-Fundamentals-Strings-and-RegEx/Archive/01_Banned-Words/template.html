@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Strings and Regular Expressions - Exercise</p>
+                <p id="problem-name">1. Banned Words</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">Array</label>
+                        <input type="text" id="num1">
+                    </div>
+                    <div>
+                        <label for="num2">String</label>
+                    <input type="text" id="num2">
+                    </div>
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve(){
+           let bannedWordsArr = JSON.parse(document.getElementById("num1").value);
+           let text = document.getElementById("num2").value;         
+
+           function bannedWords(bannedWordsArr, text) {
+
+                let originalText = text;
+                text = text.toLowerCase();
+                for (let word of bannedWordsArr) {
+                    word = word.toLowerCase();
+                    if(text.includes(word)){
+                        let count = word.length;
+                        let expression = '';
+                        for (let i = 0; i < count; i++) {
+                            expression += '*';
+                        }
+                        text = text.replace(word, expression);
+                    }
+
+                }
+                let i = 0;
+                let str = "";
+                while (i < text.length){
+                    if(originalText[i] !== text[i] && text[i] !== '*'){
+                        str += originalText[i];
+                    } else {
+                        str += text[i];
+                    }
+                    i++;
+                }
+                document.getElementById("result").innerHTML = str;
+                }
+
+           
+            
+           bannedWords(bannedWordsArr, text);         
+
+        }
+    </script>
+</body>
+
+</html>

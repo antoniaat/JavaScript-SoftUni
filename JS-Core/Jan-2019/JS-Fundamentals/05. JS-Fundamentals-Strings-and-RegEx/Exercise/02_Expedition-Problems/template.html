@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Strings and Regular Expressions - More Exercise</p>
+                <p id="problem-name">2. Expedition problems</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">String</label>
+                        <input type="text" id="num1">
+                    </div>
+                    <div>
+                        <label for="num2">Text</label>
+                        <input type="text" id="num2">
+                    </div>
+
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve() {
+            let messageSign = document.getElementById("num1").value;
+            let text = document.getElementById("num2").value;
+            let divResult = $('#result');
+
+            function printDecriptedMessage(messageSign, text) {
+                let pattern = /(north|east)[\s\S]*?([0-9]{2})[^,]*?,[^,]*?([0-9]{6})/gim;
+                let mesagePattern = new RegExp(`${messageSign}([\\s\\S]*)${messageSign}`, 'gim');
+
+                let north = '';
+                let east = '';
+
+                let currnetMatch = pattern.exec(text);
+                while (currnetMatch) {
+                    if (currnetMatch[1].toLowerCase() === 'north') {
+                        north = `${currnetMatch[2]}.${currnetMatch[3]} N`;
+                    } else {
+                        east = `${currnetMatch[2]}.${currnetMatch[3]} E`;
+                    }
+
+                    currnetMatch = pattern.exec(text);
+                }
+
+                let messageContent = 'Message: ' + mesagePattern.exec(text)[1];
+
+                let pNorth = $('<p>');
+                let pEast = $('<p>');
+                let pMessage = $('<p>');
+                
+               divResult.append(pNorth.text(north)).append(pEast.text(east)).append(pMessage.text(messageContent));
+
+            }
+            printDecriptedMessage(messageSign, text);
+
+        }
+    </script>
+</body>
+
+</html>

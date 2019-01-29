@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Strings and Regular Expressions - Exercise</p>
+                <p id="problem-name">3. Extract Numbers</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">String</label>
+                        <input type="text" id="num1">
+                    </div>
+                    <div>
+                        <label for="num2">Number</label>
+                        <input type="text" id="num2">
+                    </div>
+                   
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve(){
+           let input = document.getElementById("num1").value; 
+           let number = parseInt(document.getElementById("num2").value);            
+           let result = $('#result'); 
+
+           function extractNumbers(input, number) {
+                let regex = /[0-9]/g;
+                let match;
+                let sum = 0;
+
+                let str = "";
+                while(match = regex.exec(input)){
+                    str += match[0] + " ";
+                    sum += +match[0];
+                }
+
+                let p = $('<p>');
+                result.append(p.text(str));
+               
+                if(sum >= number) {
+                    let p = $('<p>');                    
+                    result.append(p.text(`${sum} => ${String.fromCharCode(sum)}`));                    
+                } else {
+                    let p1 = $('<p>');                       
+                    result.append(p1.text(`${number} => ${String.fromCharCode(number)}`));                    
+                }
+            }
+            extractNumbers(input, number)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Strings and Regular Expressions - More Exercise</p>
+                <p id="problem-name">5. Airport Check</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">String</label>
+                        <input type="text" id="num1">
+                    </div>
+
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve() {
+            let input = document.getElementById("num1").value;
+
+            let divResult = $('#result');
+
+            function airport(input) {
+
+                let nameReg = /(([A-Z][a-zA-Z ,.’-]+)([-]|[-][A-Z.-]?)([A-Z][a-zA-Z'-]+))/g;
+
+                let airportReg = /([A-Z]{3}\/[A-Z]{3})/g;
+                let flightReg = /(\s([A-Z]{1,3}[0-9]{2,5})\s)/g;
+                let companyReg = /([-]\s[A-Z][a-z]+[*]{1,10}([A-Z][a-z]{0,30})?\s)/g;
+
+                let terminalReg = /([A-Z][0-9][A-Z][0-9]{1,2})/g;
+                let timeDepReg = /(STD([0-9]|0[0-9]|1[0-9]|2[0-3]):([0-5][0-9]))/g;
+                let timeArrReg = /(STA([0-9]|0[0-9]|1[0-9]|2[0-3]):([0-5][0-9]))/g;
+
+                let regArray = [nameReg, airportReg, flightReg, companyReg, terminalReg, timeDepReg, timeArrReg];
+                let matches = [];
+                let ticket;
+
+                for (let i = 0; i < 7; i++) {
+                    let tempReg = regArray[i];
+                    matches[i] = getMatches(input, tempReg, 1);
+                }
+
+                ticket = {
+                    name: matches[0],
+                    airport: matches[1],
+                    flight: matches[2],
+                    company: matches[3],
+                    terminal: matches[4],
+                    timeDeparture: matches[5],
+                    timeArrival: matches[6],
+                };
+
+
+                ticket.name = ticket.name.replace(/[-]/g, " ");
+                ticket.company = ticket.company.replace("- ", "");
+                ticket.company = ticket.company.replace("*", " ");
+                ticket.company = ticket.company.replace(/[*]/g, "").trim();
+
+                let airportArray = ticket.airport.split('/');
+                let p = $('<p>');
+                let p1 = $('<p>');
+                let p2 = $('<p>');
+                let p3 = $('<p>');
+                divResult.append(p.text(`Mr/Ms, ${ticket.name}, your flight, with number, ${ticket.flight} is from ${airportArray[0]} to ${airportArray[1]}.`));
+
+                divResult.append(p1.text(`Departure time is ${ticket.timeDeparture} from terminal ${ticket.terminal}.`));
+                divResult.append(p2.text(`Arrival time is ${ticket.timeArrival}.`));
+                divResult.append(p3.text(`Have a nice flight with ${ticket.company}.`));
+
+                function getMatches(string, regex, index) {
+                    index || (index = 1);
+                    let matches;
+                    let match;
+                    while (match = regex.exec(string)) {
+                        matches = (match[index]);
+                    }
+
+                    return matches;
+                }
+            }
+
+            airport(input);
+
+        }
+    </script>
+</body>
+
+</html>

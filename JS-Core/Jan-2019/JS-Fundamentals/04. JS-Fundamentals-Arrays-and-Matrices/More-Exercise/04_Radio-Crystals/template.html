@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Arrays and Matrices - More Exercise</p>
+                <p id="problem-name">4. Radio Crystals</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">Array</label>
+                        <input type="text" id="num1">
+                    </div>
+
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve() {
+            let arr = JSON.parse(document.getElementById("num1").value);
+            let divResult = $('#result')
+            function radioCrystals(arr) {
+                let target = arr[0];
+                let crystals = arr.slice(1);
+                for (let crystal of crystals) {
+                    let p = $('<p>');
+                    divResult.append(p.text(`Processing chunk ${crystal} microns`));
+
+                    let cuts = 0;
+                    let laps = 0;
+                    let grinds = 0;
+                    let etchs = 0;
+                    let xray = 0;
+                    while (crystal / 4 >= target - 1) {
+                        cuts++;
+                        crystal /= 4;
+                    }
+                    if (cuts !== 0) {
+                        let p = $('<p>');
+                        divResult.append(p.text(`Cut x${cuts}`));
+                        crystal = Math.floor(crystal);
+                        let p1 = $('<p>');
+                        divResult.append(p1.text("Transporting and washing"));
+
+                    }
+                    if (crystal === target) {
+                        let p = $('<p>');
+                        divResult.append(p.text(`Finished crystal ${crystal} microns`));
+
+                        continue;
+                    }
+                    while (crystal - crystal * 0.2 >= target - 1) {
+                        laps++;
+                        crystal -= crystal * 0.2;
+                    }
+                    if (laps !== 0) {
+                        let p = $('<p>');
+                        divResult.append(p.text(`Lap x${laps}`));
+
+                        crystal = Math.floor(crystal);
+                        let p1 = $('<p>');
+                        divResult.append(p1.text("Transporting and washing"));
+
+                    }
+
+                    if (crystal === target) {
+                        let p = $('<p>');
+                        divResult.append(p.text(`Finished crystal ${crystal} microns`));
+
+                        continue;
+                    }
+                    while (crystal - 20 >= target - 1) {
+                        grinds++;
+                        crystal -= 20;
+                    }
+                    if (grinds !== 0) {
+                        let p = $('<p>');
+                        divResult.append(p.text(`Grind x${grinds}`));
+
+                        crystal = Math.floor(crystal);
+                        let p1 = $('<p>');
+                        divResult.append(p1.text("Transporting and washing"));
+
+                    }
+
+                    if (crystal === target) {
+                        let p = $('<p>');
+                        divResult.append(p.text(`Finished crystal ${crystal} microns`));
+
+                        continue;
+                    }
+                    while (crystal - 2 >= target - 1) {
+                        etchs++;
+                        crystal -= 2;
+                    }
+                    if (etchs !== 0) {
+                        let p = $('<p>');
+                        divResult.append(p.text(`Etch x${etchs}`));
+
+                        crystal = Math.floor(crystal);
+                        let p1 = $('<p>');
+                        divResult.append(p1.text("Transporting and washing"));
+
+                    }
+
+                    if (crystal === target) {
+                        let p = $('<p>');
+                        divResult.append(p.text(`Finished crystal ${crystal} microns`));
+
+                        continue;
+                    }
+                    if (crystal + 1 <= target) {
+                        xray++;
+                        crystal += 1;
+                    }
+                    if (xray !== 0) {
+                        let p = $('<p>');
+                        divResult.append(p.text(`X-ray x${xray}`));
+
+                    }
+                    let p2 = $('<p>');
+                    divResult.append(p2.text(`Finished crystal ${crystal} microns`));
+
+                }
+            }
+            radioCrystals(arr);
+        }
+
+    </script>
+</body>
+
+</html>

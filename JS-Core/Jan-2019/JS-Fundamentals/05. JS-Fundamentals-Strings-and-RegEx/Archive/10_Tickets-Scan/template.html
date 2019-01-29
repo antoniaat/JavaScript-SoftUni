@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Strings and Regular Expressions - Exercise</p>
+                <p id="problem-name">10. Tickets Scan</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">First String</label>
+                        <input type="text" id="num1">
+                    </div>
+                    <div>
+                        <label for="num2">Second String</label>
+                        <input type="text" id="num2">
+                    </div>
+                    
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve(){
+           let input = document.getElementById("num1").value; 
+           let command = document.getElementById("num2").value;        
+           let result1 = $('#result'); 
+           let result = '';
+           function regex(input, command) {
+
+                let nameRegex = / ([A-Z][a-zA-Z]*)-([A-Z][a-zA-Z]*)(\.-([A-Z][a-zA-Z]*))? /g;
+                let airportRegex = / ([A-Z]{3})\/([A-Z]{3}) /g;
+                let flightRegex = / ([A-Z]{1,3})([0-9]{1,5}) /g;
+                let companyRegex = /- ([A-Z][a-z]*)\*([A-Z][a-z]*)? /g;
+                let gateRegex = / ([A-Z][0-9]{2}[A-Z][0-9]{2}) /g;
+                let departureTime = / STD([0-9]{2}:[0-9]{2}) /g;
+                let arrivalTime = / STA([0-9]{2}:[0-9]{2}) /g;
+
+                let match;
+                let name;
+                let newName;
+                while (match = nameRegex.exec(input)){
+                    name = match[0];
+                    name = name.substring(1, name.length  - 1);
+                    newName = name.replace(/-/g, " ");
+                }
+
+                let matchTwo;
+                let flightNumber;
+
+                while(matchTwo = flightRegex.exec(input)){
+                    flightNumber = matchTwo[0];
+                    flightNumber = flightNumber.substring(1, flightNumber.length - 1);
+                }
+
+                let matchThree;
+                let fromAirport;
+                let toAirport;
+
+                while(matchThree = airportRegex.exec(input)){
+                    let airports = matchThree[0];
+                    airports = airports.substring(1, airports.length - 1);
+                    airports = airports.split("/");
+                    fromAirport = airports[0];
+                    toAirport = airports[1];
+                }
+
+                let matchFour;
+                let gate;
+
+                while (matchFour = gateRegex.exec(input)){
+                    gate = matchFour[0];
+                    gate = gate.substring(1, gate.length - 1);
+                }
+
+                let matchFive;
+                let departure;
+                while(matchFive = departureTime.exec(input)){
+                    departure = matchFive[0];
+                    departure = departure.substring(1, departure.length - 1);
+                }
+
+                let matchSix;
+                let arrival;
+                while (matchSix = arrivalTime.exec(input)){
+                    arrival = matchSix[0];
+                    arrival = arrival.substring(1, arrival.length - 1);
+                }
+
+                let matchSeven;
+                let company;
+
+                while (matchSeven = companyRegex.exec(input)){
+                    company = matchSeven[0];
+                    company = company.substring(2, company.length - 1);
+                    company = company.replace(/\*/g, " ");
+                }
+
+                if(command === "name" && newName){
+                   result = `Mr/Ms, ${newName}, have a nice flight!`;
+                }
+                else if(command === "flight" && flightNumber && fromAirport && toAirport)
+                {
+                    result = `Your flight number ${flightNumber} is from ${fromAirport} to ${toAirport}.`;
+                } else if(command === "times" && departure && gate && arrival){
+                    result = `Departure time is ${departure} from terminal ${gate}. Arrival time is ${arrival}.`;
+                } else if(command === 'company' && company){
+                    result = `Have a nice flight with ${company}.`;
+                } else if(command === "all" && newName && flightNumber && fromAirport && toAirport && departure && gate && arrival && company){
+                    result = `Mr/Ms, ${newName}, your flight number ${flightNumber} is from ${fromAirport} to ${toAirport}. Have a nice flight with ${company}.`;
+                }else {
+                    result = "INVALID";
+                }
+
+                document.getElementById("result").innerHTML = result;
+            }
+            regex(input, command)       
+
+        }
+    </script>
+</body>
+
+</html>

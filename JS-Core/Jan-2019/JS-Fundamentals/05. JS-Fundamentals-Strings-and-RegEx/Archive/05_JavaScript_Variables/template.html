@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Strings and Regular Expressions - Exercise</p>
+                <p id="problem-name">5.	JavaScript Variables</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">Array</label>
+                        <input type="text" id="num1">
+                    </div>
+                    
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve(){
+           let arr = JSON.parse(document.getElementById("num1").value);         
+           let result = $('#result'); 
+           function findVariables(arr) {
+                let regex = /^(let|var) (\w+)\ ?=\ ?([^;]+)\;?$/g;
+                let match;
+
+                for (let input of arr) {
+                    let variable = "";
+                    let name = "";
+                    while(match = regex.exec(input)){
+                        variable = match[0];
+                        name = match[2];
+                    }
+                    if(!variable.includes(" = ")) {
+                        variable = variable.replace('=', " = ");
+                    }
+                    variable = variable.replace(name, name.toLowerCase());
+                    if(variable !== '' && variable !== " ") {
+                        let p1 = $('<p>');                       
+                        result.append(p1.text(variable));
+                        
+                    }
+                }
+
+            }            
+            findVariables(arr);       
+
+        }
+    </script>
+</body>
+
+</html>

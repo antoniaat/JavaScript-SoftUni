@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Strings and Regular Expressions - Exercise</p>
+                <p id="problem-name">6.	Extract the Links</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">Array</label>
+                        <input type="text" id="num1">
+                    </div>
+                    
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve(){
+           let input = JSON.parse(document.getElementById("num1").value);         
+           let result1 = $('#result'); 
+           function extractLinks(input) {
+                let pattern = /(www\.)([a-zA-Z0-9\-]+)(\.[a-z]+)(\.[a-z]+)*/g;
+                let match;
+                let result = [];
+
+                for (let sentence of input) {
+                    while (match = pattern.exec(sentence)){
+                        result.push(match[0]);
+                    }
+                }
+                
+                for (let el of result) {
+                    let p = $('<p>');
+                    result1.append(p.text(el))
+                }
+               
+            }
+
+            extractLinks(input)       
+
+        }
+    </script>
+</body>
+
+</html>

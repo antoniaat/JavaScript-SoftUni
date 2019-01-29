@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Strings and Regular Expressions - Exercise</p>
+                <p id="problem-name">7. Secret Data</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">Array</label>
+                        <input type="text" id="num1">
+                    </div>
+                    
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve(){
+           let input = JSON.parse(document.getElementById("num1").value);         
+           let result1 = $('#result'); 
+           function secretData(input) {
+                let regexName = /\*[A-Z][A-Za-z]*(?=\s|$)/g;
+                let regexNumber = /\+[0-9\-]{10}(?=\s|$)/g;
+                let regexId = /(![a-zA-Z0-9]+)(?=\s|\t|$)/g;
+                let regexBase = /(_[A-Za-z0-9]+)(?=\s|$)/g;
+
+                for (let sentence of input) {
+
+                    sentence = sentence.replace(regexName, m => '|'.repeat(m.length));
+                    sentence = sentence.replace(regexNumber, m => '|'.repeat(m.length));
+                    sentence = sentence.replace(regexId, m => '|'.repeat(m.length));
+                    sentence = sentence.replace(regexBase, m => '|'.repeat(m.length))
+                    
+                        let p = $('<p>');
+                        result1.append(p.text(sentence))
+                   
+                    
+                }
+
+            }
+
+            secretData(input);       
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Functions and Logic Flow - Lab</p>
+                <p id="problem-name">3.	Count Occurrences of a Given Character</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="string">String</label>
+                        <input type="text" id="string">
+                    </div>
+                    <div>
+                        <label for="character">Character</label>
+                    <input type="text" id="character">
+                    </div>
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve(){
+            let string = document.getElementById("string").value;
+            let char = document.getElementById("character").value;         
+            let count = 0;
+            let result = '';
+
+    function findCharacterCount(string, char) {
+        for (let i = 0; i < string.length; i++) {
+            if(string[i] === char){
+                count++;
+            }
+        }
+    }
+
+    function evenOrOddCount(string, char) {
+        if (count % 2 === 0) {
+            result = `Count of ${char} is even.`;
+        } else {
+            result = `Count of ${char} is odd.`;
+        }
+    }
+
+    findCharacterCount(string, char);
+    evenOrOddCount(string, char);
+            document.getElementById("result").innerHTML = result;
+
+        }
+    </script>
+</body>
+
+</html>

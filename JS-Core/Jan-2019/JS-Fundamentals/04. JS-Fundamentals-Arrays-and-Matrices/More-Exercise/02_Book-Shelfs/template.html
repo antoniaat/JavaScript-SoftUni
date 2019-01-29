@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Arrays and Matrices - More Exercise</p>
+                <p id="problem-name">2. Book Shelfs</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">Integer Array</label>
+                        <input type="text" id="num1">
+                    </div>
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve() {
+            let inputArray = JSON.parse(document.getElementById("num1").value);
+            let divResult = $('#result')
+            function shelfFunction(inputArray) {
+                let shelfs = new Map();
+                for (let string of inputArray) {
+                    if (string.includes('->')) {
+                        let tokens = string.split(' -> ');
+                        let id = tokens[0];
+                        let genre = tokens[1];
+                        if ([...shelfs].filter(x => x[0].id === id).length === 0) {
+                            shelfs.set({ id: id, genre: genre }, []);
+                        }
+                    } else {
+                        let tokens = string.split(': ');
+                        let title = tokens[0];
+                        let authorAndGenre = tokens[1].split(', ');
+                        let author = authorAndGenre[0];
+                        let genre = authorAndGenre[1];
+                        if ([...shelfs].filter(x => x[0].genre === genre).length > 0) {
+                            let shelf = getShelf(genre);
+                            let books = shelfs.get(shelf);
+                            books.push({ title: title, author: author });
+                            shelfs.set(shelf, books);
+                        }
+                    }
+                }
+
+                let sorted = [...shelfs].sort((a, b) => b[1].length - a[1].length);
+                
+               
+                for (let [key, value] of sorted) {   
+                    let p1 = $('<p>');                 
+                    divResult.append(p1.text(`${key.id} ${key.genre}: ${value.length}`));                                                        
+                    let sortedValue = value.sort((a, b) => a.title.localeCompare(b.title));
+                    for (let book of sortedValue) {
+                        let p = $('<p>');
+                        divResult.append(p.text(`--> ${book.title}: ${book.author}`));
+                        
+                    }
+                }
+
+                function getShelf(genre) {
+                    for (let [key,] of shelfs) {
+                        if (key.genre === genre) {
+                            return key;
+                        }
+                    }
+                }
+            }
+            shelfFunction(inputArray);            
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Strings and Regular Expressions - Exercise</p>
+                <p id="problem-name">9. DNAex</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">Array</label>
+                        <input type="text" id="num1">
+                    </div>
+                    
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve(){
+           let input = JSON.parse(document.getElementById("num1").value);         
+           let result1 = $('#result'); 
+           function dna(input) {
+
+                let validInput = /^([a-z!@#$?]+)=([0-9]+)--([0-9]+)<<([a-zA-Z]+)$/;
+                let validArr = [];
+
+                let firstPartRgx = /([a-z!@#$?]+)=([0-9]+)/g;
+                let match;
+
+                for (let i = 0; i < input.length; i++) {
+
+                    if(input[i] === 'Stop!'){
+                        break;
+                    }
+
+                    if(validInput.exec(input[i])){
+                        while(match = firstPartRgx.exec(input[i])) {
+
+                            let name = match[1];
+                            let length = match[2];
+
+                            let matches = name.match(/[a-z]/g);
+
+                            if(matches.length == length){
+                                validArr.push(input[i]);
+                            }
+                        }
+                    }
+                }
+
+                let rgx = /([0-9]+)<<([a-zA-Z]+)/g;
+                let matchKey;
+                let map = new Map();
+
+                for (let obj of validArr) {
+                    while (matchKey = rgx.exec(obj)){
+                        let genes = Number(matchKey[1]);
+                        let organism = matchKey[2];
+
+                        if(!map.has(organism)){
+                            map.set(organism, genes)
+                        } else {
+                            map.set(organism, map.get(organism) +genes);
+                        }
+                    }
+                }
+
+                let sortedMap = [...map].sort((a, b) => b[1] - a[1]);
+
+                for (let obj of sortedMap) {
+                    let p = $('<p>');
+                    result1.append(p.text(`${obj[0]} has genome size of ${obj[1]}`));
+                   
+                }
+
+                }
+            dna(input);       
+
+        }
+    </script>
+</body>
+
+</html>

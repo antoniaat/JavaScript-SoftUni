@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Strings and Regular Expressions - Lab</p>
+                <p id="problem-name">5. Extract User Data</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">Array</label>
+                        <input type="text" id="num1">
+                    </div>
+                   
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve(){
+           let arr = JSON.parse(document.getElementById("num1").value);               
+           let result = $('#result');
+             
+
+           function userData(arr) {
+            let pattern = /^([A-Z][a-z]* [A-Z][a-z]*) (\+359 [0-9] [0-9]{3} [0-9]{3}|\+359-[0-9]-[0-9]{3}-[0-9]{3}) ([a-z0-9]+@[a-z]+\.[a-z]{2,3})$/;
+            let match;
+                for (let data of arr) {
+                    match = pattern.exec(data);
+
+                    if(match) {
+                        result.append($('<p>').text(`Name: ${match[1]}`));
+                        result.append($('<p>').text(`Phone Number: ${match[2]}`));
+                        result.append($('<p>').text(`Email: ${match[3]}`));
+                    } else {
+                        result.append($('<p>').text("Invalid data"));
+                    }
+                    result.append($('<p>').text("- - -"));
+                }
+            } 
+            userData(arr);
+        }
+    </script>
+</body>
+
+</html>

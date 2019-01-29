@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Arrays and Matrices - More Exercise</p>
+                <p id="problem-name">3. Card Wars</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">Array</label>
+                        <input type="text" id="num1">
+                    </div>
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve() {
+            let input = JSON.parse(document.getElementById("num1").value);
+            let divResult = $('#result')
+            function convertFunc(data) {
+                let temp = data.toString();
+                console.log(temp);
+                return temp.replace(new RegExp("J", 'gi'), '11')
+                    .replace(new RegExp("Q", 'gi'), '12')
+                    .replace(new RegExp("K", 'gi'), '13')
+                    .replace(new RegExp("A", 'gi'), '14')
+                    .split(',');
+            }
+
+            function convertBack(data) {
+                let temp = data.toString();
+                return temp.replace(new RegExp("11", 'gi'), 'J')
+                    .replace(new RegExp("12", 'gi'), 'Q')
+                    .replace(new RegExp("13", 'gi'), 'K')
+                    .replace(new RegExp("14", 'gi'), 'A')
+                    .split(',');
+            }
+
+
+            function cards(input) {
+                let first = convertFunc(input[0]);
+                let second = convertFunc(input[1]);
+
+                let i = 0;
+
+                while (i < 20) {
+                    let firstPlayerCard = first.shift();
+                    let secondPlayerCard = second.shift();
+                    let winnerHand = [firstPlayerCard, secondPlayerCard];
+
+                    if (firstPlayerCard === secondPlayerCard) {
+                        let firstPlayerNextCard = first.shift();
+                        let secondPlayerNextCard = second.shift();
+                        winnerHand.push(firstPlayerNextCard);
+                        winnerHand.push(secondPlayerNextCard);
+
+                        if (firstPlayerNextCard === secondPlayerNextCard) {
+                            let firstPlayerNextNextCard = first.shift();
+                            let secondPlayerNextNextCard = second.shift();
+                            winnerHand.push(firstPlayerNextNextCard);
+                            winnerHand.push(secondPlayerNextNextCard);
+
+                            if (firstPlayerNextNextCard > secondPlayerNextNextCard) {
+                                first = first.concat(winnerHand);
+                            } else {
+                                second = second.concat(winnerHand);
+                            }
+
+                        } else if (firstPlayerNextCard > secondPlayerNextCard) {
+                            first = first.concat(winnerHand);
+                        } else {
+                            second = second.concat(winnerHand);
+                        }
+
+                    } else if (firstPlayerCard > secondPlayerCard) {
+                        first = first.concat(winnerHand);
+                    } else {
+                        second = second.concat(winnerHand);
+                    }
+
+                    i++;
+                }
+
+                let f = convertBack(first);
+                let s = convertBack(second);
+                
+                let p = $('<p>');
+                let p1 = $('<p>');
+                divResult.append(p.text('First -> ' + f.join(', ')));
+                divResult.append(p1.text('Second -> ' + s.join(', ')));
+               
+
+            }
+
+            cards(input);
+        }
+
+    </script>
+</body>
+
+</html>

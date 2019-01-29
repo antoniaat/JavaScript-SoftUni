@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>Problem name</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav id="navigation">
+            <div id="navigation-text">
+                <p id="lecture-name">Strings and Regular Expressions - Lab</p>
+                <p id="problem-name">3.	Split String Equally</p>
+            </div>
+            <img id="logo-img" src="SoftUniFoundation_Logo_OneLine_White@2x.png" alt="logo">
+        </nav>
+        <main id="main">
+            <div id="exercise">
+                <form>
+                    <div>
+                        <label for="num1">String</label>
+                        <input type="text" id="num1">
+                    </div>
+                    <div>
+                        <label for="num2">Number</label>
+                    <input type="text" id="num2">
+                    </div>
+                    <input type="button" onclick="solve()" value="Calculate">
+                </form>
+                <div>Result: <span id="result"></span></div>
+            </div>
+            <img id="softUni-person-img" src="cw_2_New_Logo.png" alt="softUni-person">
+        </main>
+        <footer id="footer">
+            <p id="footer-text">Check your solution here: <span id="check-judge">https://judge.softuni.bg/Contests/TODO</span>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function solve(){
+           let string = document.getElementById("num1").value;
+           let n = parseInt(document.getElementById("num2").value);         
+
+          function splitStringEqually(string, n) {
+                let arr = [];
+                let indexCounter = 0;
+                if(string.length % n !== 0){
+                    let len = string.length;
+                    let symbolsCount = 0;
+
+                    while(len % n !== 0){
+                        len %= n;
+                        len++;
+                        symbolsCount++;
+                    }
+
+                    for (let i = 0; i < symbolsCount; i++) {
+                        string += string[indexCounter];
+                        indexCounter++;
+                    }
+                }
+
+                for (let i = 0; i < string.length; i+=n) {
+                    arr.push(string.substr(i, n));
+                }
+
+                document.getElementById("result").innerHTML = arr.join(' ');
+            }
+           
+            splitStringEqually(string, n);         
+
+        }
+    </script>
+</body>
+
+</html>
