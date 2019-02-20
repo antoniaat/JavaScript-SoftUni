@@ -1,107 +1,132 @@
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.4; }
+  line-height: 1.4;
+}
 
 i {
-  color: white; }
+  color: white;
+}
 
 nav {
   background: #234465;
-  padding: .2em 5em; }
-  nav div {
-    display: inline-block;
-    vertical-align: middle; }
-  nav div:nth-child(1) {
-    width: 35%; }
-    nav div:nth-child(1) img {
-      width: 38%;
-      margin-top: 6px; }
-    nav div:nth-child(1) i {
-      font-size: 30px;
-      color: white;
-      position: relative;
-      top: -14px; }
-  nav div:nth-child(2) {
-    width: 60%; }
-    nav div:nth-child(2) img {
-      width: 3%;
-      border-radius: 50%;
-      margin-top: 0px;
-      margin-left: 9px;
-      position: relative;
-      top: 6px; }
-    nav div:nth-child(2) i {
-      color: #91A1B2; }
-    nav div:nth-child(2) i:hover {
-      color: white; }
-  nav ul li {
-    display: inline-block;
-    margin: 0 .4em; }
-    nav ul li a {
-      color: #91A1B2;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: "LatoBlack", "Arial", "Helvetica", sans-serif; }
-    nav ul li a:hover {
-      color: white;
-      cursor: pointer; }
-  nav button {
-    background-color: #ffa000;
-    color: #fff;
-    text-align: center;
-    border-radius: 20px;
-    border: 2px solid transparent;
-    padding: 4px 13px;
-    font-weight: bold;
-    font-size: 1em;
-    outline: none;
-    position: relative;
-    top: -19px; }
-  nav button:hover {
-    cursor: pointer; }
+  padding: 0.2em 5em;
+}
+nav div {
+  display: inline-block;
+  vertical-align: middle;
+}
+nav div:nth-child(1) {
+  width: 35%;
+}
+nav div:nth-child(1) img {
+  width: 38%;
+  margin-top: 6px;
+}
+nav div:nth-child(1) i {
+  font-size: 30px;
+  color: white;
+  position: relative;
+  top: -14px;
+}
+nav div:nth-child(2) {
+  width: 60%;
+}
+nav div:nth-child(2) img {
+  width: 3%;
+  border-radius: 50%;
+  margin-top: 0px;
+  margin-left: 9px;
+  position: relative;
+  top: 6px;
+}
+nav div:nth-child(2) i {
+  color: #91a1b2;
+}
+nav div:nth-child(2) i:hover {
+  color: white;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 0.4em;
+}
+nav ul li a {
+  color: #91a1b2;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "LatoBlack", "Arial", "Helvetica", sans-serif;
+}
+nav ul li a:hover {
+  color: white;
+  cursor: pointer;
+}
+nav button {
+  background-color: #ffa000;
+  color: #fff;
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  padding: 4px 13px;
+  font-weight: bold;
+  font-size: 1em;
+  outline: none;
+  position: relative;
+  top: -19px;
+}
+nav button:hover {
+  cursor: pointer;
+}
 
 .education {
-  background: #D3D3D3;
+  background: #d3d3d3;
   padding: 2em;
-  text-align: center; }
-  .education article {
-    display: inline-block;
-    width: 27%;
-    margin: 15px; }
+  text-align: center;
+}
+.education article {
+  display: inline-block;
+  width: 27%;
+  margin: 15px;
+}
 
 h3 {
-  margin: 0; }
+  margin: 0;
+}
 
 .box-head {
-  background: #ECEAF0;
+  background: #eceaf0;
   color: #234465;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   text-align: center;
-  padding: 20px; }
+  padding: 20px;
+}
 
 .box-body {
-  background-color: #FFF; }
-  .box-body ul {
-    margin: 0; }
-  .box-body li {
-    word-wrap: break-word;
-    padding: 20px 0 18px 0;
-    border-bottom: 1px solid #CCC;
-    margin: 0 20px 0 20px;
-    text-align: left;
-    list-style: none;
-    font-weight: bold;
-    color: #234465; }
-    .box-body li i {
-      color: #FFA000;
-      padding-left: 40px;
-      font-size: 21px; }
-  .box-body li:hover {
-    text-decoration: underline;
-    cursor: pointer; }
+  background-color: #fff;
+}
+.box-body ul {
+  margin: 0;
+}
+.box-body li {
+  word-wrap: break-word;
+  padding: 20px 0 18px 0;
+  border-bottom: 1px solid #ccc;
+  margin: 0 20px 0 20px;
+  text-align: left;
+  list-style: none;
+  font-weight: bold;
+  color: #234465;
+}
+.box-body li i {
+  color: #ffa000;
+  padding-left: 40px;
+  font-size: 21px;
+}
+.box-body li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 .box-footer {
   text-align: center;
@@ -112,19 +137,23 @@ h3 {
   min-height: 54px;
   vertical-align: middle;
   font-size: 21px;
-  padding-top: 18px; }
+  padding-top: 18px;
+}
 
 .slider {
   width: 89%;
-  margin: 0 auto; }
-  .slider h2 {
-    padding: 33px; }
+  margin: 0 auto;
+}
+.slider h2 {
+  padding: 33px;
+}
 
 .slick-slide img {
   width: 270px;
   margin-left: 13px;
   border-top-left-radius: 12px;
-  border-top-right-radius: 12px; }
+  border-top-right-radius: 12px;
+}
 
 .info {
   border-bottom-left-radius: 12px;
@@ -134,6 +163,112 @@ h3 {
   margin-left: 13px;
   border-bottom-right-radius: 12px;
   color: white;
-  padding: 14px; }
+  padding: 14px;
+}
 
 /*# sourceMappingURL=styles.css.map */
+
+/*lecture-meeting*/
+.lecture-meeting {
+  background: #d3d3d3;
+  padding-bottom: 4em;
+  
+}
+.lecture-meeting h2 {
+  padding: 33px 33px 45px 33px;
+  width: 89%;
+  margin: 0 auto;
+}
+
+.meeting-main {
+  background: white;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+ 
+}
+
+.meeting-header {
+  display: flex;
+  justify-content: space-around;
+  width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.meeting-header p:nth-child(1) {
+  font-size: 1.5em;
+  font-weight: bold;
+  border-right: 2px solid black;  
+  width: 300px;
+  text-align: right;
+  padding-right: 30px;
+  box-sizing: border-box;
+
+}
+
+.meeting-header p:nth-child(2) {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ccc; 
+  width: 300px;
+  text-align: left;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+.lecture-meeting i {
+  display: block;
+  color: #234465;
+  position: absolute;
+  font-size: 24px;
+  pointer-events: none;  
+  top: 0; left: 0; right: 0; bottom: 0;
+  padding-left: 5px;
+ 
+}
+
+.lecture-meeting form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;  
+  padding: 2em 0 2em 0;
+  
+}
+
+.lecture-meeting form p{
+  position: relative;
+  width: 35%;
+  box-sizing: border-box;
+  padding-bottom: 0.5em;
+}
+
+.lecture-meeting input,
+.lecture-meeting select,
+.lecture-meeting option {
+  display: block;
+  border: none;
+  width: 100%;
+  margin: 0 auto;  
+  font-size: 16px;  
+  border-bottom: 1px solid #234465;
+  padding-left: 40px;
+  font-size: inherit;
+  outline: none;
+  color: #234465;
+  box-sizing: border-box;
+  padding-bottom: 0.4em;
+  border-radius: 0;
+}
+
+
+/*section course-table*/
+.cоursе-table{
+
+}
+
+.cоursе-table h2 {
+  padding: 33px 33px 45px 33px;
+  width: 89%;
+  margin: 0 auto;
+}

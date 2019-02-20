@@ -1,0 +1,27 @@
+header {
+    text-align: center;
+    margin: 15px;
+}
+
+.dataTables_wrapper {
+    width: 90%;
+    margin: 30px auto;
+    border: 2px solid darkgray;
+    border-radius: 8px;
+}
+
+#example_length {
+    padding: 15px;
+    margin-top: 6px;
+}
+
+#example_filter, #example_info, #example_paginate {
+    padding: 15px;
+}
+
+#example_filter input {
+    border: 2px solid darkgray;
+    border-radius: 15px;
+    padding: 5px;
+    outline: none;
+}
