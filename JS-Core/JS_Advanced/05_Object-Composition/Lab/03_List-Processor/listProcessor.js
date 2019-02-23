@@ -27,7 +27,6 @@ function processor(arr) {
             console.log(list.join(','));
         }
     }
-
 }
 
 let test0 = ['add hello', 'add again', 'remove hello', 'add again', 'print'];
