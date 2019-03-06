@@ -182,10 +182,6 @@
                 <p><i class="fas fa-user"></i><input type="text" name="username" id="username"
                                                      placeholder="Потребителско име"/></p>
                 <p>
-                    <i class="fas fa-lock"></i><input type="password" name="password" id="password"
-                                                      placeholder="Парола"/>
-                </p>
-                <p>
                     <i class="fas fa-graduation-cap"></i>
                     <select>
                         <option value="JS">JS Applications</option>
@@ -197,9 +193,10 @@
                 <p>
                     <i class="fas fa-male"></i>
                     <select>
+                        <option value="name">Име на лектор</option>
                         <option value="Papazov">Ивайло Папазов</option>
                         <option value="Maya">Мая Бояджиева</option>
-                        <option value="Kenov">Христомир Асенов</option>
+                        <option value="Hristomir">Христомир Асенов</option>
                         <option value="Atanasova">Антония Атанасова</option>
                         <option value="Kiril">Кирил Кирилов</option>
                     </select>
@@ -208,7 +205,7 @@
                     <i class="fas fa-hourglass-start"></i><input id="dateTimeInput" class="form-control" type="text"
                                                                  placeholder="Дата / Час"/>
                 </p>
-                <button>Изпрати</button>
+                <button onclick="addMeetingWithLecturer()">Изпрати</button>
             </form>
         </section>
     </section>
@@ -270,5 +267,6 @@
 </footer>
 <script src="scripts/app.js"></script>
 <script src="./lib/jquery.datetimepicker.full.js"></script>
+<script src="scripts/datetimepicker.js"></script>
 </body>
 </html>
