@@ -1,286 +1,303 @@
 body {
-  font-family: "Lato", sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.4;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
 }
 
 .let-it-snow {
-  width: 100%;
-  height: 100%;
-  float: left;
-  background: #001e28;
+    width: 100%;
+    height: 100%;
+    float: left;
+    background: #001e28;
 }
 
 i {
-  color: white;
+    color: white;
 }
 
 nav {
-  background: #234465;
-  padding: 0.2em 5em;
+    background: #234465;
+    padding: 0.2em 5em;
 }
+
 nav div {
-  display: inline-block;
-  vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
 }
+
 nav div:nth-child(1) {
-  width: 35%;
+    width: 35%;
 }
+
 nav div:nth-child(1) img {
-  width: 38%;
-  margin-top: 6px;
+    width: 38%;
+    margin-top: 6px;
 }
+
 nav div:nth-child(1) i {
-  font-size: 30px;
-  color: white;
-  position: relative;
-  top: -14px;
+    font-size: 30px;
+    color: white;
+    position: relative;
+    top: -14px;
 }
+
 nav div:nth-child(2) {
-  width: 60%;
+    width: 64%;
 }
+
 nav div:nth-child(2) img {
-  width: 3%;
-  border-radius: 50%;
-  margin-top: 0px;
-  margin-left: 9px;
-  position: relative;
-  top: 6px;
+    width: 3%;
+    border-radius: 50%;
+    margin-top: 0px;
+    margin-left: 9px;
+    position: relative;
+    top: 6px;
 }
+
 nav div:nth-child(2) i {
-  color: #91a1b2;
+    color: #91a1b2;
 }
+
 nav div:nth-child(2) i:hover {
-  color: white;
+    color: white;
 }
+
 nav ul li {
-  display: inline-block;
-  margin: 0 0.4em;
+    display: inline-block;
+    margin: 0 0.4em;
 }
+
 nav ul li a {
-  color: #91a1b2;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: "LatoBlack", "Arial", "Helvetica", sans-serif;
+    color: #91a1b2;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "LatoBlack", "Arial", "Helvetica", sans-serif;
 }
+
 nav ul li a:hover {
-  color: white;
-  cursor: pointer;
+    color: white;
+    cursor: pointer;
 }
+
 nav button {
-  background-color: #ffa000;
-  color: #fff;
-  text-align: center;
-  border-radius: 20px;
-  border: 2px solid transparent;
-  padding: 4px 13px;
-  font-weight: bold;
-  font-size: 1em;
-  outline: none;
-  position: relative;
-  top: -19px;
+    background-color: #ffa000;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    padding: 4px 13px;
+    font-weight: bold;
+    font-size: 1em;
+    outline: none;
+    position: relative;
+    top: -19px;
 }
+
 nav button:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .education {
-  background: #d3d3d3;
-  padding: 2em;
-  text-align: center;
+    background: #d3d3d3;
+    padding: 2em;
+    text-align: center;
 }
+
 .education article {
-  display: inline-block;
-  width: 27%;
-  margin: 15px;
+    display: inline-block;
+    width: 27%;
+    margin: 15px;
 }
 
 h3 {
-  margin: 0;
+    margin: 0;
 }
 
 .box-head {
-  background: #eceaf0;
-  color: #234465;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  text-align: center;
-  padding: 20px;
+    background: #eceaf0;
+    color: #234465;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: 20px;
 }
 
 .box-body {
-  background-color: #fff;
+    background-color: #fff;
+    height: 269px;
 }
+
 .box-body ul {
-  margin: 0;
+    margin: 0;
 }
+
 .box-body li {
-  word-wrap: break-word;
-  padding: 20px 0 18px 0;
-  border-bottom: 1px solid #ccc;
-  margin: 0 20px 0 20px;
-  text-align: left;
-  list-style: none;
-  font-weight: bold;
-  color: #234465;
+    word-wrap: break-word;
+    padding: 20px 0 18px 0;
+    border-bottom: 1px solid #ccc;
+    margin: 0 20px 0 20px;
+    text-align: left;
+    list-style: none;
+    font-weight: bold;
+    color: #234465;
 }
+
 .box-body li i {
-  color: #ffa000;
-  padding-left: 40px;
-  font-size: 21px;
+    color: #ffa000;
+    padding-left: 40px;
+    font-size: 21px;
 }
+
 .box-body li:hover {
-  text-decoration: underline;
-  cursor: pointer;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .box-footer {
-  text-align: center;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background: #234465;
-  color: white;
-  min-height: 54px;
-  vertical-align: middle;
-  font-size: 21px;
-  padding-top: 18px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #234465;
+    color: white;
+    min-height: 54px;
+    vertical-align: middle;
+    font-size: 21px;
+    padding-top: 18px;
 }
 
 
-.slider{
-  background: #fffff1;
+.slider {
+    background: #fffff1;
 }
+
 .slider-container {
-  width: 89%;
-  margin: 0 auto;
-  padding: 1em 0;
-  
+    width: 89%;
+    margin: 0 auto;
+    padding: 1em 0;
 }
+
 .slider h2 {
-  padding: 33px;
-  margin: 0 0 1em 0;
+    text-align: center;
+    padding: 0 0 25px 0;
 }
 
 .slick-slide img {
-  width: 270px;
-  margin-left: 13px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.5);
+    width: 270px;
+    margin-left: 13px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
 .info {
-  border-bottom-left-radius: 12px;
-  background: #234465;
-  font-size: 17px;
-  width: 242px;
-  margin-left: 13px;
-  border-bottom-right-radius: 12px;
-  color: white;
-  padding: 14px;
-  box-shadow: 2px 3px 3px 0px rgba(0,0,0,0.5);
+    border-bottom-left-radius: 12px;
+    background: #234465;
+    font-size: 17px;
+    width: 242px;
+    margin-left: 13px;
+    border-bottom-right-radius: 12px;
+    color: white;
+    padding: 14px;
+    box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.5);
 }
-
 
 
 /*# sourceMappingURL=styles.css.map */
 
 /*lecture-meeting*/
 .lecture-meeting {
-  background: #d3d3d3;
-  padding-bottom: 4em;
-  
+    background: #d3d3d3;
+    padding-bottom: 4em;
+
 }
+
 .lecture-meeting h2 {
-  padding: 33px 33px 45px 33px;
-  width: 89%;
-  margin: 0 auto;
+    text-align: center;
+    padding: 30px 0 5px 0;
 }
 
 .meeting-main {
-  background: white;
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
- 
-}
-
-.meeting-header {
-  display: flex;
-  justify-content: space-around;
-  width: 600px;
-  margin: 0 auto;
-  box-sizing: border-box;
+    background: white;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 .meeting-header p:nth-child(1) {
-  font-size: 1.5em;
-  font-weight: bold;
-  border-right: 2px solid black;  
-  width: 300px;
-  text-align: right;
-  padding-right: 30px;
-  box-sizing: border-box;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-right: 2px solid black;
+    width: 300px;
+    text-align: right;
+    padding-right: 30px;
+    box-sizing: border-box;
 
 }
 
 .meeting-header p:nth-child(2) {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #ccc; 
-  width: 300px;
-  text-align: left;
-  padding-left: 30px;
-  box-sizing: border-box;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ccc;
+    width: 300px;
+    text-align: left;
+    padding-left: 30px;
+    box-sizing: border-box;
 }
 
 .lecture-meeting i {
-  display: block;
-  color: #234465;
-  position: absolute;
-  font-size: 24px;
-  pointer-events: none;  
-  top: 0; left: 0; right: 0; bottom: 0;
-  padding-left: 5px;
- 
+    display: block;
+    color: #234465;
+    position: absolute;
+    font-size: 24px;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-left: 5px;
+
 }
 
 .lecture-meeting form {
-  display: flex;
-  align-items: center;
-  flex-direction: column;  
-  padding: 2em 0 2em 0;
-  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em 0 2em 0;
+
 }
 
-.lecture-meeting form p{
-  position: relative;
-  width: 35%;
-  box-sizing: border-box;
-  padding-bottom: 0.5em;
+.lecture-meeting form p {
+    position: relative;
+    width: 46%;
+    box-sizing: border-box;
+    padding-bottom: 0.5em;
 }
 
 .lecture-meeting input,
 .lecture-meeting select,
 .lecture-meeting option {
-  display: block;
-  border: none;
-  width: 100%;
-  margin: 0 auto;  
-  font-size: 16px;  
-  border-bottom: 1px solid #234465;
-  padding-left: 40px;
-  font-size: inherit;
-  outline: none;
-  color: #234465;
-  box-sizing: border-box;
-  padding-bottom: 0.4em;
-  border-radius: 0;
+    display: block;
+    border: none;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+    border-bottom: 0.08em solid #234465;
+    padding-left: 40px;
+    font-size: inherit;
+    outline: none;
+    color: #234465;
+    box-sizing: border-box;
+    padding-bottom: 0.8em;
+    border-radius: 0;
 }
 
-.lecture-meeting button{          
-    letter-spacing: 0.05em;
+.lecture-meeting input::placeholder {
+    color: #234465;
+}
+
+.lecture-meeting button {
     background-color: #ffa000;
     border: 2px solid transparent;
     font-size: 16px;
@@ -290,113 +307,113 @@ h3 {
     border-radius: 20px;
     transition: all .2s ease;
     padding: 10px 25px;
-    text-align: center;
     outline: none;
-    margin-top: 2.5em;
+    margin-top: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
 
 /*site-footer*/
 
-.site-footer{
-  background: #234465;
-  color: white; 
+.site-footer {
+    background: #234465;
+    color: white;
 }
 
-.site-footer a{
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
+.site-footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
 }
 
 .site-footer .wrapper {
-  display: flex;
-  justify-content: space-evenly;
-	padding: 1.5rem 0;
-  width: 80%;
-  margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.5rem 0;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .site-footer ul {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .site-footer li {
-	display: block;
-	list-style: none outside;
+    display: block;
+    list-style: none outside;
 }
 
 .site-footer .about {
-	flex: 0 0 30%;
+    flex: 0 0 30%;
 }
 
-.site-footer .ul{
-  display: flex;  
-}
-.site-footer ul{
-  padding-right: 2em;
+.site-footer .ul {
+    display: flex;
 }
 
-.about header > p{
-  font-size: 14px;
-  padding-bottom: 1.5rem;
-} 
-
-.about hr{  
-  width: 100%;
-  height: 1px;
+.site-footer ul {
+    padding-right: 2em;
 }
 
-.about > p{
-  padding-bottom: 1.2rem;
+.about header > p {
+    font-size: 14px;
+    padding-bottom: 1.5rem;
+}
+
+.about hr {
+    width: 100%;
+    height: 1px;
+}
+
+.about > p {
+    padding-bottom: 1.2rem;
 }
 
 .site-footer .initiatives {
-	flex: 0 0 20%;
+    flex: 0 0 20%;
 }
 
 .site-footer .partners {
-	flex: 0 0 30%;
+    flex: 0 0 30%;
 }
 
 
-.site-footer h3{
-  font-size: 18px;
-  color: #ffa000;
-  padding-bottom: 1em;
+.site-footer h3 {
+    font-size: 18px;
+    color: #ffa000;
+    padding-bottom: 1em;
 }
 
 .site-footer .initiatives ul {
-	
+
 }
 
 .site-footer .initiatives li {
-	display: block;
-	list-style: none outside;
- 
-  
+    display: block;
+    list-style: none outside;
 }
 
 .site-footer .initiatives li a {
-	text-decoration: none;
-	color: white;
+    text-decoration: none;
+    color: white;
 }
 
 .site-footer .partners li {
-	display: block;
-	list-style: none outside;
-	flex: 0 0 50%;	
-	line-height: 1.2;
-	position: relative;	
-	padding-bottom: 0.5rem;
+    display: block;
+    list-style: none outside;
+    flex: 0 0 50%;
+    line-height: 1.2;
+    position: relative;
+    padding-bottom: 0.5rem;
 }
 
 .site-footer .partners li i {
-	display: inline-block;
-	position: absolute;
-	top: 0.1rem; left: 0;
-	width: 1.7rem;
-	text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 0.1rem;
+    left: 0;
+    width: 1.7rem;
+    text-align: center;
 }
-

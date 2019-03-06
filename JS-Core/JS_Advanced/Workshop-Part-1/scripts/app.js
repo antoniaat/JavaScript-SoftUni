@@ -5,4 +5,12 @@ $(".regular").slick({
     slidesToScroll: 4
 });
 
+$('#dateInput').datetimepicker({
+    timepicker: false
+});
+$('#timeInput').datetimepicker({
+    datepicker: false
+});
+$('#dateTimeInput').datetimepicker();
+
 
