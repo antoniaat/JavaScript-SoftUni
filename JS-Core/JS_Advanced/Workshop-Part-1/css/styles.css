@@ -17,7 +17,7 @@ i {
 }
 
 nav {
-    background: #234465;
+    background: #2d2e2e;
     padding: 0.2em 5em;
 }
 
@@ -40,6 +40,7 @@ nav div:nth-child(1) i {
     color: white;
     position: relative;
     top: -14px;
+    left: -5px;
 }
 
 nav div:nth-child(2) {
@@ -56,7 +57,7 @@ nav div:nth-child(2) img {
 }
 
 nav div:nth-child(2) i {
-    color: #91a1b2;
+    color: white;
 }
 
 nav div:nth-child(2) i:hover {
@@ -69,14 +70,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #91a1b2;
+    color: white;
     text-decoration: none;
     font-weight: bold;
     font-family: "LatoBlack", "Arial", "Helvetica", sans-serif;
 }
 
 nav ul li a:hover {
-    color: white;
+    color: #dfdfdf;
     cursor: pointer;
 }
 
@@ -92,6 +93,7 @@ nav button {
     outline: none;
     position: relative;
     top: -19px;
+    left: 17px;
 }
 
 nav button:hover {
@@ -116,7 +118,7 @@ h3 {
 
 .box-head {
     background: #eceaf0;
-    color: #234465;
+    color: #2d2e2e;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     text-align: center;
@@ -140,7 +142,7 @@ h3 {
     text-align: left;
     list-style: none;
     font-weight: bold;
-    color: #234465;
+    color: #2d2e2e;
 }
 
 .box-body li i {
@@ -158,7 +160,7 @@ h3 {
     text-align: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background: #234465;
+    background: #2d2e2e;
     color: white;
     min-height: 54px;
     vertical-align: middle;
@@ -180,10 +182,11 @@ h3 {
 .slider h2 {
     text-align: center;
     padding: 0 0 25px 0;
+    color: #2d2e2e;
 }
 
 .slick-slide img {
-    width: 270px;
+    width: 311px;
     margin-left: 13px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -192,24 +195,20 @@ h3 {
 
 .info {
     border-bottom-left-radius: 12px;
-    background: #234465;
+    background: #2d2e2e;
     font-size: 17px;
-    width: 242px;
+    width: 283px;
     margin-left: 13px;
     border-bottom-right-radius: 12px;
     color: white;
     padding: 14px;
-    box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.5)
 }
-
-
-/*# sourceMappingURL=styles.css.map */
 
 /*lecture-meeting*/
 .lecture-meeting {
     background: #d3d3d3;
     padding-bottom: 4em;
-
 }
 
 .lecture-meeting h2 {
@@ -219,7 +218,7 @@ h3 {
 
 .meeting-main {
     background: white;
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     padding: 20px;
     border-radius: 20px;
@@ -248,7 +247,7 @@ h3 {
 
 .lecture-meeting i {
     display: block;
-    color: #234465;
+    color: #2d2e2e;
     position: absolute;
     font-size: 24px;
     pointer-events: none;
@@ -270,7 +269,7 @@ h3 {
 
 .lecture-meeting form p {
     position: relative;
-    width: 46%;
+    width: 55%;
     box-sizing: border-box;
     padding-bottom: 0.5em;
 }
@@ -283,18 +282,18 @@ h3 {
     width: 100%;
     margin: 0 auto;
     font-size: 16px;
-    border-bottom: 0.08em solid #234465;
+    border-bottom: 0.08em solid #2d2e2e;
     padding-left: 40px;
     font-size: inherit;
     outline: none;
-    color: #234465;
+    color: #2d2e2e;
     box-sizing: border-box;
     padding-bottom: 0.8em;
     border-radius: 0;
 }
 
 .lecture-meeting input::placeholder {
-    color: #234465;
+    color: #2d2e2e;
 }
 
 .lecture-meeting button {
@@ -317,7 +316,7 @@ h3 {
 /*site-footer*/
 
 .site-footer {
-    background: #234465;
+    background: #2d2e2e;
     color: white;
 }
 
