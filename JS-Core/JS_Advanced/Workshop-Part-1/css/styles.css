@@ -147,8 +147,10 @@ h3 {
 
 .box-body li i {
     color: #ffa000;
-    padding-left: 40px;
     font-size: 21px;
+    text-align: right;
+    float: right;
+    padding-right: 29px;
 }
 
 .box-body li:hover {
@@ -415,4 +417,17 @@ h3 {
     left: 0;
     width: 1.7rem;
     text-align: center;
+}
+
+.notifyjs-bootstrap-success {
+    text-align: center !important;
+    background-image: none !important;
+}
+
+.notifyjs-arrow {
+    display: none !important;
+}
+
+.notifyjs-bootstrap-base {
+    padding: 8px 6px !important;
 }

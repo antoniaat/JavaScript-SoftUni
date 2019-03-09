@@ -25,8 +25,9 @@ $(".regular").slick({
     }
 
     function appendTheCurrentConsultation(consultationInfo) {
-        let newConsultation = $(`<li>${consultationInfo}<i class="fas fa-chevron-circle-right"></i></li>`);
+        let newConsultation = $(`<li><span>${consultationInfo}</span><i class="fas fa-chevron-circle-right"></i></li>`);
         $('.education article:nth-child(3) .box-body ul').append(newConsultation);
+        $.notify("Access granted", "success");
         updateSeminarsCount();
     }
 
