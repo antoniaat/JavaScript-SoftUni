@@ -1,15 +1,17 @@
-/* Slider */
 .slick-slider {
     position: relative;
     display: block;
     box-sizing: border-box;
+    user-select: none;
     touch-action: pan-y;
 }
 
 .slick-list {
     position: relative;
+
     display: block;
     overflow: hidden;
+
     margin: 0;
     padding: 0;
 }
@@ -19,6 +21,7 @@
 }
 
 .slick-list.dragging {
+    cursor: pointer;
     cursor: hand;
 }
 
@@ -94,6 +97,3 @@
     display: none;
 }
 
-.slick-slide {
-    width: 270px;
-}

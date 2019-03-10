@@ -179,6 +179,7 @@ h3 {
     width: 89%;
     margin: 0 auto;
     padding: 1em 0;
+    text-align: center;
 }
 
 .slider h2 {
@@ -193,6 +194,7 @@ h3 {
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+    outline: none;
 }
 
 .info {
@@ -204,7 +206,8 @@ h3 {
     border-bottom-right-radius: 12px;
     color: white;
     padding: 14px;
-    box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.5)
+    box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, 0.5);
+    margin-top: 0;
 }
 
 /*lecture-meeting*/
@@ -419,10 +422,16 @@ h3 {
     text-align: center;
 }
 
-.notifyjs-bootstrap-success {
+.notifyjs-bootstrap-success,
+.notifyjs-bootstrap-warn {
     text-align: center !important;
     background-image: none !important;
 }
+
+.notifyjs-bootstrap-warn {
+    background-image: none !important !important;
+}
+
 
 .notifyjs-arrow {
     display: none !important;
@@ -430,4 +439,13 @@ h3 {
 
 .notifyjs-bootstrap-base {
     padding: 8px 6px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.slick-slide {
+    transition: all ease-in-out .3s;
 }
