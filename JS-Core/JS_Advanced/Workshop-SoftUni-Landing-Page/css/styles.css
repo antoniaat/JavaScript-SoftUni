@@ -170,44 +170,41 @@ h3 {
     padding-top: 18px;
 }
 
-
 .slider {
     background: #fffff1;
 }
 
 .slider-container {
-    width: 89%;
+    width: 84%;
     margin: 0 auto;
     padding: 1em 0;
-    text-align: center;
 }
 
 .slider h2 {
     text-align: center;
-    padding: 0 0 25px 0;
-    color: #2d2e2e;
+    padding: 14px 0;
+    color: white;
+    margin-top: 0;
 }
 
 .slick-slide img {
-    width: 311px;
+    width: 300px !important;
     margin-left: 13px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
-    outline: none;
 }
 
 .info {
     border-bottom-left-radius: 12px;
     background: #2d2e2e;
     font-size: 17px;
-    width: 283px;
+    width: 300.7px;
     margin-left: 13px;
     border-bottom-right-radius: 12px;
     color: white;
     padding: 14px;
-    box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, 0.5);
-    margin-top: 0;
+    box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.5)
 }
 
 /*lecture-meeting*/
@@ -422,16 +419,14 @@ h3 {
     text-align: center;
 }
 
-.notifyjs-bootstrap-success,
-.notifyjs-bootstrap-warn {
+.notifyjs-bootstrap-success {
     text-align: center !important;
     background-image: none !important;
 }
 
-.notifyjs-bootstrap-warn {
-    background-image: none !important !important;
+.notifyjs-bootstrap-error {
+    background-image: none !important;
 }
-
 
 .notifyjs-arrow {
     display: none !important;
@@ -441,11 +436,15 @@ h3 {
     padding: 8px 6px !important;
 }
 
-.slick-prev:before,
-.slick-next:before {
-    color: black;
+.nav {
+    position: -webkit-sticky;
 }
 
-.slick-slide {
-    transition: all ease-in-out .3s;
+.sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0;
 }

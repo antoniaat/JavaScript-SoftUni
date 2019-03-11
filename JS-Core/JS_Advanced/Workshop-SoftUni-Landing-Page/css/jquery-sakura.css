@@ -774,8 +774,8 @@
 }
 
 .sakura {
-    background: linear-gradient(120deg, rgba(255, 160, 0, 0.9), rgba(255, 160, 100, 0.9));
+    background: linear-gradient(120deg, rgba(255, 160, 0, 0.9), rgba(255, 160, 0, 0.9));
     border-radius: 12px 1px;
     pointer-events: none;
-    position: absolute
+    position: absolute;
 }

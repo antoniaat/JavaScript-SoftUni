@@ -2,46 +2,46 @@
     $('#bookHourBtn').click(addConsultation);
 
     function addConsultation(event) {
-        event.stopPropagation();
         event.preventDefault();
+        event.stopPropagation();
 
         let validUsername = usernameValidation();
         let validLecturerName = lecturerValidation();
-        let validInputFields = inputFieldsValidation();
+        let filledInputFields = filledInputFieldsValidation();
 
-        if (validInputFields && validLecturerName && validUsername) {
-            $.notify("Added", "success");
+        if (validUsername && validLecturerName && filledInputFields) {
+            $.notify("Consultation added", "success");
             addNewConsultation();
         } else {
-            $.notify("Try again", "warn");
+            $.notify("Try again", "error");
         }
     }
 
     function addNewConsultation() {
-        let lecturerName = $('#lecturer :selected').val().split(' ')[0];
+        let lecturerName = $('#lecturer option:selected').val();
         let dateAndTime = $('#datetimepicker').val().split(' ');
-
         let yearMonthDay = dateAndTime[0].split('/');
-        let time = dateAndTime[1];
         let monthDay = `${yearMonthDay[1]}/${yearMonthDay[2]}`;
 
-        let consultationText = `${lecturerName} - ${monthDay} - ${time}`;
+        let time = dateAndTime[1];
 
         $('.education article:nth-child(3) .box-body ul')
-            .append($(`<li><span>${consultationText}</span><i class="fas fa-chevron-circle-right"></i></li>`));
+            .append(`<li><span>${lecturerName} - ${monthDay} - ${time}</span><i class="fas fa-chevron-circle-right"></i></li>`);
 
-        let consultationsCountRef = $('.education article:nth-child(3) .box-footer span');
-        let consultationsCountNumber = Number(consultationsCountRef.text());
-        consultationsCountRef.text(++consultationsCountNumber);
+        increaseConsultationsCount();
     }
 
-    function inputFieldsValidation() {
+    function increaseConsultationsCount() {
+        let consultationsCount = $('.education article:nth-child(3) .box-footer span');
+        let currentCount = consultationsCount.text();
+        consultationsCount.text(++currentCount);
+    }
+
+    function filledInputFieldsValidation() {
         let isValid = false;
 
-        let username = $('#username').val();
-        let date = $('#datetimepicker').val();
-
-        if (username !== '' && date !== '') {
+        let dateTimeInputField = $('#datetimepicker').val();
+        if (dateTimeInputField !== '') {
             isValid = true;
         }
 
@@ -51,8 +51,8 @@
     function lecturerValidation() {
         let isValid = false;
 
-        let selectedLecturer = $('#lecturer :selected').val();
-        if (selectedLecturer !== 'name') {
+        let selectedOption = $('#lecturer option:selected').val();
+        if (selectedOption !== 'name') {
             isValid = true;
         }
 
@@ -61,7 +61,7 @@
 
     function usernameValidation() {
         let isValid = false;
-        const regex = /^(([A-Za-z])([A-Za-z0-9_]{2,24}))$/gm;
+        const regex = /^([A-Za-z])([A-Za-z0-9_]{2,24})$/gm;
 
         let username = $('#username').val();
         if (regex.test(username)) {
