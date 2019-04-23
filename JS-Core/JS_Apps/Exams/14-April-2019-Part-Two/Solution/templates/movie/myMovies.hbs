@@ -1,0 +1,16 @@
+{{> header}}
+<h1>My Movies</h1>
+<div class="movies">
+{{#each movies}}
+<div class="movie">
+  {{> movie}}
+  <div class="btn-group">
+    <button><a href="#/movie/edit/{{this._id}}">Edit</a></button>
+    <button><a href="#/movie/delete/{{this._id}}">Delete</a></button>
+    <button><a href="#/movie/buyTicket/{{this._id}}">Buy Ticket</a></button>
+    <button><a href="#/movie/details/{{this._id}}">Details</a></button>
+  </div>
+</div>
+{{/each}}
+</div>
+{{> footer}}

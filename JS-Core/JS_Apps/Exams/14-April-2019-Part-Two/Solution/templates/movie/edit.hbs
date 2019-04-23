@@ -1,0 +1,16 @@
+{{> header}}
+<h1>Edit movie</h1>
+<form action="#/movie/edit/{{movie._id}}" method="POST">
+  <label>Title</label>
+  <input type="text" name="title" value="{{movie.title}}">
+  <label>Image Url</label>
+  <input type="text" name="imageUrl" value="{{movie.imageUrl}}">
+  <label>Description</label>
+  <textarea type="text" name="description">{{movie.description}}</textarea>
+  <label>Genres</label>
+  <input type="text" name="genres" value="{{movie.genres}}">
+  <label>Available Tickets</label>
+  <input type="number" name="tickets" value="{{movie.tickets}}">
+  <input type="submit" value="Edit">
+</form>
+{{> footer}}
